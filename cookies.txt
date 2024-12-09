@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+smoothwan.discourse.group	TRUE	/	FALSE	1999999999	_forum_session	Ark62cJY%2Blrwko9uAYhPutTSY1%2FQG3QNlSc3Ao5pZ1bWi%2Ftv59uBqhQa4%2FbD91TGNI3%2BNny%2F%2BYNxfbw%2BFhlJQCXrOmUi4o1Pw9DsN2gaiELhK%2FRPPF9Ddg3shVR43g3cTyEKvgWpdsdGf3AKLyYoVLMHUQlbx37aGe6mncWFvGCChvsfGXymHn4f2C3s9LsrYFFUVxGnKlU0iXMXpzICExCK6xABYA9tusybuaDcGQ7lyQTAbTDm4giLo294t8izrXAOYWHe2z%2BGrjKT0PHu1WrzUxDxTt4%2B7GnvA3B%2B0ZjVqLS%2Bdwfs8FnCCLehSeGTgWgHlWO2R7e47kvfTUqyY%2BhX%2FN6FGy%2F34OuRw%2FYUktcsgrngahemv3p8n5Ol8P%2Fv2WqDGPPrYt4edGi8OVqoFCa2odjGyzHoG1U%2FJvgMJch4fLieNibkfv84mZn0nlWKf%2F%2FaK7Gf--tfTsitBWW7Wq33Z4--UrjViTUysefP7B04K0viOw%3D%3D
+smoothwan.discourse.group	TRUE	/	FALSE	1999999999	SameSite	Lax
+

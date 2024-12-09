@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+    <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17</link>
+    <description>https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid
+
+Version `0.99.8`</description>
+    
+    <lastBuildDate>Wed, 03 May 2023 02:28:06 +0000</lastBuildDate>
+    <category>Development &amp; Feedback</category>
+    <atom:link href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Odd, not sure why, I think the Amos record was done with 0.99.8.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/13</link>
+        <pubDate>Wed, 03 May 2023 02:28:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-13</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Was TCP (8), TCP (4), TCP (8).<br>
+Changed to Single TCP.<br>
+No difference in total throughput.<br>
+Changed back to Auto.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/12</link>
+        <pubDate>Tue, 02 May 2023 20:15:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-12</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>You may try using (single) TCP as protocol to see if it’s openwrt related, by default it’s auto and usually TCP Multiple is chosen or vice versa, you can click on one of the connections in Speedify UI, then click on the IP address, it will show the protocol used.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/11</link>
+        <pubDate>Tue, 02 May 2023 18:29:48 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-11</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>There was no appreciable change in speed after disconnecting the hotspots.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/10</link>
+        <pubDate>Tue, 02 May 2023 18:06:09 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-10</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Interesting, does the speed increase with less WANs connected?</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/9</link>
+        <pubDate>Tue, 02 May 2023 15:48:21 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-9</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I also have the Slate AX. Speeds on the Slate seem to top out 80Mbps. A cell phone connected to the same server can get 130+ at the same time of day. I’d love to know how to squeeze more out of the Slate AX, OR if a raspberry pi or an intel based solution would be better for ensuring top performance within the limits of the speedify server I’m connected to.</p>
+<p>Speedify connections (normal kids network traffic)<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/41fb754d00a4332362de61cb3f95bed796849ed5.jpeg" data-download-href="/uploads/short-url/9pHMvajjGTt0rWvG9ndhz1yCJ4p.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_690x432.jpeg" alt="image" data-base62-sha1="9pHMvajjGTt0rWvG9ndhz1yCJ4p" width="690" height="432" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_690x432.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_1035x648.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_1380x864.jpeg 2x" data-dominant-color="1D222A"></a></div><p></p>
+<p>Speedigy speed tests<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/dcee18c8367ac3a7cf13553ea45da0904b2ace9d.png" data-download-href="/uploads/short-url/vwra8GKyvHMYm7W6rzpPVhgJsVD.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/dcee18c8367ac3a7cf13553ea45da0904b2ace9d.png" alt="image" data-base62-sha1="vwra8GKyvHMYm7W6rzpPVhgJsVD" width="595" height="500" data-dominant-color="272627"></a></div><p></p>
+<p>With speedify disabled and still on the same Slate AX wifi. I did an ookla test on just the comcast<br>
+<img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/171a11a951ff2f54a195b1f08b4252fdac56c8f2.png" alt="image" data-base62-sha1="3imPJkzNo4mwpLM7xUiya4FeQBc" width="548" height="301"></p>
+<p>Cell phone same server with primary as cell carrier.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563.jpeg" data-download-href="/uploads/short-url/k2hWB08yEs09vmWsIwf06QVtKsX.jpeg?dl=1" title="Screenshot_20230430_102424_Speedify" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_230x500.jpeg" alt="Screenshot_20230430_102424_Speedify" data-base62-sha1="k2hWB08yEs09vmWsIwf06QVtKsX" width="230" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_230x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_345x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_460x1000.jpeg 2x" data-dominant-color="19191A"></a></div><p></p>
+<p>CPU and load on the Slate seem reasonable. Gap is netdata disabled for a speedtest. No significant change with netdata disabled.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3.jpeg" data-download-href="/uploads/short-url/a7t5HGH8XC0lgC6UR8hFEMLOwLh.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_690x461.jpeg" alt="image" data-base62-sha1="a7t5HGH8XC0lgC6UR8hFEMLOwLh" width="690" height="461" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_690x461.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_1035x691.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_1380x922.jpeg 2x" data-dominant-color="2E3035"></a></div><p></p>
+<p>htop during a speedtest (sorted on memory)<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ae903409eb3c437a376499078fd51a90cfb52a75.png" data-download-href="/uploads/short-url/oUg26vUutKu081RxByhBkvNtwln.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_690x360.png" alt="image" data-base62-sha1="oUg26vUutKu081RxByhBkvNtwln" width="690" height="360" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_690x360.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_1035x540.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ae903409eb3c437a376499078fd51a90cfb52a75.png 2x" data-dominant-color="29372D"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/8</link>
+        <pubDate>Sun, 30 Apr 2023 16:51:14 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-8</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[clemiiiii]]></dc:creator>
+        <description><![CDATA[
+            <p>thanks for the information  <img src="https://emoji.discourse-cdn.com/twitter/heart_eyes_cat.png?v=12" title=":heart_eyes_cat:" class="emoji" alt=":heart_eyes_cat:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/7</link>
+        <pubDate>Sun, 26 Mar 2023 15:19:47 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-7</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Regarding SD card Ill add all the mounting utilities next release.<br>
+If the the official OpenWrt is stable enough you will have more package selection and kernel modules that are ready to install from official repos.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/6</link>
+        <pubDate>Fri, 24 Mar 2023 22:22:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-6</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the write up! it’s useful!<br>
+I’ll keep an eye on official OpenWrt support for the Slate/Flint which comes with a recent kernel ~6 years newer, and 64 bit with optimized crypto extensions. I managed to do 350-400Mbit with it.<br>
+Link: <a href="https://forum.openwrt.org/t/gl-inet-ax1800-new-router-openwrt-support/105163/314" class="inline-onebox">GL-iNet AX1800 new router - OpenWrt support? - #314 by radiomean - For Developers - OpenWrt Forum</a></p>
+<p>The Wi-Fi and USB are currently an issue, and flashing it requires the recovery method, will post an update once it’s stable for use.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/5</link>
+        <pubDate>Fri, 24 Mar 2023 22:19:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-5</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[clemiiiii]]></dc:creator>
+        <description><![CDATA[
+            <p>sure no problem with sharing data,</p>
+<p>in: eth cable - DOCSIS (unbelievable) stable 300 down 50 up</p>
+<ul>
+<li>starlink &amp;/ some stuff like 3g/4g/5g devices over usb/wifi/eth</li>
+</ul>
+<p>~100 normal usage - peaked nearly 200 (down) / 100+ up</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ">
+  <header class="source">
+
+      <a href="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ" target="_blank" rel="noopener nofollow ugc">onedrive.live.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/397;"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b783bf30310cd5043a135e00f943dffc93d3e906_2_690x397.png" class="thumbnail" width="690" height="397" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b783bf30310cd5043a135e00f943dffc93d3e906_2_690x397.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b783bf30310cd5043a135e00f943dffc93d3e906.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b783bf30310cd5043a135e00f943dffc93d3e906.png 2x" data-dominant-color="1A2229"></div>
+
+<h3><a href="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ" target="_blank" rel="noopener nofollow ugc">smoothwan</a></h3>
+
+  <p>Folder</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>kind of unsorted of topic mixed long story:</p>
+<p>sadly, no fixed setup now, just kind of experimenting</p>
+<p>hardware/device: AXT1800, SW/image from github: OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7 / LuCI openwrt-22.03 branch git-21.284.67084-e4d24f0</p>
+<p>using uplinks: [usually more than 1 <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> but not all at the same time normally, some problems with usb-hub&amp;/power (not sure at the moment)]</p>
+<ul>
+<li>
+<p>(sometimes) eth cable - starlink (old round) with (max around 300 down, 20-50 up)</p>
+</li>
+<li>
+<p>(usually) eth cable - DOCSIS cable with unbelievable stable 300 down 50 up</p>
+</li>
+<li>
+<p>(trying to get a final setup with) 1x to 3x usb emulated ethernet devices (CDC-Ethernet devices i guess) ztl/Huawei (depends on ISP/cell/contract utilization - 0-100 down/up)</p>
+</li>
+<li>
+<p>(trying to get a final setup with) 1x usb 4g/3g ncm Huawei device (depends on ISP/cell/contract utilization - 0-100 down/up)</p>
+</li>
+</ul>
+<p>(using lan as speed test client, or on directly on glx1800 or speedify stats)</p>
+<p>speedify (13.1.0.10834) settings: default (mostly connected to Vienna/AT servers, because of my location)</p>
+<p>but maybe my configuration or software setup is not optimal, installed to much extensions - no space left - trying to get sd card memory working ATM</p>
+<p>finally setup should be portable - without eth uplinks, but other topic</p>
+<p>sure that I can’t get that speeds with mobile connections (with that modems in that kind of city/district I’m right now) …</p>
+<p>but still with both eth never got that numbers (speedify statistics: top download 142, top upload 133 :O)</p>
+<p>…anyways not important for my project, just interesting to see that numbers at the same hardware (&amp;software?), CPU load wasn’t to high or not on all cores of the ax1800) btw haven’t installed all opkg updates (because of memory problems) but sometimes I’ve seen speeds like 300 M bits (with speedify) on pc/mac - yeah and speedify support told me something that i have to use a dedicated server or something, not sure how – should read that mail again - or not included in team account guess - because i was trying to get 300mbit DOCSIS + 200mbit 5g + … down, no i wanted to get more upload - anyways too much text <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+<p>buts its speedify… should be connectedly or combinedly or stabilili <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+<p>depends on what are u trying to solve or to do - get 10mbits with 3 mobile connections or 2000mbits with 2 fiber connections</p>
+<p>or redundancyly or uploadily, all off topic and sry 4 editing post but no structure in it, still, …</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/4</link>
+        <pubDate>Fri, 24 Mar 2023 20:14:01 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-4</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Interesting, do you mind sharing your setup?</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/3</link>
+        <pubDate>Fri, 24 Mar 2023 18:46:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-3</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[clemiiiii]]></dc:creator>
+        <description><![CDATA[
+            <p>wow, i can’t get more than 100mbits, still great and enouth for my projects, … maybe i have to change speedify servers… did u change any of the default speedify settings ?</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/2</link>
+        <pubDate>Fri, 24 Mar 2023 18:38:33 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-2</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+      <item>
+        <title>Slate AX Speedify throughput test result by Amos@Discord</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <aside class="onebox allowlistedgeneric" data-onebox-src="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid">
+  <header class="source">
+      <img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/7d636ef92c6101768bfd71f144cd5b54b56523b0.png" class="site-icon" width="32" height="32">
+
+      <a href="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid" target="_blank" rel="noopener">Speedify</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/363;"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/31f64ce9841356c1b7591c81bb8f26284d68ba0a.png" class="thumbnail" width="690" height="363" data-dominant-color="B7A1B0"></div>
+
+<h3><a href="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid" target="_blank" rel="noopener">Check out my Speed Test Result - Speedify</a></h3>
+
+  <p>How fast is your Internet? Combine connections for increased stability, speed, and security with Speedify!</p>
+
+  <p>
+    <span class="label1">Est. reading time: 2 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Version <code>0.99.8</code></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17/1</link>
+        <pubDate>Fri, 10 Mar 2023 19:10:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-17-1</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17.rss">Slate AX Speedify throughput test result by Amos@Discord</source>
+      </item>
+  </channel>
+</rss>

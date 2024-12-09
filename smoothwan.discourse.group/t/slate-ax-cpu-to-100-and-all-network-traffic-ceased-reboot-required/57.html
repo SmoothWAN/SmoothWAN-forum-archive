@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:52:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Slate AX CPU to 100 and all network traffic ceased reboot required - Help - SmoothWAN Forum</title>
+    <meta name="description" content="Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot. 
+root@SmoothWAN:/usr/share/speedify/logs# ls -ltra
+drwxrwxr-x    3 root     root           976 Apr 12 20:05&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="57.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Slate AX CPU to 100 and all network traffic ceased reboot required&#39;" href="57.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_1024x994.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_1024x994.png" />
+<meta property="og:url" content="57.html" />
+<meta name="twitter:url" content="57.html" />
+<meta property="og:title" content="Slate AX CPU to 100 and all network traffic ceased reboot required" />
+<meta name="twitter:title" content="Slate AX CPU to 100 and all network traffic ceased reboot required" />
+<meta property="og:description" content="Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot.  root@SmoothWAN:/usr/share/speedify/logs# ls -ltra drwxrwxr-x    3 root     root           976 Apr 12 20:05 .. -rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt -rw-r--r--    1 root     root          1677 Apr 14 21:19 histogram_20230413_145654.tsv -rw-r--r--    1 root     root        265356 Apr 14 23:52 summary_041423.txt -rw-r--r--    1 root     root        ..." />
+<meta name="twitter:description" content="Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot.  root@SmoothWAN:/usr/share/speedify/logs# ls -ltra drwxrwxr-x    3 root     root           976 Apr 12 20:05 .. -rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt -rw-r--r--    1 root     root          1677 Apr 14 21:19 histogram_20230413_145654.tsv -rw-r--r--    1 root     root        265356 Apr 14 23:52 summary_041423.txt -rw-r--r--    1 root     root        ..." />
+<meta property="og:article:section" content="Help" />
+<meta property="og:article:section:color" content="94f5ce" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2023-04-18T16:46:27+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Slate AX CPU to 100 and all network traffic ceased reboot required","mainEntity":{"@type":"Question","name":"Slate AX CPU to 100 and all network traffic ceased reboot required","text":"Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot.\n\nroot@SmoothWAN:/usr/share/speedify/logs# ls -ltra\n\ndrwxrwxr-x    3 root     root           976 Apr 12 20:05 ..\n\n-rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt\n\n&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2023-04-18T16:46:27.272Z","author":{"@type":"Person","name":"thumper","url":"https://smoothwan.discourse.group/u/thumper"}}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="57.html">Slate AX CPU to 100 and all network traffic ceased reboot required</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/help/4.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Help</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Slate AX CPU to 100 and all network traffic ceased reboot required'>
+      <link itemprop='url' href='57.html'>
+      <meta itemprop='datePublished' content='2023-04-18T16:46:27Z'>
+        <meta itemprop='articleSection' content='Help'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="57.html">
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e96fb96b83f1aaed3129843c05df611264b48b3.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-04-18T16:46:27Z' class='post-time'>
+                    April 18, 2023,  4:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-18T16:46:27Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot.</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# ls -ltra
+drwxrwxr-x    3 root     root           976 Apr 12 20:05 ..
+-rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt
+-rw-r--r--    1 root     root          1677 Apr 14 21:19 histogram_20230413_145654.tsv
+-rw-r--r--    1 root     root        265356 Apr 14 23:52 summary_041423.txt
+-rw-r--r--    1 root     root          2748 Apr 15 20:03 histogram_20230414_211943.tsv
+-rw-r--r--    1 root     root       1060784 Apr 15 20:09 speedify_20230415_200353.log_0
+-rw-r--r--    1 root     root        419993 Apr 15 20:09 speedify_20230415_200910.log_0
+-rw-r--r--    1 root     root       3145728 Apr 15 20:46 speedify_20230415_200950.log_2
+-rw-r--r--    1 root     root       3145728 Apr 15 21:10 speedify_20230415_200950.log_1
+-rw-r--r--    1 root     root       1904788 Apr 15 21:23 speedify_20230415_200950.log_0
+-rw-r--r--    1 root     root          2628 Apr 15 21:24 histogram_20230415_200950.tsv
+-rw-r--r--    1 root     root        604847 Apr 15 23:59 summary_041523.txt
+-rw-r--r--    1 root     root        332308 Apr 16 23:50 summary_041623.txt
+-rw-r--r--    1 root     root        346793 Apr 17 23:50 summary_041723.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 15:46 speedify_20230415_212412.log_2
+-rw-r--r--    1 root     root       3145728 Apr 18 15:55 speedify_20230415_212412.log_1
+-rw-r--r--    1 root     root        846943 Apr 18 15:57 speedify_20230415_212412.log_0
+-rw-r--r--    1 root     root        108945 Apr 18 15:58 settings.txt.lastGoodRead
+-rw-r--r--    1 root     root            46 Apr 18 15:58 VERSION
+-rw-r--r--    1 root     root          2476 Apr 18 15:58 histogram_20230415_212412.tsv
+-rw-r--r--    1 root     root       3145728 Apr 18 16:31 speedify_20230418_155842.log_2
+-rw-r--r--    1 root     root        359007 Apr 18 16:32 summary_041823.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 16:36 speedify_20230418_155842.log_1
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt.lastGoodWrite
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt
+-rw-r--r--    1 root     root         27256 Apr 18 16:39 lastUsedSettings.txt
+-rw-r--r--    1 root     root        151552 Apr 18 16:39 sql.db
+drwxr-xr-x    2 root     root          2416 Apr 18 16:39 .
+-rw-r--r--    1 root     root       1415326 Apr 18 16:39 speedify_20230418_155842.log_0
+root@SmoothWAN:/usr/share/speedify/logs# 
+
+</code></pre>
+<blockquote>
+<p>Side note: It would be good to be able to specify a log directory e.g. mounted sd-card.</p>
+</blockquote>
+<p>Symptom was that web browser wouldn’t load anything from the internet. I could still (slowly) access luci and netdata.</p>
+<p>Attached some graphs from netdata that I was able to grab before reboot. Didn’t have a console to check which proc(s) were on top.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e96fb96b83f1aaed3129843c05df611264b48b3.png" data-download-href="/uploads/short-url/6E9rrR3ezZXW8pzNCTnLTFlPyKL.png?dl=1" title="Screen Shot 2023-04-18 at 9.58.34 AM" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_514x500.png" alt="Screen Shot 2023-04-18 at 9.58.34 AM" data-base62-sha1="6E9rrR3ezZXW8pzNCTnLTFlPyKL" width="514" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_514x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_771x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_1028x1000.png 2x" data-dominant-color="323539"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2023-04-18 at 9.58.34 AM</span><span class="informations">1272×1235 193 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf.png" data-download-href="/uploads/short-url/a5FnUAVy6Zmdbt0932P3ba2YLMP.png?dl=1" title="Screen Shot 2023-04-18 at 9.58.44 AM" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_519x500.png" alt="Screen Shot 2023-04-18 at 9.58.44 AM" data-base62-sha1="a5FnUAVy6Zmdbt0932P3ba2YLMP" width="519" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_519x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_778x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_1038x1000.png 2x" data-dominant-color="2C2F32"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2023-04-18 at 9.58.44 AM</span><span class="informations">1096×1055 112 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-18T17:02:49Z' class='post-time'>
+                    April 18, 2023,  5:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-18T17:02:49Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s interesting, can you share what other features enabled other than Speedify, and an estimate of connected Wi-Fi clients?<br>
+I think you can mount <code>/var</code> to a pre-formatted ext4 SD-card in LuCI mountpoints menu for logs.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-18T20:43:41Z' class='post-time'>
+                    April 18, 2023,  8:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-19T15:34:54Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve only added <code>netdata</code>, <code>luci-app-nlbwmon</code> and updated some filesystem utils<br>
+There are three wifi clients on Narwhal<br>
+Zero on shadow<br>
+Maybe ten on raven<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45.png" data-download-href="/uploads/short-url/ck2BDsY9mXExtlatvonUbcKu1cF.png?dl=1" title="Screen Shot 2023-04-18 at 2.15.04 PM" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_379x500.png" alt="Screen Shot 2023-04-18 at 2.15.04 PM" data-base62-sha1="ck2BDsY9mXExtlatvonUbcKu1cF" width="379" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_379x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_568x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45.png 2x" data-dominant-color="F2F5F7"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2023-04-18 at 2.15.04 PM</span><span class="informations">718×946 54.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<pre><code class="lang-auto">root@SmoothWAN:~# cat /etc/device_info 
+DEVICE_MANUFACTURER='OpenWrt'
+DEVICE_MANUFACTURER_URL='https://openwrt.org/'
+DEVICE_PRODUCT='Generic'
+DEVICE_REVISION='v0'
+root@SmoothWAN:~# cat /etc/openwrt_release 
+DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='21.02-SNAPSHOT'
+DISTRIB_REVISION='r16399+159-c67509efd7'
+DISTRIB_TARGET='ipq807x/ipq60xx'
+DISTRIB_ARCH='arm_cortex-a7'
+DISTRIB_DESCRIPTION='OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7'
+DISTRIB_TAINTS='no-all override'
+DISTRIB_TIP='OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7 / TIP-devel-cb0d6246'
+DISTRIB_TIP_VERSION='devel'
+DISTRIB_DESCRIPTION='SmoothWAN v0.99.5HF5'
+root@SmoothWAN:~# cat /etc/openwrt_version
+ApNos-cb0d6246
+r16399+159-c67509efd7
+root@SmoothWAN:~# /usr/share/speedify/speedify_cli version
+{
+	"bug" : 1,
+	"build" : 10893,
+	"maj" : 13,
+	"min" : 2
+}
+root@SmoothWAN:~# 
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-20T16:48:37Z' class='post-time'>
+                    April 20, 2023,  4:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-20T16:48:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>of course now that I’m watching it constantly there’s not been any problems.<br>
+Added vnStat2<br>
+Also added the bandwidth sharing under SQM as described on the wiki</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-20T18:01:32Z' class='post-time'>
+                    April 20, 2023,  6:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-20T18:01:32Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I did have a <code>low memory</code> banner pop up in the speedify UI about an hour ago right around Uptime: 2 days. When I checked, speedify was top of memory use. And one CPU was showing pegged with <code>speedify -d logs</code> as the top process both CPU and Memory. I did <code>/etc/init.d/speedifyconf restart</code> and the memory use went down and the <code>speedify -d logs</code> is now in check</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-20T18:28:35Z' class='post-time'>
+                    April 20, 2023,  6:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-22T16:24:14Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I haven’t updated to the latest version, feel free to downgrade Speedify version in the <code>Options</code> menu, I hope it’s not an issue with the latest update.</p>
+<p>Similar issue: <a href="https://github.com/SmoothWAN/SmoothWAN/issues/141">Speedify Stops and cannot be restarted · Issue #141 · SmoothWAN/SmoothWAN (github.com)</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-22T16:34:17Z' class='post-time'>
+                    April 22, 2023,  4:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-22T16:34:17Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Looks like <code>zram</code> has to be enabled for the latest release, unless other processes have abnormal memory usage.</p>
+<p>Use <code>htop</code> command &amp; press <code>F6</code> to sort by memory usage to see if other processes have abnormal memory usage.</p>
+<p>Related:<br>
+<a href="https://github.com/SmoothWAN/SmoothWAN/issues/89">Speedify memory leak/usage issue · Issue #89 · SmoothWAN/SmoothWAN (github.com)</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-22T16:59:10Z' class='post-time'>
+                    April 22, 2023,  4:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-22T16:59:10Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Enabling <code>zram</code> next release, upon further tests, Flint &amp; Slate AX 5Ghz Wi-Fi driver use too much memory that is not freed when 10+ clients are connected.</p>
+<p>Flint/Slate AX patch for testing, in terminal, type the following to enable <code>zram</code>:<br>
+Slate:</p>
+<pre><code class="lang-auto">wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN/main/devconfigs/slateax/files/etc/rc.local -O /etc/rc.local
+</code></pre>
+<p>Flint:</p>
+<pre><code class="lang-auto">wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN/main/devconfigs/flint/files/etc/rc.local -O /etc/rc.local
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-23T06:08:31Z' class='post-time'>
+                    April 23, 2023,  6:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-23T06:08:31Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s just speedify process that starts consuming ram. At about the two day mark I start getting low memory banner in the UI.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-23T18:52:14Z' class='post-time'>
+                    April 23, 2023,  6:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-23T18:52:14Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hope <code>zram</code> helps, else you may need to replicate the memory (leak?) issue on Ubuntu then send the logs to Speedify, since they do not support OpenWrt.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/00fe98cf35a6eca6b1bc88639daf7907f5f5d9c1.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-24T18:30:09Z' class='post-time'>
+                    April 24, 2023,  6:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-24T18:30:09Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>With zram enabled and swap on, used RAM seems to be holding steady now at the ~71% mark and free does show some swap in use. Before zram, all swap numbers were zeros.</p>
+<p><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/00fe98cf35a6eca6b1bc88639daf7907f5f5d9c1.png" alt="image" data-base62-sha1="8NtdW8C3j6hxMB6IIFngXHFIat" width="109" height="128"></p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify# free
+              total        used        free      shared  buff/cache   available
+Mem:         402612      278336       33768         448       90508       76044
+Swap:        195312        5636      189676
+root@SmoothWAN:/usr/share/speedify# 
+
+</code></pre>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png" data-download-href="/uploads/short-url/ulj09lAWreLofNR5kQkSbIA2JSA.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c_2_429x500.png" alt="image" data-base62-sha1="ulj09lAWreLofNR5kQkSbIA2JSA" width="429" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c_2_429x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png 2x" data-dominant-color="484232"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">570×663 41.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016.png" data-download-href="/uploads/short-url/spZhhhOf7kOoSaVmoTK7wrGsfNs.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_446x500.png" alt="image" data-base62-sha1="spZhhhOf7kOoSaVmoTK7wrGsfNs" width="446" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_446x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_669x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_892x1000.png 2x" data-dominant-color="323634"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">925×1036 81.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/a7b746453fb2828580311926e538fd10bd957f6c.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-24T23:01:36Z' class='post-time'>
+                    April 24, 2023, 11:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-24T23:01:36Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In terms of zram, it looks like there are luci settings instead of forcing something in rc.local wouldn’t it make more sense to use uci to keep it more obvious?</p>
+<p><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/a7b746453fb2828580311926e538fd10bd957f6c.png" alt="image" data-base62-sha1="nVGoSONfr9YCsixFw2p2Y1BURha" width="666" height="398"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-25T15:36:17Z' class='post-time'>
+                    April 25, 2023,  3:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-25T15:36:17Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good to hear, not sure if that option works on the unofficial OpenWrt build by GL.iNet, let me know if it does. Only one of the compression algorithms is available.<br>
+Will push a hotfix soon with <code>zram</code> enabled.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/f9d89e5b200987579314ad00dc8acce4cfb8779d.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-25T16:58:11Z' class='post-time'>
+                    April 25, 2023,  4:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-25T16:58:11Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="TalalM" data-post="13" data-topic="57">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../../yyz2.discourse-cdn.com/free1/user_avatar/smoothwan.discourse.group/talalm/48/115_2.jpg" class="avatar"> TalalM:</div>
+<blockquote>
+<p>Only one of the compression algorithms is available.</p>
+</blockquote>
+</aside>
+<p><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/f9d89e5b200987579314ad00dc8acce4cfb8779d.png" alt="image" data-base62-sha1="zEeZAgjzywb0ohmfLovIazBfQQZ" width="282" height="117"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-25T17:54:07Z' class='post-time'>
+                    April 25, 2023,  5:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-25T17:54:07Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As a kernel module I mean. That’s LuCI support for the official builds. (gl.inet is not official, and smoothwan is using that)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c88b4224602d68359f355f63b0e467c195d62225.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-25T23:24:31Z' class='post-time'>
+                    April 25, 2023, 11:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-25T23:24:31Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Memory usage has been been climbing.</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# uptime
+ 22:50:07 up 4 days, 41 min,  load average: 0.49, 0.84, 0.96
+</code></pre>
+<p>Speedify was 196 or so yesterday<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c88b4224602d68359f355f63b0e467c195d62225.png" data-download-href="/uploads/short-url/sC5QVSpbzG9FUNeSeH4CPUzs549.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_690x177.png" alt="image" data-base62-sha1="sC5QVSpbzG9FUNeSeH4CPUzs549" width="690" height="177" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_690x177.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_1035x265.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c88b4224602d68359f355f63b0e467c195d62225.png 2x" data-dominant-color="24362D"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1125×290 61.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>And after <code>/etc/init.d/speedifyconf restart</code> we have this<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png" data-download-href="/uploads/short-url/6to3HyBnT7ZqzGzHAtkeZX70pQW.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86_2_690x203.png" alt="image" data-base62-sha1="6to3HyBnT7ZqzGzHAtkeZX70pQW" width="690" height="203" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86_2_690x203.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png 2x" data-dominant-color="24372E"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">934×275 49.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>and whatever was swapped out is probably not speedify related</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# free
+              total        used        free      shared  buff/cache   available
+Mem:         402612      217064      105380         528       80168      137320
+Swap:        195312        5404      189908
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-26T00:29:55Z' class='post-time'>
+                    April 26, 2023, 12:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-26T00:29:55Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I wonder if the previous smoothwan versions are different, since I noticed that the official firmware 4.2.0 is using a bit more memory than 4.1 , and HF5 use the 4.2 base.<br>
+Don’t remember what Speedify <em>usually</em> used in terms of RAM unfortunately.<br>
+I do remember that it never reached hundreds though.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-17">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../slate-ax-speedify-throughput-test-result-by-amos-discord/17.html' class='title raw-link raw-topic-link'>Slate AX Speedify throughput test result by Amos@Discord</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/development/2.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #a0def5'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Development &amp; Feedback</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='../../tag/performance.html' class='discourse-tag'>performance</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>12</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>345</span>
+            </td>
+            <td>
+              May 3, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-153">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.html' class='title raw-link raw-topic-link'>I have a Slate GL-Net Router, Downloaded Speedify - now What?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>1</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>116</span>
+            </td>
+            <td>
+              May 17, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-54">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../wired-wan-on-slate-ax-not-working/54.html' class='title raw-link raw-topic-link'>Wired WAN on Slate AX not working</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>10</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>175</span>
+            </td>
+            <td>
+              April 17, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-158">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../after-reboot-settings-not-saved/158.html' class='title raw-link raw-topic-link'>After reboot settings not saved</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>6</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>47</span>
+            </td>
+            <td>
+              September 21, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-62">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../patch-to-start-support-for-speedify-logs-in-a-specified-location/62.html' class='title raw-link raw-topic-link'>Patch to start support for speedify logs in a specified location</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>165</span>
+            </td>
+            <td>
+              April 27, 2023
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:52:07 GMT -->
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Speedify now supports OpenWrt officially</title>
+    <link>https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172</link>
+    <description>Routers now require a [license](https://speedify.com/store/#routers).
+[Installation proccess](https://support.speedify.com/article/918-openwrt) requires knowledge with OpenWrt.
+Performance should be better than SmoothWAN and the [unofficial installer](https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119).</description>
+    
+    <lastBuildDate>Sat, 28 Sep 2024 05:22:30 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Speedify now supports OpenWrt officially</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Routers now require a <a href="https://speedify.com/store/#routers">license</a>.<br>
+<a href="https://support.speedify.com/article/918-openwrt">Installation proccess</a> requires knowledge with OpenWrt.<br>
+Performance should be better than SmoothWAN and the <a href="https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119">unofficial installer</a>.</p>
+          <p><a href="https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172/1</link>
+        <pubDate>Sat, 28 Sep 2024 05:22:30 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-172-1</guid>
+        <source url="https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172.rss">Speedify now supports OpenWrt officially</source>
+      </item>
+  </channel>
+</rss>

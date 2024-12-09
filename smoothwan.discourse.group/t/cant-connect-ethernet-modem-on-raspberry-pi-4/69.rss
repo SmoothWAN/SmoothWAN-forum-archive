@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can&#39;t Connect Ethernet modem on Raspberry Pi 4</title>
+    <link>https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69</link>
+    <description>I&#39;m stuck with the setup on my Raspberry Pi 4.
+I have a netgear nighthawk modem connected to the Pi via ethernet.
+In Network-&gt;Interfaces, eth0 wasn&#39;t even in the interfaces list to start with, I added it from the Devices tab on that page.
+I&#39;m not sure if I&#39;ve done this correctly, but it shows it&#39;s sending data.
+![image|690x156](upload://6jVNHcGuyTemCAEZQhJwXdpTIBk.png)
+When I try to setup Speedify it fails saying the device doesn&#39;t have internet.
+Can anyone help?
+Is there a decent setup guide for Raspberry Pi?</description>
+    
+    <lastBuildDate>Mon, 15 May 2023 20:46:14 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can&#39;t Connect Ethernet modem on Raspberry Pi 4</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Old guide that includes the Raspberry Pi 4: <a href="https://web.archive.org/web/20230213184735/https://smoothwan.com/installation/">Quick Setup - SmoothWAN (archive.org)</a><br>
+<a href="https://raw.githubusercontent.com/SmoothWAN/SmoothWAN-misc/c4d88ba34c8c444613ccc5d4971928be4d1f9d12/smoothwan-illust.drawio.svg"></a></p>
+          <p><a href="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/3</link>
+        <pubDate>Mon, 15 May 2023 20:46:14 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-69-3</guid>
+        <source url="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69.rss">Can&#39;t Connect Ethernet modem on Raspberry Pi 4</source>
+      </item>
+      <item>
+        <title>Can&#39;t Connect Ethernet modem on Raspberry Pi 4</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi.<br>
+<code>eth0</code> is reserved for the LAN port.<br>
+You need to plug a USB ethernet to the Pi, connected to the modem, the internal Pi port is used as LAN only.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/0ac4b0255d15da23281c27d2038467a8e9819fce.webp" data-download-href="/uploads/short-url/1xgaYcr29PC8ROrtgvVNUg7OZz0.webp?dl=1" title="smoothwan-illust.drawio"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0ac4b0255d15da23281c27d2038467a8e9819fce_2_416x500.webp" alt="smoothwan-illust.drawio" data-base62-sha1="1xgaYcr29PC8ROrtgvVNUg7OZz0" width="416" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0ac4b0255d15da23281c27d2038467a8e9819fce_2_416x500.webp, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0ac4b0255d15da23281c27d2038467a8e9819fce_2_624x750.webp 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0ac4b0255d15da23281c27d2038467a8e9819fce_2_832x1000.webp 2x" data-dominant-color="76819B"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/2</link>
+        <pubDate>Mon, 15 May 2023 07:38:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-69-2</guid>
+        <source url="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69.rss">Can&#39;t Connect Ethernet modem on Raspberry Pi 4</source>
+      </item>
+      <item>
+        <title>Can&#39;t Connect Ethernet modem on Raspberry Pi 4</title>
+        <dc:creator><![CDATA[MrDreigon]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m stuck with the setup on my Raspberry Pi 4.<br>
+I have a netgear nighthawk modem connected to the Pi via ethernet.<br>
+In Network-&gt;Interfaces, eth0 wasn’t even in the interfaces list to start with, I added it from the Devices tab on that page.<br>
+I’m not sure if I’ve done this correctly, but it shows it’s sending data.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2c4dd999cceb3c26306fce5091c66006594efeb2.png" data-download-href="/uploads/short-url/6jVNHcGuyTemCAEZQhJwXdpTIBk.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2c4dd999cceb3c26306fce5091c66006594efeb2_2_690x156.png" alt="image" data-base62-sha1="6jVNHcGuyTemCAEZQhJwXdpTIBk" width="690" height="156" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2c4dd999cceb3c26306fce5091c66006594efeb2_2_690x156.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2c4dd999cceb3c26306fce5091c66006594efeb2.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2c4dd999cceb3c26306fce5091c66006594efeb2.png 2x" data-dominant-color="F5F5F5"></a></div><br>
+When I try to setup Speedify it fails saying the device doesn’t have internet.<br>
+Can anyone help?<br>
+Is there a decent setup guide for Raspberry Pi?<p></p>
+          <p><a href="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69/1</link>
+        <pubDate>Sun, 14 May 2023 04:04:49 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-69-1</guid>
+        <source url="https://smoothwan.discourse.group/t/cant-connect-ethernet-modem-on-raspberry-pi-4/69.rss">Can&#39;t Connect Ethernet modem on Raspberry Pi 4</source>
+      </item>
+  </channel>
+</rss>

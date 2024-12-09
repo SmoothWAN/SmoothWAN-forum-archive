@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DHCP relay help needed</title>
+    <link>https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148</link>
+    <description>I have the following case of using DHCP static leases by the current main router.
+
+I&#39;m trying to setup SmoothWAN so that LAN devices would still be obtain IP addresses through SmoothWan running Speedify according to the main router DHCP settings. Naturally, WAN traffic from the devices would go via Speedify for bonded connections. 
+
+I have the SmoothWan set up with Speedify working, but the correct settings for DHCP relay(?) are still elusive. 
+
+![image|528x499](upload://xNQM7PKHa6a6xoEgT2wXJ6W5Hwl.png)</description>
+    
+    <lastBuildDate>Sat, 04 May 2024 14:51:39 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>DHCP relay help needed</title>
+        <dc:creator><![CDATA[jip]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, many thanks for quick reply!</p>
+<p>Unfortunately I don’t quite follow the reason to “modify the Main Router DHCP gateway IP address to SmoothWAN LAN IP address”. Intuitively, the main router / DHCP server would not need any modifications.<br>
+Just to ensure, the idea is to use both connections (the “main” router and additional access point) for Speedified internet, while also using the main router for managing the local network. I’m not sure if this makes sense?</p>
+<p>In this scenario, how is it decided at SmoothWAN which DHCP server is providing the IP addresses to LAN devices? (Let’s say the secondary access point is providing 192.168.0.x address to SmoothWAN side of the network)</p>
+<p>The reason for such a setup is the possibility of having centralized management of IP addresses at the main router. In case Speedify is needed (with SmoothWAN in the middle), IP addresses don’t need to be altered for regaining access across LAN devices by IP.</p>
+          <p><a href="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/3</link>
+        <pubDate>Sat, 04 May 2024 13:46:53 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-148-3</guid>
+        <source url="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148.rss">DHCP relay help needed</source>
+      </item>
+      <item>
+        <title>DHCP relay help needed</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>You can disable DHCP on SmoothWAN, and by having the Main Router and AP LAN port connected to SmoothWAN, modify the Main Router DHCP gateway IP address to point to SmoothWAN LAN IP address, in the same subnet, so you will have to modify SmoothWAN LAN IP to 10.0.0.x…</p>
+<p>I guess you need the relay since the Main Router DHCP settings are limited?</p>
+          <p><a href="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/2</link>
+        <pubDate>Sat, 04 May 2024 12:22:28 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-148-2</guid>
+        <source url="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148.rss">DHCP relay help needed</source>
+      </item>
+      <item>
+        <title>DHCP relay help needed</title>
+        <dc:creator><![CDATA[jip]]></dc:creator>
+        <description><![CDATA[
+            <p>I have the following case of using DHCP static leases by the current main router.</p>
+<p>I’m trying to setup SmoothWAN so that LAN devices would still be obtain IP addresses through SmoothWan running Speedify according to the main router DHCP settings. Naturally, WAN traffic from the devices would go via Speedify for bonded connections.</p>
+<p>I have the SmoothWan set up with Speedify working, but the correct settings for DHCP relay(?) are still elusive.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9.png" data-download-href="/uploads/short-url/xNQM7PKHa6a6xoEgT2wXJ6W5Hwl.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_528x499.png" alt="image" data-base62-sha1="xNQM7PKHa6a6xoEgT2wXJ6W5Hwl" width="528" height="499" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_528x499.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_792x748.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_1056x998.png 2x" data-dominant-color="F7F7F8"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148/1</link>
+        <pubDate>Sat, 04 May 2024 11:41:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-148-1</guid>
+        <source url="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148.rss">DHCP relay help needed</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>How to bypass one device out wan</title>
+    <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118</link>
+    <description>I have one android device that will not connect to the Internet... i can only connect it to the slate but it doesn&#39;t give this device Internet and because my Slate AX with smooth wan is my only wifi in my camper I&#39;m forced to connect to it... I have two wan Ethernets going into the slate ax... how can I send this android device through one of the two Ethernets directly and bypass everything else in the smooth wan router including Speedify and even the smooth wan dhcp.. i just want it to seem like this android device is connected directly to one Ethernet cable</description>
+    
+    <lastBuildDate>Sat, 13 Jan 2024 12:53:41 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>How to bypass one device out wan</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Try creating a new bridge, and add the ethernet port to that, then in Wi-Fi settings point to the bridge.</p>
+          <p><a href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/4</link>
+        <pubDate>Sat, 13 Jan 2024 12:53:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-118-4</guid>
+        <source url="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss">How to bypass one device out wan</source>
+      </item>
+      <item>
+        <title>How to bypass one device out wan</title>
+        <dc:creator><![CDATA[whitieiii]]></dc:creator>
+        <description><![CDATA[
+            <p>Did that but now the device can’t get an ip address</p>
+          <p><a href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/3</link>
+        <pubDate>Fri, 05 Jan 2024 07:07:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-118-3</guid>
+        <source url="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss">How to bypass one device out wan</source>
+      </item>
+      <item>
+        <title>How to bypass one device out wan</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Have you tried a simple bridge like the following?</p>
+<h2><a name="screenshot-2023-10-27-232609488x500-75uploadadhdeu7bsqik9j1psscveuuazxupng-1" class="anchor" href="https://smoothwan.discourse.group#screenshot-2023-10-27-232609488x500-75uploadadhdeu7bsqik9j1psscveuuazxupng-1"></a><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/fddad37be704618b4cd943cb617ba377118899ae.png" data-download-href="/uploads/short-url/AdHDeu7bsqIK9J1PSscVeuUAzXU.png?dl=1" title="Screenshot 2023-10-27 232609"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/fddad37be704618b4cd943cb617ba377118899ae_2_366x375.png" alt="Screenshot 2023-10-27 232609" data-base62-sha1="AdHDeu7bsqIK9J1PSscVeuUAzXU" width="366" height="375" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/fddad37be704618b4cd943cb617ba377118899ae_2_366x375.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/fddad37be704618b4cd943cb617ba377118899ae_2_549x562.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/fddad37be704618b4cd943cb617ba377118899ae_2_732x750.png 2x" data-dominant-color="F8F8F8"></a></div></h2>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b7e2c5b74ba22ce6cdcb58e851139705dfa6e783.png" data-download-href="/uploads/short-url/qeJexFgCpRkUS2r6e1GT7gigygX.png?dl=1" title="Screenshot 2024-01-05 083605"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b7e2c5b74ba22ce6cdcb58e851139705dfa6e783_2_345x33.png" alt="Screenshot 2024-01-05 083605" data-base62-sha1="qeJexFgCpRkUS2r6e1GT7gigygX" width="345" height="33" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b7e2c5b74ba22ce6cdcb58e851139705dfa6e783_2_345x33.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b7e2c5b74ba22ce6cdcb58e851139705dfa6e783_2_517x49.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b7e2c5b74ba22ce6cdcb58e851139705dfa6e783_2_690x66.png 2x" data-dominant-color="F4F2F4"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/2</link>
+        <pubDate>Fri, 05 Jan 2024 05:38:36 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-118-2</guid>
+        <source url="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss">How to bypass one device out wan</source>
+      </item>
+      <item>
+        <title>How to bypass one device out wan</title>
+        <dc:creator><![CDATA[whitieiii]]></dc:creator>
+        <description><![CDATA[
+            <p>I have one android device that will not connect to the Internet… i can only connect it to the slate but it doesn’t give this device Internet and because my Slate AX with smooth wan is my only wifi in my camper I’m forced to connect to it… I have two wan Ethernets going into the slate ax… how can I send this android device through one of the two Ethernets directly and bypass everything else in the smooth wan router including Speedify and even the smooth wan dhcp… i just want it to seem like this android device is connected directly to one Ethernet cable</p>
+          <p><a href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118/1</link>
+        <pubDate>Thu, 04 Jan 2024 20:44:51 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-118-1</guid>
+        <source url="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss">How to bypass one device out wan</source>
+      </item>
+  </channel>
+</rss>

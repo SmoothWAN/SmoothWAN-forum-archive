@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Avahai mDNS reflector setup</title>
+    <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127</link>
+    <description>
+
+Instructions:
+Log onto your firewall Luci web interface and go to Network -&gt; Firewall -&gt; Traffic Rules tab. Under Open ports on router add a new rule for mDNS. This will be for UDP on port 5353
+
+Question:
+When I look in this tab/section I am missing the &quot;Open ports on router&quot; section. Any advice on fixing this or possibly setting this up without the gui? 
+
+
+Source: 
+https://blog.christophersmart.com/2020/03/30/resolving-mdns-across-vlans-with-avahi-on-openwrt/</description>
+    
+    <lastBuildDate>Wed, 10 Apr 2024 16:49:18 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Avahai mDNS reflector setup</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>You may need to use a different routing table.</p>
+          <p><a href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/4</link>
+        <pubDate>Wed, 10 Apr 2024 16:49:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-127-4</guid>
+        <source url="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss">Avahai mDNS reflector setup</source>
+      </item>
+      <item>
+        <title>Avahai mDNS reflector setup</title>
+        <dc:creator><![CDATA[kuz]]></dc:creator>
+        <description><![CDATA[
+            <p>Got it thanks, that is the conclusion I ended up coming to as well. I am on my 4th install of this and speedify works great just trying to figure out how to get everything to work with my local vlans and get the mdns reflector to work so I can get rid of my old stuff. So far stumbling through learning openwrt.</p>
+<p>I found some notes that say to delete wan and wan6 but these come back every time.</p>
+<p>When setting up a vlan on the br-lan it doesn’t populate a default route even though I have specified one so clients on the untagged br-lan cannot reached the tagged vlan.</p>
+          <p><a href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/3</link>
+        <pubDate>Tue, 06 Feb 2024 13:09:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-127-3</guid>
+        <source url="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss">Avahai mDNS reflector setup</source>
+      </item>
+      <item>
+        <title>Avahai mDNS reflector setup</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Seems to be in Network → Firewall → Traffic rules<br>
+The UI in screenshot is probably very old.</p>
+          <p><a href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/2</link>
+        <pubDate>Tue, 06 Feb 2024 01:53:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-127-2</guid>
+        <source url="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss">Avahai mDNS reflector setup</source>
+      </item>
+      <item>
+        <title>Avahai mDNS reflector setup</title>
+        <dc:creator><![CDATA[kuz]]></dc:creator>
+        <description><![CDATA[
+            <p>Instructions:<br>
+Log onto your firewall Luci web interface and go to Network → Firewall → Traffic Rules tab. Under Open ports on router add a new rule for mDNS. This will be for UDP on port 5353</p>
+<p>Question:<br>
+When I look in this tab/section I am missing the “Open ports on router” section. Any advice on fixing this or possibly setting this up without the gui?</p>
+<p>Source:<br>
+<a href="https://blog.christophersmart.com/2020/03/30/resolving-mdns-across-vlans-with-avahi-on-openwrt/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://blog.christophersmart.com/2020/03/30/resolving-mdns-across-vlans-with-avahi-on-openwrt/</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127/1</link>
+        <pubDate>Mon, 05 Feb 2024 02:11:45 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-127-1</guid>
+        <source url="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss">Avahai mDNS reflector setup</source>
+      </item>
+  </channel>
+</rss>

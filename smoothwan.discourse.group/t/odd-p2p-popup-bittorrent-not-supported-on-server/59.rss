@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Odd P2P popup Bittorrent not supported on server</title>
+    <link>https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59</link>
+    <description>Got a Bittorrent not supported on this server popup in the speedify UI.
+The only entry by the P2P firewall logger is for speedify itself
+```
+Thu Apr 20 18:48:25 2023 kern.warn kernel: [183019.979338] P2P:IN=lo OUT= MAC=00:00:00:00:00:00:00:00:00:00:00:00:08:00 SRC=127.0.0.1 DST=127.0.0.1 LEN=353 TOS=0x00 PREC=0x00 TTL=64 ID=3513 DF PROTO=TCP SPT=9330 DPT=34196 WINDOW=907 RES=0x00 ACK PSH URGP=0
+Thu Apr 20 18:48:25 2023 kern.warn kernel: [183019.979425] P2P:IN=lo OUT= MAC=00:00:00:00:00:00:00:00:00:00:00:00:08:00 SRC=127.0.0.1 DST=127.0.0.1 LEN=353 TOS=0x00 PREC=0x00 TTL=64 ID=3513 DF PROTO=TCP SPT=9330 DPT=34196 WINDOW=907 RES=0x00 ACK PSH URGP=0
+root@SmoothWAN:~# date
+Thu Apr 20 18:48:58 UTC 2023
+root@SmoothWAN:~# 
+root@SmoothWAN:~# netstat -anp | grep 9330
+tcp        0      0 0.0.0.0:9330            0.0.0.0:*               LISTEN      25425/speedify
+tcp        0      0 127.0.0.1:9330          127.0.0.1:34196         ESTABLISHED 25425/speedify
+tcp        0      0 127.0.0.1:34196         127.0.0.1:9330          ESTABLISHED 3040/nginx: worker 
+root@SmoothWAN:~# 
+
+```</description>
+    
+    <lastBuildDate>Fri, 21 Apr 2023 15:38:41 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Odd P2P popup Bittorrent not supported on server</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>This is the kernel log and it’s normal since Speedify WebSocket connection includes plain text “torrent” word.<br>
+You should use the LuCI menu to view the source IP which includes the filter: <a href="https://smoothwan.com/tips/">Tips &amp; Troubleshooting - SmoothWAN</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59/2</link>
+        <pubDate>Thu, 20 Apr 2023 19:31:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-59-2</guid>
+        <source url="https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59.rss">Odd P2P popup Bittorrent not supported on server</source>
+      </item>
+      <item>
+        <title>Odd P2P popup Bittorrent not supported on server</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Got a Bittorrent not supported on this server popup in the speedify UI.<br>
+The only entry by the P2P firewall logger is for speedify itself</p>
+<pre><code class="lang-auto">Thu Apr 20 18:48:25 2023 kern.warn kernel: [183019.979338] P2P:IN=lo OUT= MAC=00:00:00:00:00:00:00:00:00:00:00:00:08:00 SRC=127.0.0.1 DST=127.0.0.1 LEN=353 TOS=0x00 PREC=0x00 TTL=64 ID=3513 DF PROTO=TCP SPT=9330 DPT=34196 WINDOW=907 RES=0x00 ACK PSH URGP=0
+Thu Apr 20 18:48:25 2023 kern.warn kernel: [183019.979425] P2P:IN=lo OUT= MAC=00:00:00:00:00:00:00:00:00:00:00:00:08:00 SRC=127.0.0.1 DST=127.0.0.1 LEN=353 TOS=0x00 PREC=0x00 TTL=64 ID=3513 DF PROTO=TCP SPT=9330 DPT=34196 WINDOW=907 RES=0x00 ACK PSH URGP=0
+root@SmoothWAN:~# date
+Thu Apr 20 18:48:58 UTC 2023
+root@SmoothWAN:~# 
+root@SmoothWAN:~# netstat -anp | grep 9330
+tcp        0      0 0.0.0.0:9330            0.0.0.0:*               LISTEN      25425/speedify
+tcp        0      0 127.0.0.1:9330          127.0.0.1:34196         ESTABLISHED 25425/speedify
+tcp        0      0 127.0.0.1:34196         127.0.0.1:9330          ESTABLISHED 3040/nginx: worker 
+root@SmoothWAN:~# 
+
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59/1</link>
+        <pubDate>Thu, 20 Apr 2023 18:53:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-59-1</guid>
+        <source url="https://smoothwan.discourse.group/t/odd-p2p-popup-bittorrent-not-supported-on-server/59.rss">Odd P2P popup Bittorrent not supported on server</source>
+      </item>
+  </channel>
+</rss>

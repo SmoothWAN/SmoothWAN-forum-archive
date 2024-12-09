@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>&quot;Wireless is not associated&quot;</title>
+    <link>https://smoothwan.discourse.group/t/wireless-is-not-associated/77</link>
+    <description>I have followed all instructions and have added my Netgear M6 Hotspot as WLAN0 with connectivity and it is showing up in Speedify Overview page.  I have also added my home wifi network, but it is not showing in Speedify and has a message under the Wireless Overview section that says &quot;Wireless is not associated&quot;.  I can&#39;t figure out what that means or how to correct it so that I can use another internet connection in Speedify.</description>
+    
+    <lastBuildDate>Fri, 02 Jun 2023 04:45:50 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/wireless-is-not-associated/77.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>&quot;Wireless is not associated&quot;</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, does clicking scan next to the assigned (5 or 2.4ghz radio) display the home AP in scan results?</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireless-is-not-associated/77/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireless-is-not-associated/77/2</link>
+        <pubDate>Fri, 02 Jun 2023 04:45:50 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-77-2</guid>
+        <source url="https://smoothwan.discourse.group/t/wireless-is-not-associated/77.rss">&quot;Wireless is not associated&quot;</source>
+      </item>
+      <item>
+        <title>&quot;Wireless is not associated&quot;</title>
+        <dc:creator><![CDATA[rwathen]]></dc:creator>
+        <description><![CDATA[
+            <p>I have followed all instructions and have added my Netgear M6 Hotspot as WLAN0 with connectivity and it is showing up in Speedify Overview page.  I have also added my home wifi network, but it is not showing in Speedify and has a message under the Wireless Overview section that says “Wireless is not associated”.  I can’t figure out what that means or how to correct it so that I can use another internet connection in Speedify.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireless-is-not-associated/77/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireless-is-not-associated/77/1</link>
+        <pubDate>Thu, 01 Jun 2023 01:55:28 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-77-1</guid>
+        <source url="https://smoothwan.discourse.group/t/wireless-is-not-associated/77.rss">&quot;Wireless is not associated&quot;</source>
+      </item>
+  </channel>
+</rss>

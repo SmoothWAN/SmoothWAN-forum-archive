@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>AdGuard breaks Tmobile connections</title>
+    <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129</link>
+    <description>For the first time I tried adguard home feature today. 
+The Adguard GUI indicated it was working fine with metrics and whatnot. 
+Unfortunately, it immediately caused strange behavior in the Speedify GUI within smoothwan. Every other refresh cycle for the connection info it showed the 2 TMobile connections as dropped off of the active connection list or at the very least with 0 download, but my starlink and Pair and Share connections worked fine. (interestingly the phones connected through pair and share are google fi through TMobile) 
+If i disable Adguard home and reboot the router, all is back to normal.</description>
+    
+    <lastBuildDate>Thu, 08 Feb 2024 03:10:20 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>AdGuard breaks Tmobile connections</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Interesting, check in private/incognito tab as well, some browsers addons may be the problem.</p>
+          <p><a href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/4</link>
+        <pubDate>Thu, 08 Feb 2024 03:10:20 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-129-4</guid>
+        <source url="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss">AdGuard breaks Tmobile connections</source>
+      </item>
+      <item>
+        <title>AdGuard breaks Tmobile connections</title>
+        <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+        <description><![CDATA[
+            <p>I checked and yes it happens with all servers. It seems to be an issue with the speedify plugin. It was doing it without adguard so I uninstalled the speedify, waited a day, and reinstalled. Now its working ok but I’ll give it some time and report back. I did try uninstall/reinstall once before and one other time reimaging smoothwan and it started again both times after an hour or so.</p>
+          <p><a href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/3</link>
+        <pubDate>Thu, 08 Feb 2024 02:33:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-129-3</guid>
+        <source url="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss">AdGuard breaks Tmobile connections</source>
+      </item>
+      <item>
+        <title>AdGuard breaks Tmobile connections</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Does this happen with other Speedify servers?</p>
+          <p><a href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/2</link>
+        <pubDate>Tue, 06 Feb 2024 02:24:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-129-2</guid>
+        <source url="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss">AdGuard breaks Tmobile connections</source>
+      </item>
+      <item>
+        <title>AdGuard breaks Tmobile connections</title>
+        <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+        <description><![CDATA[
+            <p>For the first time I tried adguard home feature today.<br>
+The Adguard GUI indicated it was working fine with metrics and whatnot.<br>
+Unfortunately, it immediately caused strange behavior in the Speedify GUI within smoothwan. Every other refresh cycle for the connection info it showed the 2 TMobile connections as dropped off of the active connection list or at the very least with 0 download, but my starlink and Pair and Share connections worked fine. (interestingly the phones connected through pair and share are google fi through TMobile)<br>
+If i disable Adguard home and reboot the router, all is back to normal.</p>
+          <p><a href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129/1</link>
+        <pubDate>Tue, 06 Feb 2024 00:42:59 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-129-1</guid>
+        <source url="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss">AdGuard breaks Tmobile connections</source>
+      </item>
+  </channel>
+</rss>

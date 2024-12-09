@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+    <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57</link>
+    <description>Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot. 
+```
+root@SmoothWAN:/usr/share/speedify/logs# ls -ltra
+drwxrwxr-x    3 root     root           976 Apr 12 20:05 ..
+-rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt
+-rw-r--r--    1 root     root          1677 Apr 14 21:19 histogram_20230413_145654.tsv
+-rw-r--r--    1 root     root        265356 Apr 14 23:52 summary_041423.txt
+-rw-r--r--    1 root     root          2748 Apr 15 20:03 histogram_20230414_211943.tsv
+-rw-r--r--    1 root     root       1060784 Apr 15 20:09 speedify_20230415_200353.log_0
+-rw-r--r--    1 root     root        419993 Apr 15 20:09 speedify_20230415_200910.log_0
+-rw-r--r--    1 root     root       3145728 Apr 15 20:46 speedify_20230415_200950.log_2
+-rw-r--r--    1 root     root       3145728 Apr 15 21:10 speedify_20230415_200950.log_1
+-rw-r--r--    1 root     root       1904788 Apr 15 21:23 speedify_20230415_200950.log_0
+-rw-r--r--    1 root     root          2628 Apr 15 21:24 histogram_20230415_200950.tsv
+-rw-r--r--    1 root     root        604847 Apr 15 23:59 summary_041523.txt
+-rw-r--r--    1 root     root        332308 Apr 16 23:50 summary_041623.txt
+-rw-r--r--    1 root     root        346793 Apr 17 23:50 summary_041723.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 15:46 speedify_20230415_212412.log_2
+-rw-r--r--    1 root     root       3145728 Apr 18 15:55 speedify_20230415_212412.log_1
+-rw-r--r--    1 root     root        846943 Apr 18 15:57 speedify_20230415_212412.log_0
+-rw-r--r--    1 root     root        108945 Apr 18 15:58 settings.txt.lastGoodRead
+-rw-r--r--    1 root     root            46 Apr 18 15:58 VERSION
+-rw-r--r--    1 root     root          2476 Apr 18 15:58 histogram_20230415_212412.tsv
+-rw-r--r--    1 root     root       3145728 Apr 18 16:31 speedify_20230418_155842.log_2
+-rw-r--r--    1 root     root        359007 Apr 18 16:32 summary_041823.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 16:36 speedify_20230418_155842.log_1
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt.lastGoodWrite
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt
+-rw-r--r--    1 root     root         27256 Apr 18 16:39 lastUsedSettings.txt
+-rw-r--r--    1 root     root        151552 Apr 18 16:39 sql.db
+drwxr-xr-x    2 root     root          2416 Apr 18 16:39 .
+-rw-r--r--    1 root     root       1415326 Apr 18 16:39 speedify_20230418_155842.log_0
+root@SmoothWAN:/usr/share/speedify/logs# 
+
+```
+
+&gt; Side note: It would be good to be able to specify a log directory e.g. mounted sd-card.
+
+Symptom was that web browser wouldn&#39;t load anything from the internet. I could still (slowly) access luci and netdata.
+
+Attached some graphs from netdata that I was able to grab before reboot. Didn&#39;t have a console to check which proc(s) were on top. 
+![Screen Shot 2023-04-18 at 9.58.34 AM|514x500](upload://6E9rrR3ezZXW8pzNCTnLTFlPyKL.png)
+![Screen Shot 2023-04-18 at 9.58.44 AM|519x500](upload://a5FnUAVy6Zmdbt0932P3ba2YLMP.png)</description>
+    
+    <lastBuildDate>Wed, 26 Apr 2023 00:29:55 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I wonder if the previous smoothwan versions are different, since I noticed that the official firmware 4.2.0 is using a bit more memory than 4.1 , and HF5 use the 4.2 base.<br>
+Don’t remember what Speedify <em>usually</em> used in terms of RAM unfortunately.<br>
+I do remember that it never reached hundreds though.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/17</link>
+        <pubDate>Wed, 26 Apr 2023 00:29:55 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-17</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Memory usage has been been climbing.</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# uptime
+ 22:50:07 up 4 days, 41 min,  load average: 0.49, 0.84, 0.96
+</code></pre>
+<p>Speedify was 196 or so yesterday<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c88b4224602d68359f355f63b0e467c195d62225.png" data-download-href="/uploads/short-url/sC5QVSpbzG9FUNeSeH4CPUzs549.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_690x177.png" alt="image" data-base62-sha1="sC5QVSpbzG9FUNeSeH4CPUzs549" width="690" height="177" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_690x177.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c88b4224602d68359f355f63b0e467c195d62225_2_1035x265.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c88b4224602d68359f355f63b0e467c195d62225.png 2x" data-dominant-color="24362D"></a></div><p></p>
+<p>And after <code>/etc/init.d/speedifyconf restart</code> we have this<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png" data-download-href="/uploads/short-url/6to3HyBnT7ZqzGzHAtkeZX70pQW.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86_2_690x203.png" alt="image" data-base62-sha1="6to3HyBnT7ZqzGzHAtkeZX70pQW" width="690" height="203" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86_2_690x203.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d5f7be817779aeb6f9464f751ef5bab30681b86.png 2x" data-dominant-color="24372E"></a></div><p></p>
+<p>and whatever was swapped out is probably not speedify related</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# free
+              total        used        free      shared  buff/cache   available
+Mem:         402612      217064      105380         528       80168      137320
+Swap:        195312        5404      189908
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/16</link>
+        <pubDate>Tue, 25 Apr 2023 23:24:31 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-16</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>As a kernel module I mean. That’s LuCI support for the official builds. (gl.inet is not official, and smoothwan is using that)</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/15</link>
+        <pubDate>Tue, 25 Apr 2023 17:54:07 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-15</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="TalalM" data-post="13" data-topic="57">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://yyz2.discourse-cdn.com/free1/user_avatar/smoothwan.discourse.group/talalm/48/115_2.png" class="avatar"> TalalM:</div>
+<blockquote>
+<p>Only one of the compression algorithms is available.</p>
+</blockquote>
+</aside>
+<p><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/f9d89e5b200987579314ad00dc8acce4cfb8779d.png" alt="image" data-base62-sha1="zEeZAgjzywb0ohmfLovIazBfQQZ" width="282" height="117"></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/14</link>
+        <pubDate>Tue, 25 Apr 2023 16:58:11 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-14</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Good to hear, not sure if that option works on the unofficial OpenWrt build by GL.iNet, let me know if it does. Only one of the compression algorithms is available.<br>
+Will push a hotfix soon with <code>zram</code> enabled.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/13</link>
+        <pubDate>Tue, 25 Apr 2023 15:36:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-13</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>In terms of zram, it looks like there are luci settings instead of forcing something in rc.local wouldn’t it make more sense to use uci to keep it more obvious?</p>
+<p><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/a7b746453fb2828580311926e538fd10bd957f6c.png" alt="image" data-base62-sha1="nVGoSONfr9YCsixFw2p2Y1BURha" width="666" height="398"></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/12</link>
+        <pubDate>Mon, 24 Apr 2023 23:01:36 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-12</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>With zram enabled and swap on, used RAM seems to be holding steady now at the ~71% mark and free does show some swap in use. Before zram, all swap numbers were zeros.</p>
+<p><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/00fe98cf35a6eca6b1bc88639daf7907f5f5d9c1.png" alt="image" data-base62-sha1="8NtdW8C3j6hxMB6IIFngXHFIat" width="109" height="128"></p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify# free
+              total        used        free      shared  buff/cache   available
+Mem:         402612      278336       33768         448       90508       76044
+Swap:        195312        5636      189676
+root@SmoothWAN:/usr/share/speedify# 
+
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png" data-download-href="/uploads/short-url/ulj09lAWreLofNR5kQkSbIA2JSA.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c_2_429x500.png" alt="image" data-base62-sha1="ulj09lAWreLofNR5kQkSbIA2JSA" width="429" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c_2_429x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d4a9cadf8af05bde9ebfdcdb34cc89c5cf087f5c.png 2x" data-dominant-color="484232"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016.png" data-download-href="/uploads/short-url/spZhhhOf7kOoSaVmoTK7wrGsfNs.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_446x500.png" alt="image" data-base62-sha1="spZhhhOf7kOoSaVmoTK7wrGsfNs" width="446" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_446x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_669x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/c72cee142f503b0f013c5652ff14b35c0b7fa016_2_892x1000.png 2x" data-dominant-color="323634"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/11</link>
+        <pubDate>Mon, 24 Apr 2023 18:30:09 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-11</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hope <code>zram</code> helps, else you may need to replicate the memory (leak?) issue on Ubuntu then send the logs to Speedify, since they do not support OpenWrt.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/10</link>
+        <pubDate>Sun, 23 Apr 2023 18:52:14 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-10</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>It’s just speedify process that starts consuming ram. At about the two day mark I start getting low memory banner in the UI.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/9</link>
+        <pubDate>Sun, 23 Apr 2023 06:08:31 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-9</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Enabling <code>zram</code> next release, upon further tests, Flint &amp; Slate AX 5Ghz Wi-Fi driver use too much memory that is not freed when 10+ clients are connected.</p>
+<p>Flint/Slate AX patch for testing, in terminal, type the following to enable <code>zram</code>:<br>
+Slate:</p>
+<pre><code class="lang-auto">wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN/main/devconfigs/slateax/files/etc/rc.local -O /etc/rc.local
+</code></pre>
+<p>Flint:</p>
+<pre><code class="lang-auto">wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN/main/devconfigs/flint/files/etc/rc.local -O /etc/rc.local
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/8</link>
+        <pubDate>Sat, 22 Apr 2023 16:59:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-8</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Looks like <code>zram</code> has to be enabled for the latest release, unless other processes have abnormal memory usage.</p>
+<p>Use <code>htop</code> command &amp; press <code>F6</code> to sort by memory usage to see if other processes have abnormal memory usage.</p>
+<p>Related:<br>
+<a href="https://github.com/SmoothWAN/SmoothWAN/issues/89">Speedify memory leak/usage issue · Issue #89 · SmoothWAN/SmoothWAN (github.com)</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/7</link>
+        <pubDate>Sat, 22 Apr 2023 16:34:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-7</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I haven’t updated to the latest version, feel free to downgrade Speedify version in the <code>Options</code> menu, I hope it’s not an issue with the latest update.</p>
+<p>Similar issue: <a href="https://github.com/SmoothWAN/SmoothWAN/issues/141">Speedify Stops and cannot be restarted · Issue #141 · SmoothWAN/SmoothWAN (github.com)</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/6</link>
+        <pubDate>Thu, 20 Apr 2023 18:28:35 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-6</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I did have a <code>low memory</code> banner pop up in the speedify UI about an hour ago right around Uptime: 2 days. When I checked, speedify was top of memory use. And one CPU was showing pegged with <code>speedify -d logs</code> as the top process both CPU and Memory. I did <code>/etc/init.d/speedifyconf restart</code> and the memory use went down and the <code>speedify -d logs</code> is now in check</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/5</link>
+        <pubDate>Thu, 20 Apr 2023 18:01:32 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-5</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>of course now that I’m watching it constantly there’s not been any problems.<br>
+Added vnStat2<br>
+Also added the bandwidth sharing under SQM as described on the wiki</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/4</link>
+        <pubDate>Thu, 20 Apr 2023 16:48:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-4</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve only added <code>netdata</code>, <code>luci-app-nlbwmon</code> and updated some filesystem utils<br>
+There are three wifi clients on Narwhal<br>
+Zero on shadow<br>
+Maybe ten on raven<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45.png" data-download-href="/uploads/short-url/ck2BDsY9mXExtlatvonUbcKu1cF.png?dl=1" title="Screen Shot 2023-04-18 at 2.15.04 PM" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_379x500.png" alt="Screen Shot 2023-04-18 at 2.15.04 PM" data-base62-sha1="ck2BDsY9mXExtlatvonUbcKu1cF" width="379" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_379x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45_2_568x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/565e11fbf4bebff968ca53b58a7d3427276e3e45.png 2x" data-dominant-color="F2F5F7"></a></div><p></p>
+<pre><code class="lang-auto">root@SmoothWAN:~# cat /etc/device_info 
+DEVICE_MANUFACTURER='OpenWrt'
+DEVICE_MANUFACTURER_URL='https://openwrt.org/'
+DEVICE_PRODUCT='Generic'
+DEVICE_REVISION='v0'
+root@SmoothWAN:~# cat /etc/openwrt_release 
+DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='21.02-SNAPSHOT'
+DISTRIB_REVISION='r16399+159-c67509efd7'
+DISTRIB_TARGET='ipq807x/ipq60xx'
+DISTRIB_ARCH='arm_cortex-a7'
+DISTRIB_DESCRIPTION='OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7'
+DISTRIB_TAINTS='no-all override'
+DISTRIB_TIP='OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7 / TIP-devel-cb0d6246'
+DISTRIB_TIP_VERSION='devel'
+DISTRIB_DESCRIPTION='SmoothWAN v0.99.5HF5'
+root@SmoothWAN:~# cat /etc/openwrt_version
+ApNos-cb0d6246
+r16399+159-c67509efd7
+root@SmoothWAN:~# /usr/share/speedify/speedify_cli version
+{
+	"bug" : 1,
+	"build" : 10893,
+	"maj" : 13,
+	"min" : 2
+}
+root@SmoothWAN:~# 
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/3</link>
+        <pubDate>Tue, 18 Apr 2023 20:43:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-3</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s interesting, can you share what other features enabled other than Speedify, and an estimate of connected Wi-Fi clients?<br>
+I think you can mount <code>/var</code> to a pre-formatted ext4 SD-card in LuCI mountpoints menu for logs.</p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/2</link>
+        <pubDate>Tue, 18 Apr 2023 17:02:49 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-2</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+      <item>
+        <title>Slate AX CPU to 100 and all network traffic ceased reboot required</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Not sure which logs to start digging in. /usr/local/share/speedigy/logs seems to have persisted past the reboot.</p>
+<pre><code class="lang-auto">root@SmoothWAN:/usr/share/speedify/logs# ls -ltra
+drwxrwxr-x    3 root     root           976 Apr 12 20:05 ..
+-rw-r--r--    1 root     root        173563 Apr 13 23:59 summary_041323.txt
+-rw-r--r--    1 root     root          1677 Apr 14 21:19 histogram_20230413_145654.tsv
+-rw-r--r--    1 root     root        265356 Apr 14 23:52 summary_041423.txt
+-rw-r--r--    1 root     root          2748 Apr 15 20:03 histogram_20230414_211943.tsv
+-rw-r--r--    1 root     root       1060784 Apr 15 20:09 speedify_20230415_200353.log_0
+-rw-r--r--    1 root     root        419993 Apr 15 20:09 speedify_20230415_200910.log_0
+-rw-r--r--    1 root     root       3145728 Apr 15 20:46 speedify_20230415_200950.log_2
+-rw-r--r--    1 root     root       3145728 Apr 15 21:10 speedify_20230415_200950.log_1
+-rw-r--r--    1 root     root       1904788 Apr 15 21:23 speedify_20230415_200950.log_0
+-rw-r--r--    1 root     root          2628 Apr 15 21:24 histogram_20230415_200950.tsv
+-rw-r--r--    1 root     root        604847 Apr 15 23:59 summary_041523.txt
+-rw-r--r--    1 root     root        332308 Apr 16 23:50 summary_041623.txt
+-rw-r--r--    1 root     root        346793 Apr 17 23:50 summary_041723.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 15:46 speedify_20230415_212412.log_2
+-rw-r--r--    1 root     root       3145728 Apr 18 15:55 speedify_20230415_212412.log_1
+-rw-r--r--    1 root     root        846943 Apr 18 15:57 speedify_20230415_212412.log_0
+-rw-r--r--    1 root     root        108945 Apr 18 15:58 settings.txt.lastGoodRead
+-rw-r--r--    1 root     root            46 Apr 18 15:58 VERSION
+-rw-r--r--    1 root     root          2476 Apr 18 15:58 histogram_20230415_212412.tsv
+-rw-r--r--    1 root     root       3145728 Apr 18 16:31 speedify_20230418_155842.log_2
+-rw-r--r--    1 root     root        359007 Apr 18 16:32 summary_041823.txt
+-rw-r--r--    1 root     root       3145728 Apr 18 16:36 speedify_20230418_155842.log_1
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt.lastGoodWrite
+-rw-r--r--    1 root     root        109201 Apr 18 16:39 settings.txt
+-rw-r--r--    1 root     root         27256 Apr 18 16:39 lastUsedSettings.txt
+-rw-r--r--    1 root     root        151552 Apr 18 16:39 sql.db
+drwxr-xr-x    2 root     root          2416 Apr 18 16:39 .
+-rw-r--r--    1 root     root       1415326 Apr 18 16:39 speedify_20230418_155842.log_0
+root@SmoothWAN:/usr/share/speedify/logs# 
+
+</code></pre>
+<blockquote>
+<p>Side note: It would be good to be able to specify a log directory e.g. mounted sd-card.</p>
+</blockquote>
+<p>Symptom was that web browser wouldn’t load anything from the internet. I could still (slowly) access luci and netdata.</p>
+<p>Attached some graphs from netdata that I was able to grab before reboot. Didn’t have a console to check which proc(s) were on top.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e96fb96b83f1aaed3129843c05df611264b48b3.png" data-download-href="/uploads/short-url/6E9rrR3ezZXW8pzNCTnLTFlPyKL.png?dl=1" title="Screen Shot 2023-04-18 at 9.58.34 AM" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_514x500.png" alt="Screen Shot 2023-04-18 at 9.58.34 AM" data-base62-sha1="6E9rrR3ezZXW8pzNCTnLTFlPyKL" width="514" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_514x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_771x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2e96fb96b83f1aaed3129843c05df611264b48b3_2_1028x1000.png 2x" data-dominant-color="323539"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf.png" data-download-href="/uploads/short-url/a5FnUAVy6Zmdbt0932P3ba2YLMP.png?dl=1" title="Screen Shot 2023-04-18 at 9.58.44 AM" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_519x500.png" alt="Screen Shot 2023-04-18 at 9.58.44 AM" data-base62-sha1="a5FnUAVy6Zmdbt0932P3ba2YLMP" width="519" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_519x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_778x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46b9bf6dc7cdb7ce7b48a2ea9b3635ffae0b0acf_2_1038x1000.png 2x" data-dominant-color="2C2F32"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57/1</link>
+        <pubDate>Tue, 18 Apr 2023 16:46:27 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-57-1</guid>
+        <source url="https://smoothwan.discourse.group/t/slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.rss">Slate AX CPU to 100 and all network traffic ceased reboot required</source>
+      </item>
+  </channel>
+</rss>

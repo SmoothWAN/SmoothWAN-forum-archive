@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Save changes to WAN Interface - Engarde</title>
+    <link>https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164</link>
+    <description>Hello,
+
+I&#39;ve set the *Override IPv4 routing table* for WAN interface to BYP1. However, any changes to WAN interface resets on restart of the device. Is there a simple, noob-friendly solution to keep it fixed to BYP1?
+
+Edit: This only happens to the WAN interface created by engarde. Any changes, including custom DNS, also gets reset to default upon device restart. I&#39;m using Raspberry Pi 4.</description>
+    
+    <lastBuildDate>Thu, 15 Aug 2024 06:19:31 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Save changes to WAN Interface - Engarde</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, yes that’s a limitation with Engarde since it only reads default gateway and hence a dedicated table is automatically selected.<br>
+You can try the VPN bypass app instead.</p>
+          <p><a href="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/3</link>
+        <pubDate>Thu, 15 Aug 2024 06:19:31 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-164-3</guid>
+        <source url="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164.rss">Save changes to WAN Interface - Engarde</source>
+      </item>
+      <item>
+        <title>Save changes to WAN Interface - Engarde</title>
+        <dc:creator><![CDATA[squirrel]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://smoothwan.discourse.group/u/talalm">@TalalM</a> Hi Talal, I’d greatly appreciate your input on this <img src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/2</link>
+        <pubDate>Sun, 11 Aug 2024 22:12:51 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-164-2</guid>
+        <source url="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164.rss">Save changes to WAN Interface - Engarde</source>
+      </item>
+      <item>
+        <title>Save changes to WAN Interface - Engarde</title>
+        <dc:creator><![CDATA[squirrel]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I’ve set the <em>Override IPv4 routing table</em> for WAN interface to BYP1. However, any changes to WAN interface resets on restart of the device. Is there a simple, noob-friendly solution to keep it fixed to BYP1?</p>
+<p>Edit: This only happens to the WAN interface created by engarde. Any changes, including custom DNS, also gets reset to default upon device restart. I’m using Raspberry Pi 4.</p>
+          <p><a href="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164/1</link>
+        <pubDate>Tue, 06 Aug 2024 15:33:52 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-164-1</guid>
+        <source url="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164.rss">Save changes to WAN Interface - Engarde</source>
+      </item>
+  </channel>
+</rss>

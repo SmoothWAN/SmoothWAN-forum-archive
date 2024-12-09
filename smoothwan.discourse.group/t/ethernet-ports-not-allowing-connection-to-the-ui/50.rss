@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ethernet Ports not allowing connection to the UI</title>
+    <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50</link>
+    <description>I&#39;ve inadvertently changed a setting for the Slate AX 1800. I cannot connect to the router via an Ethernet cable. I entered 172.17.17.2 into the browser, and it will not connect.  I have tried Lan 2 and the WAN ports with no luck. I have even tried to roll back the firmware with no luck. I appreciate your help in advance.</description>
+    
+    <lastBuildDate>Mon, 10 Apr 2023 22:13:26 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>No problem, I need to make the text bigger on the Slate AX diagram.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1c5a04592227affbb8601c00d6ef61598f1ad1fd.png" data-download-href="/uploads/short-url/42OeeREyG4WECLySOEOsmJq99Yp.png?dl=1" title="image"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1c5a04592227affbb8601c00d6ef61598f1ad1fd_2_461x500.png" alt="image" data-base62-sha1="42OeeREyG4WECLySOEOsmJq99Yp" width="461" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1c5a04592227affbb8601c00d6ef61598f1ad1fd_2_461x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1c5a04592227affbb8601c00d6ef61598f1ad1fd_2_691x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1c5a04592227affbb8601c00d6ef61598f1ad1fd.png 2x" data-dominant-color="EDEBEC"></a></div><br>
+New:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/02cb06ce702c4ec1007a1f8c42977142e8a4f3dc.webp" data-download-href="/uploads/short-url/oHW7mj59ZplWuQ4AEFq6YeswCE.webp?dl=1" title="flint"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/02cb06ce702c4ec1007a1f8c42977142e8a4f3dc_2_489x500.webp" alt="flint" data-base62-sha1="oHW7mj59ZplWuQ4AEFq6YeswCE" width="489" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/02cb06ce702c4ec1007a1f8c42977142e8a4f3dc_2_489x500.webp, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/02cb06ce702c4ec1007a1f8c42977142e8a4f3dc_2_733x750.webp 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/02cb06ce702c4ec1007a1f8c42977142e8a4f3dc_2_978x1000.webp 2x" data-dominant-color="DCDCDC"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/10</link>
+        <pubDate>Mon, 10 Apr 2023 21:07:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-10</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[Hoochthefireman]]></dc:creator>
+        <description><![CDATA[
+            <p>After reflashing to the original firmware and then the alternate install of smoothWAN, still had no luck. I realized I needed the ethernet to be connected third port (LAN 2), and everything worked. I was connected to WAN 1 and 2 when trying to connect the router. Thanks for your time with this. Feeling a little silly. lol.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/9</link>
+        <pubDate>Mon, 10 Apr 2023 20:59:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-9</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>To rule out image corruption, try reflashing the WebUI image over Wi-Fi by following the alternative instructions in releases page.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/8</link>
+        <pubDate>Mon, 10 Apr 2023 15:31:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-8</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[Hoochthefireman]]></dc:creator>
+        <description><![CDATA[
+            <p>Windows 10. I’ve also tried with an Android device with no luck either. Using Chrome</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/7</link>
+        <pubDate>Mon, 10 Apr 2023 15:25:34 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-7</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Oh I see, what computer/OS are you using?</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/6</link>
+        <pubDate>Mon, 10 Apr 2023 15:21:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-6</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[Hoochthefireman]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes. I am able to log in to the UI using WiFi. Just not able to connect directly.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/5</link>
+        <pubDate>Mon, 10 Apr 2023 15:15:52 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-5</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Have you tried WiFi to see if it’s host issue</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/4</link>
+        <pubDate>Mon, 10 Apr 2023 13:40:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-4</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[Hoochthefireman]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve done that a few times and changed ethernet cables but to no avail. I just can’t figure out what I am missing.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/3</link>
+        <pubDate>Mon, 10 Apr 2023 11:47:00 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-3</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, try pressing the reset button on the side for 10 seconds and release, the unit should reboot after a few seconds with reset settings.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/2</link>
+        <pubDate>Mon, 10 Apr 2023 01:36:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-2</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+      <item>
+        <title>Ethernet Ports not allowing connection to the UI</title>
+        <dc:creator><![CDATA[Hoochthefireman]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve inadvertently changed a setting for the Slate AX 1800. I cannot connect to the router via an Ethernet cable. I entered 172.17.17.2 into the browser, and it will not connect.  I have tried Lan 2 and the WAN ports with no luck. I have even tried to roll back the firmware with no luck. I appreciate your help in advance.</p>
+          <p><a href="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50/1</link>
+        <pubDate>Mon, 10 Apr 2023 00:22:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-50-1</guid>
+        <source url="https://smoothwan.discourse.group/t/ethernet-ports-not-allowing-connection-to-the-ui/50.rss">Ethernet Ports not allowing connection to the UI</source>
+      </item>
+  </channel>
+</rss>

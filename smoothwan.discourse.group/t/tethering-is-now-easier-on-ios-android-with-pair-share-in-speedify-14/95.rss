@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Tethering is now easier on iOS &amp; Android with Pair &amp; Share in Speedify 14</title>
+    <link>https://smoothwan.discourse.group/t/tethering-is-now-easier-on-ios-android-with-pair-share-in-speedify-14/95</link>
+    <description>Note: as of 14.0.1, speed is limited to 10Mbit for sharing per device, hotspot method is still needed for high speed bonding.
+
+Sharing your cellular from your phone using hotspot or USB tethering is now optional.
+Simply install Speedify on your phone and connect your phone&#39;s Wi-Fi to SmoothWAN&#39;s access point then pair.
+Your phone will share it&#39;s cellular over SmoothWAN&#39;s access point. A.K.A reverse tethering.
+
+You can still use the hotspot method if you need to share your phone&#39;s connected Wi-Fi connection*, this will replace the need to use USB Wi-Fi dongle on your SmoothWAN appliance. 
+
+*Applicable to mid-high end Android smartphones and iPhones that can do hotspot + client mode simultaneously.</description>
+    
+    <lastBuildDate>Fri, 22 Sep 2023 15:15:35 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/tethering-is-now-easier-on-ios-android-with-pair-share-in-speedify-14/95.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Tethering is now easier on iOS &amp; Android with Pair &amp; Share in Speedify 14</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Note: as of 14.0.1, speed is limited to 10Mbit for sharing per device, hotspot method is still needed for high speed bonding.</p>
+<p>Sharing your cellular from your phone using hotspot or USB tethering is now optional.<br>
+Simply install Speedify on your phone and connect your phone’s Wi-Fi to SmoothWAN’s access point then pair.<br>
+Your phone will share it’s cellular over SmoothWAN’s access point. A.K.A reverse tethering.</p>
+<p>You can still use the hotspot method if you need to share your phone’s connected Wi-Fi connection*, this will replace the need to use USB Wi-Fi dongle on your SmoothWAN appliance.</p>
+<p>*Applicable to mid-high end Android smartphones and iPhones that can do hotspot + client mode simultaneously.</p>
+          <p><a href="https://smoothwan.discourse.group/t/tethering-is-now-easier-on-ios-android-with-pair-share-in-speedify-14/95/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/tethering-is-now-easier-on-ios-android-with-pair-share-in-speedify-14/95/1</link>
+        <pubDate>Fri, 22 Sep 2023 15:15:35 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-95-1</guid>
+        <source url="https://smoothwan.discourse.group/t/tethering-is-now-easier-on-ios-android-with-pair-share-in-speedify-14/95.rss">Tethering is now easier on iOS &amp; Android with Pair &amp; Share in Speedify 14</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>PSA: Unable to sign-in Speedify UI with no error provided</title>
+    <link>https://smoothwan.discourse.group/t/psa-unable-to-sign-in-speedify-ui-with-no-error-provided/16</link>
+    <description>In recent versions on Ubuntu and SmoothWAN as of version 13.01:
+- Check your password.
+- Free plan is not supported. (apparently)</description>
+    
+    <lastBuildDate>Fri, 10 Mar 2023 19:03:46 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/psa-unable-to-sign-in-speedify-ui-with-no-error-provided/16.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>PSA: Unable to sign-in Speedify UI with no error provided</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>In recent versions on Ubuntu and SmoothWAN as of version 13.01:</p>
+<ul>
+<li>Check your password.</li>
+<li>Free plan is not supported. (apparently)</li>
+</ul>
+          <p><a href="https://smoothwan.discourse.group/t/psa-unable-to-sign-in-speedify-ui-with-no-error-provided/16/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/psa-unable-to-sign-in-speedify-ui-with-no-error-provided/16/1</link>
+        <pubDate>Fri, 10 Mar 2023 19:03:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-16-1</guid>
+        <source url="https://smoothwan.discourse.group/t/psa-unable-to-sign-in-speedify-ui-with-no-error-provided/16.rss">PSA: Unable to sign-in Speedify UI with no error provided</source>
+      </item>
+  </channel>
+</rss>

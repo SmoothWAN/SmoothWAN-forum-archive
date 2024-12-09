@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/fast-com-netflix-questions/46 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Fast.com/Netflix questions - Development &amp; Feedback - SmoothWAN Forum</title>
+    <meta name="description" content="In the log of Speedify trigger/install there are two errors at the end of the log: 
+interface wan not found 
+interface wan6 not found 
+  
+Also I connect to three bonded (two wired, on on 2.4 GHz) and do a regular speed t&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="46.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fast.com/Netflix questions&#39;" href="46.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e48f1fa60c571ec2c93c5100e74a5e94800b424.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e48f1fa60c571ec2c93c5100e74a5e94800b424.png" />
+<meta property="og:url" content="46.html" />
+<meta name="twitter:url" content="46.html" />
+<meta property="og:title" content="Fast.com/Netflix questions" />
+<meta name="twitter:title" content="Fast.com/Netflix questions" />
+<meta property="og:description" content="In the log of Speedify trigger/install there are two errors at the end of the log:  interface wan not found  interface wan6 not found     Also I connect to three bonded (two wired, on on 2.4 GHz) and do a regular speed test everything is fine.  If I do a speed test with fast.com, it does not seem to use the bonded channels, there is no throughput seen on the status screen and the speed from fast.com is that of one of the wired connections (a dsl line).  Fast.com also indicates that it is connect..." />
+<meta name="twitter:description" content="In the log of Speedify trigger/install there are two errors at the end of the log:  interface wan not found  interface wan6 not found     Also I connect to three bonded (two wired, on on 2.4 GHz) and do a regular speed test everything is fine.  If I do a speed test with fast.com, it does not seem to use the bonded channels, there is no throughput seen on the status screen and the speed from fast.com is that of one of the wired connections (a dsl line).  Fast.com also indicates that it is connect..." />
+<meta property="og:article:section" content="Development &amp; Feedback" />
+<meta property="og:article:section:color" content="a0def5" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2023-04-05T02:00:08+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="46.html">Fast.com/Netflix questions</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/development/2.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #a0def5'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Development &amp; Feedback</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fast.com/Netflix questions'>
+      <link itemprop='url' href='46.html'>
+      <meta itemprop='datePublished' content='2023-04-05T02:00:08Z'>
+        <meta itemprop='articleSection' content='Development &amp; Feedback'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/meassick'><span itemprop='name'>meassick</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="46.html">
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e48f1fa60c571ec2c93c5100e74a5e94800b424.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-04-05T02:00:08Z' class='post-time'>
+                    April 5, 2023,  2:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:33:02Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In the log of Speedify trigger/install there are two errors at the end of the log:<br>
+interface wan not found<br>
+interface wan6 not found<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e48f1fa60c571ec2c93c5100e74a5e94800b424.png" data-download-href="/uploads/short-url/6BsfnzzRmv30x9NqhkDWnLXHnU0.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2e48f1fa60c571ec2c93c5100e74a5e94800b424.png" alt="image" data-base62-sha1="6BsfnzzRmv30x9NqhkDWnLXHnU0" width="690" height="364" data-dominant-color="F1F1F1"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1011×534 46.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Also I connect to three bonded (two wired, on on 2.4 GHz) and do a regular speed test everything is fine.  If I do a speed test with <a href="http://fast.com/" rel="noopener nofollow ugc">fast.com</a>, it does not seem to use the bonded channels, there is no throughput seen on the status screen and the speed from <a href="http://fast.com/" rel="noopener nofollow ugc">fast.com</a> is that of one of the wired connections (a dsl line).  <a href="http://fast.com/" rel="noopener nofollow ugc">Fast.com</a> also indicates that it is connecting to a server that I would expect from the dsl line and not one from speedify.  This behavior is different from HF4 where the throughput did show up on the status screen, the speed reflected bonded lines and the server is one that I would expect with speedify.</p>
+<p>I have reflashed between HF4 and HF5 a number of times and the behavior is always the same.</p>
+<p>Also the system log shows lots of errors, I dont know how to attach it to this post</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:10:00Z' class='post-time'>
+                    April 5, 2023,  2:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:10:00Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Isn’t <a href="http://fast.com/">fast.com</a> Netflix and bypassed automatically by Speedify?<br>
+Is there activity in the bypassed graph inside Speedify?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/meassick'><span itemprop='name'>meassick</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:13:01Z' class='post-time'>
+                    April 5, 2023,  2:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:13:01Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I thought it should be, but in HF4 is seems not to be.  I have switched between HF4 and HF5 three times and the behavior is always the same - bonded in HF4 and not in HF5.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:13:49Z' class='post-time'>
+                    April 5, 2023,  2:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:13:49Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That means Netflix bypass wasn’t working in HF4.<br>
+(note: <a href="http://fast.com/">fast.com</a> is provided by netflix)<br>
+Is it happening with <a href="http://speedtest.net/">speedtest.net</a>?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/meassick'><span itemprop='name'>meassick</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:20:36Z' class='post-time'>
+                    April 5, 2023,  2:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:20:36Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>using <a href="http://fast.com/" rel="noopener nofollow ugc">fast.com</a> there is activity in the bypass graph, so it is bypassing</p>
+<p>using <a href="http://speedtest.net/" rel="noopener nofollow ugc">speedtest.net</a> the connection is bonded and not bypassing</p>
+<p>It is strange that it behaves difference in behavior between HF4 and HF5</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:22:32Z' class='post-time'>
+                    April 5, 2023,  2:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:22:32Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, HF4 had DNS issues, note that some Speedify servers are not blocked by Netflix but still geo-restricted, probably more than direct connection.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/meassick'><span itemprop='name'>meassick</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:31:32Z' class='post-time'>
+                    April 5, 2023,  2:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:31:32Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It does seem that which servers are blocked by Netflix changes rather rapidly.  The DNS issue may have been beneficial in some cases.  I was hoping that Speedify would allow VPN chaining to a private server with a residential IP that would not be blocked, but they do not.  The only other way to bypass this blocking to to first connect directly via a non VPN connection without Speedify and then once a stream is active, to switch to Speedify (had had a previous question about this to you).  This can easily be done with a PC where it is easy to switch wifi connections (one direct and the second though Speedify)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:32:24Z' class='post-time'>
+                    April 5, 2023,  2:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:32:24Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Disabling Netflix bypass isn’t working in Speedify UI?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/meassick'><span itemprop='name'>meassick</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-05T02:36:05Z' class='post-time'>
+                    April 5, 2023,  2:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-05T02:36:05Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When I tried it a while back, it did not make a difference.  However, I think that maybe Netflix only checks for VPN or geoblocking at the beginning of a stream.  If this is the case, connecting with a residential IP that is not blocked and then switching to Speedify would work, at least this has seemed to work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-41">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../connect-directly-to-connection-without-speedify/41.html' class='title raw-link raw-topic-link'>Connect directly to connection without speedify</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>276</span>
+            </td>
+            <td>
+              June 15, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-54">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../wired-wan-on-slate-ax-not-working/54.html' class='title raw-link raw-topic-link'>Wired WAN on Slate AX not working</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>10</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>175</span>
+            </td>
+            <td>
+              April 17, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-111">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../forwarding-and-policy-to-router-behind-smoothwan-router/111.html' class='title raw-link raw-topic-link'>Forwarding and policy to router behind SmoothWAN router</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>117</span>
+            </td>
+            <td>
+              April 10, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-98">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../speedify-ui-not-working/98.html' class='title raw-link raw-topic-link'>Speedify UI not working</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>123</span>
+            </td>
+            <td>
+              October 3, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-17">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../slate-ax-speedify-throughput-test-result-by-amos-discord/17.html' class='title raw-link raw-topic-link'>Slate AX Speedify throughput test result by Amos@Discord</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/development/2.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #a0def5'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Development &amp; Feedback</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='../../tag/performance.html' class='discourse-tag'>performance</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>12</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>345</span>
+            </td>
+            <td>
+              May 3, 2023
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/fast-com-netflix-questions/46 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:34 GMT -->
+</html>

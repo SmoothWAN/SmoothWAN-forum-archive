@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+    <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71</link>
+    <description>So I have been setting up the AX Router with Smoothwan and testing it. I have successfully been able to setup a Wired Connection, USB 5G Modem Connection, Wireless Connection from home network (2.4 and 5) -- but when I attempt to setup a iPhone HotSpot Connection it just falls down. 
+
+I have tested this scenario on both 2.4Ghz and 5Ghz network and it results in the same outcome. The SmoothWan software connects perfectly find to the iPhone Hotspot but that Frequency Access-Point network disappears completely from the network. It is not even hidden; the signal just shuts off. 
+
+Though when I check the configuration it states it is live within the configuration and the domes logs. I have been trying many options and reseting the configuration to start again. I must be missing something. When it was the original firmware it had no issues connecting to the iPhone Hotspot and advertising a connectable Access Point of the same frequency. See message log below. 
+
+wlan0 is the iPhone HotSpot
+wlan0-1 is the Access Point
+
+I have attempted them swapped around, Disabled Access Point prior to Hot Spot connectivity (even through this is not the method I&#39;d like to have in the field just to isolate).. Open to suggestions and ideas.
+
+&gt;[ 9460.675137] br-lan: port 2(wlan0-1) entered disabled state
+[ 9461.695139] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 9471.053234] wlan0: authenticate with 0----------------8
+[ 9471.060652] wlan0: send auth to 0----------------8 (try 1/3)
+[ 9471.195414] wlan0: authenticate with 0----------------8
+[ 9471.195446] wlan0: send auth to 0----------------8 (try 1/3)
+[ 9471.200672] wlan0: authenticated
+[ 9471.214969] wlan0: associate with0----------------8 (try 1/3)
+[ 9471.217190] wlan0: RX AssocResp from 0----------------8 (capab=0x11 status=30 aid=1)
+[ 9471.219692] wlan0: 0----------------8 rejected association temporarily; comeback duration 196 TU (200 ms)
+[ 9471.434976] wlan0: associate with 0----------------8 (try 2/3)
+[ 9471.437282] wlan0: RX AssocResp from 0----------------8 (capab=0x11 status=30 aid=1)
+[ 9471.439701] wlan0: 0----------------8 rejected association temporarily; comeback duration 196 TU (200 ms)
+[ 9471.654973] wlan0: associate with 0----------------8 (try 3/3)
+[ 9471.657217] wlan0: RX AssocResp from 0----------------8 (capab=0x11 status=30 aid=1)
+[ 9471.659703] wlan0: 0----------------8 rejected association temporarily; comeback duration 196 TU (200 ms)
+[ 9471.874972] wlan0: association with 0----------------8 timed out
+[ 9475.182763] wlan0: authenticate with 0----------------8
+[ 9475.190141] wlan0: send auth to 0----------------8 (try 1/3)
+[ 9475.192282] wlan0: send auth to 0----------------8 (try 2/3)
+[ 9475.198336] wlan0: authenticated
+[ 9475.204980] wlan0: associate with 0----------------8 (try 1/3)
+[ 9475.209340] wlan0: RX AssocResp from 0a:------------ (capab=0x11 status=0 aid=1)
+[ 9475.211017] wlan0: associated
+[ 9475.217351] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[ 9475.221798] wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by 0a:54-------
+[ 9475.496088] ath11k c000000.wifi: bss color param 0x81000000 set on vdev 0
+[ 9475.496156] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0-1: link becomes ready
+[ 9475.501959] br-lan: port 2(wlan0-1) entered forwarding state
+[ 9475.508318] br-lan: port 2(wlan0-1) entered forwarding state
+[ 9483.534924] br-lan: port 2(wlan0-1) entered forwarding state
+&gt;
+
+![Snapshot|690x282](upload://sq8TvvJ8XnUxVUB9AIgIOJsEHFh.jpeg)</description>
+    
+    <lastBuildDate>Wed, 20 Dec 2023 04:05:40 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>WPA3 works fine, but “SAE-Mixed” which is WPA3/WPA2-mixed seems to be problematic.</p>
+<p>You can reset SmoothWAN on the Slate/Flint by holding the reset/WPS button for 10 seconds, after release the device should restart in few seconds.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/30">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/30</link>
+        <pubDate>Wed, 20 Dec 2023 04:05:40 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-30</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[spacesuitdiver]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m having similar issues with the similar devices (home router and iOS 17 tethering) and fumbled on this thread. I’ve even somehow managed to get both of my Master devices to disappear so I can’t connect to my Slate anymore trying both bands, really sucks <img src="https://emoji.discourse-cdn.com/twitter/slightly_frowning_face.png?v=12" title=":slightly_frowning_face:" class="emoji" alt=":slightly_frowning_face:" loading="lazy" width="20" height="20"> At first I thought my Slate was bad but luckily I had another to try Amazon accidentally sent me <img src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>I’m trying to understand what to keep an eye out when connecting these Client wireless connections to avoid this problem are we thinking it’s an issue with the frequency or the channel?</p>
+<p>By the way is there any reason to avoid WPA3, it seems like Simple Wi-Fi prefers WPA2 only?</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/29">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/29</link>
+        <pubDate>Mon, 04 Dec 2023 06:17:54 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-29</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Sorry, missed the reply, yes I meant you could downgrade. I’ve had multiple reports from GH regarding this issue with iOS, next version will use WPA3 only &amp; WPA2 only in the menu, in the meantime you can change that setting in the <em>Wireless</em> menu.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/28</link>
+        <pubDate>Fri, 02 Jun 2023 04:48:16 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-28</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>Understand but it is the latest version… the original was bit for bit the same.  so you .99.9hf5 is report .99.5</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/27</link>
+        <pubDate>Thu, 18 May 2023 23:03:04 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-27</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Apologies for the confusion, I meant that the LuCI dashboard was showing 0.99.5HF5 instead of 0.99.9HF5, there is no 0.99.5HF5.<br>
+You can flash 0.99.8 for testing.<br>
+The I/O failure is probably caused by latest Speedify (13.3) running and using a bit more RAM than the usual unlike with the older versions, try stopping it before flash. (the image is uploaded to RAM, and it’s quite large)</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/26</link>
+        <pubDate>Thu, 18 May 2023 16:16:01 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-26</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>I am attempting to upgrade but there is no upgrade option in the system → backup/flash firmware → actions tab → flash new firmware image I am receiving this error “Upload request failed: I/O failure while writing temporary file”</p>
+<p>So I was able to upgrade using the downloaded file from 0.99.9HF5 after a router reboot. Though are we sure that what was posted is labeled correctly as the router after the update shows 0.99.5HF5.</p>
+<p>Im considering restoring the default firmware and starting from scratch, but before I make that effort can you check if the currently posted version is correct regardless of the filename?</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/25</link>
+        <pubDate>Thu, 18 May 2023 13:39:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-25</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Ooh that’s a typo <img src="https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"> it should be 0.99.9HF5.<br>
+Yes that’s correct.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/24</link>
+        <pubDate>Thu, 18 May 2023 02:16:47 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-24</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>0.99.8 goes back from SmoothWAN v0.99.5HF5 / LuCI openwrt-22.03 branch git-21.284.67084-e4d24f0<br>
+which I am running currently, pleases confirm… I will do so if that is the case…</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/23</link>
+        <pubDate>Thu, 18 May 2023 02:14:55 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-23</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Running out of memory on system crashes the Wi-Fi radio as well as other services. But this doesn’t seem to be the case here.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/22</link>
+        <pubDate>Thu, 18 May 2023 01:42:43 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-22</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Can you try the SmoothWAN 0.99.8 version, it’s got a much more recent kernel and Wi-Fi drivers. I couldn’t replicate it locally (no ios).</p>
+<p>Need to setup WPA3 sometime soon for more testing, you may have to force WPA3 only instead of mixed connected to the iPhone.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/21</link>
+        <pubDate>Thu, 18 May 2023 01:40:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-21</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>Did we find anything? Just to clarify if I disable the 2.4GHz HotSpot configuration the 2.4Ghz AP will come online.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/20</link>
+        <pubDate>Wed, 17 May 2023 23:28:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-20</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>What issues with Wi-Fi is it causing? I’d don’t see how the two are related as Speedify pickup active ports the have outside connectivity. The Wi-Fi radio management etc appear to be separate process’</p>
+<p>Thanks</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/19</link>
+        <pubDate>Tue, 16 May 2023 22:56:23 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-19</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>No I don’t believe so based upon the output here. Also I am not using Speedify that much at this point. I am working to stabilize just the Wifi internally and testing the Speedify is still operational…</p>
+<p>If we don’t feel we can make AX stable then I will have to bring a Raspberry PI 4 which I have here on the desk; then hardwire to the AX with its native firmware. Hate to do that as with two HD streams running it isn’t even having much of a load yet.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/8a5a0e60e68abba669fa95cfe208fb1260530f8a.png" data-download-href="/uploads/short-url/jJUPN9zBGrFReDZxQIzGaNOmMNs.png?dl=1" title="Screenshot 2023-05-16 at 6.13.34 PM" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/8a5a0e60e68abba669fa95cfe208fb1260530f8a.png" alt="Screenshot 2023-05-16 at 6.13.34 PM" data-base62-sha1="jJUPN9zBGrFReDZxQIzGaNOmMNs" width="690" height="156" data-dominant-color="282A2A"></a></div><p></p>
+<p>I can provide remote session if you’d like as well as the environment is completely a test environment at the moment. So we can rebuild, crush, rebuild, crush… etc.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/18</link>
+        <pubDate>Tue, 16 May 2023 22:16:49 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-18</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks I’ll have a look soon, check if the memory is filled, there is an ongoing issue with the latest Speedify version causing issues with Wi-Fi too, I forgot to mention that <img src="https://emoji.discourse-cdn.com/twitter/man_facepalming.png?v=12" title=":man_facepalming:" class="emoji" alt=":man_facepalming:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/17</link>
+        <pubDate>Tue, 16 May 2023 22:05:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-17</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>I have sent you a PM with a link to the logs for your review. As I mentioned in that please let me know what you find so we can share with the community.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/16</link>
+        <pubDate>Tue, 16 May 2023 22:02:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-16</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>I will generate the logs and how do you want me to provide them to you? I will have to scrub them. In the logs you will see I am running most of the clients on the 5Ghz network and there are two NDI streaming devices sending HD video to two seperate hardwired Birddog players.</p>
+<p>So I can confirm that when the iPhone is not connected via Hot Spot (manually disabled on phone) the 2.4Ghz wireless network doesn’t advertise from the AX router. When I turn on the iPhone HotSpot the Ax router advertises. The interesting thing is the power is 0 within the status and no matter what setting you make it, it remains 0.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/15</link>
+        <pubDate>Tue, 16 May 2023 21:25:04 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-15</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Looks like an issue, the download logs button in Speedify menu also downloads OpenWrt’s logs for inspection.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/14</link>
+        <pubDate>Tue, 16 May 2023 18:24:48 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-14</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>So at this point smoothwan is unstable. Left unit up and running all night to wake to 2.4Ghz not broadcast and 5GHz broadcasting. If I disable the 2.4Ghz clients the 2.4Ghz network will rebroadcast.</p>
+<p>Going to dig into configs to see if something is a mess there. After which point I will do a full ground up reinstall firmware and all. I’ve noticed that performing a reset config doesn’t reset all components as in passwords etc consistently.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/13</link>
+        <pubDate>Tue, 16 May 2023 12:16:40 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-13</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>I have set the Channel and letting the application do it. So far I have been stable with 2.4Ghz but can’t exceed 20Mhz on 5Ghz.</p>
+<p>I appreciate your help and hope that this has been helpful for others…</p>
+<p>Just need to insure I can get the fastest wifi possible. So at the moment I have disconnected the home wireless from the 5Ghz network and increased it to 80Mhz so we can at least attempt get 1.2Mb. Just need to do some speedtests between client and router…</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/12</link>
+        <pubDate>Tue, 16 May 2023 04:18:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-12</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p><code>auto</code> is buggy across IPQ based routers from my tests &amp; OpenWrt<br>
+forum. OpenWrt determines the channel automatically (client/ap combo)<br>
+if <code>auto</code> is not set, <code>auto</code> lets the driver determine the channel<br>
+which doesn’t work in this case.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/11</link>
+        <pubDate>Tue, 16 May 2023 03:00:36 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-11</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>Why can’t it be “auto”. You want to have the radio and system determine which channel has the lease noise, or is that have to be a manual process?</p>
+<p>I have it stable now with 20Mhz on the 5Ghz using it as a AP and STA… If I change that at all it will just die and be only a STA(Client)… Not that big a deal as I will not be using that much anyway.</p>
+<p>Note the home wifi is leveraging eero mesh network.</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/10</link>
+        <pubDate>Tue, 16 May 2023 02:48:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-10</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Since this seems to have been configured outside <em>Simple Wi-Fi Setup</em> menu which doesn’t offer channel settings on purpose, channel shouldn’t be <code>auto</code>, choose any other number. (adding note)</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/9</link>
+        <pubDate>Tue, 16 May 2023 01:27:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-9</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s interesting, changing 5Ghz settings shouldn’t affect the 2.4Ghz radio, is this with reboots in-between? (adding reboot note next release)</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/8</link>
+        <pubDate>Tue, 16 May 2023 01:24:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-8</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>Well you have helped me isolated the iPhone Tether issue with the Maximum Compatibility setting on the iPhone; note iPhone 8 2022 model; but testing further I moved the home wireless network from 2.4Ghz to the 5Ghz on the AX Router and the problem followed it. So I did some further testing to isolate WTH.</p>
+<p>I moved the width from 80Mhz to 40Mhz to 20Mhz and then the 5Ghz network returned. Though the home network was still connected via 80Mhz… I moved to 40Mhz width and it disappeared… Now my 2.4Ghz is unstable… I will move back to 20Mhz for now…</p>
+<p>Thoughts on this?</p>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/7</link>
+        <pubDate>Tue, 16 May 2023 00:13:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-7</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+      <item>
+        <title>Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</title>
+        <dc:creator><![CDATA[SgtEagle]]></dc:creator>
+        <description><![CDATA[
+            <p>Please see attached my test /etc/config/wireless and /etc/config/network. This is the configuration as I posted last above. Note that it is connecting via 5Ghz network and I am not forcing it to 2.4Ghz. I did attempted 2.4Ghz and will attempt the “Maximize Compatibility” option and report; though last time I had similar results but will isolate with you just to insure I didn’t miss anything. Appreciate the assist.</p>
+<pre><code class="lang-auto">config wifi-device 'radio_5GHz_Internal'
+        option type 'mac80211'
+        option path 'platform/soc/c000000.wifi'
+        option band '5g'
+        option htmode 'HE80'
+        option channels '36 40 44 48 149 153 157 161'
+        option htmod 'HE80'
+        option country 'US'
+        option cell_density '0'
+        option channel 'auto'
+
+config wifi-device 'radio_2GHz_Internal'
+        option type 'mac80211'
+        option path 'platform/soc/c000000.wifi+1'
+        option channel '1'
+        option band '2g'
+        option htmode 'HE40'
+        option country 'US'
+        option noscane '1'
+        option cell_density '0'
+
+config wifi-iface '5Ghz_Wireless_WAN'
+        option device 'radio_5GHz_Internal'
+        option mode 'sta'
+        option network 'wwan'
+        option ssid 'SSiPhone'
+        option key 'bbbbbbbb'
+        option encryption 'psk2'
+
+config wifi-iface '2GHz_Wireless_WAN'
+        option device 'radio_2GHz_Internal'
+        option mode 'sta'
+        option network 'wwan2'
+        option ssid 'Bald-Eagle'
+        option key ‘somekeyphrase’
+        option encryption 'sae-mixed'
+
+config wifi-iface '5GHz_Access_Point'
+        option device 'radio_5GHz_Internal'
+        option mode 'ap'
+        option wds '1'
+        option network 'lan'
+        option ssid 'SmoothWAN Setup 5GHz'
+        option encryption 'psk2'
+        option key 'brassworld'
+
+config wifi-iface '2GHz_Access_Point'
+        option device 'radio_2GHz_Internal'
+        option mode 'ap'
+        option wds '1'
+        option ssid 'SmoothWAN Setup 2.4GHz'
+        option encryption 'psk2'
+        option network 'lan'
+        option key 'brassworld'
+</code></pre>
+<p>/etc/config/network</p>
+<pre><code class="lang-auto">config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        option multicast_to_unicast '0'
+        list ports 'eth2'
+
+config device
+        option name 'eth1'
+        option macaddr '94:83:c4:29:ba:32'
+
+config device
+        option name 'eth2'
+        option macaddr '94:83:c4:29:ba:32'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option ipaddr '172.17.17.2'
+
+config device
+        option name 'eth0'
+        option macaddr '94:83:c4:29:ba:31'
+
+config switch
+        option name 'switch0'
+        option reset '0'
+        option enable_vlan '0'
+
+config interface 'PortOne'
+        option proto 'dhcp'
+        option device 'eth1'
+        option metric '25'
+
+config interface 'PortTwo'
+        option proto 'dhcp'
+        option device 'eth0'
+        option metric '26'
+
+config interface 'AutoUSBeth3'
+        option proto 'dhcp'
+        option device 'eth3'
+        option metric '33'
+
+config interface 'AutoUSBeth4'
+        option proto 'dhcp'
+        option device 'eth4'
+        option metric '34'
+
+config interface 'AutoUSBeth5'
+        option proto 'dhcp'
+        option device 'eth5'
+        option metric '35'
+
+config interface 'AutoUSB0'
+        option proto 'dhcp'
+        option device 'usb0'
+        option metric '40'
+
+config interface 'AutoUSB1'
+        option proto 'dhcp'
+        option device 'usb1'
+        option metric '41'
+
+config interface 'AutoUSB2'
+        option proto 'dhcp'
+        option device 'usb2'
+        option metric '42'
+
+config interface 'wwan'
+        option proto 'dhcp'
+        option metric '100'
+
+config interface 'wwan2'
+        option proto 'dhcp'
+        option metric '99'
+
+config device
+        option name 'wlan0'
+        option promisc '1'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71/6</link>
+        <pubDate>Mon, 15 May 2023 23:31:31 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-71-6</guid>
+        <source url="https://smoothwan.discourse.group/t/leveraging-iphone-wifi-hotspot-makes-access-point-on-same-freq-disappear/71.rss">Leveraging iPhone Wifi HotSpot makes Access Point on same Freq. Disappear</source>
+      </item>
+  </channel>
+</rss>

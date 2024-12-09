@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>SmoothWAN Engarde on Oracle Cloud - Help - SmoothWAN Forum</title>
+    <meta name="description" content="Hello, 
+I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="102.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;SmoothWAN Engarde on Oracle Cloud&#39;" href="102.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:url" content="102.html" />
+<meta name="twitter:url" content="102.html" />
+<meta property="og:title" content="SmoothWAN Engarde on Oracle Cloud" />
+<meta name="twitter:title" content="SmoothWAN Engarde on Oracle Cloud" />
+<meta property="og:description" content="Hello,  I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS?  The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS..." />
+<meta name="twitter:description" content="Hello,  I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS?  The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS..." />
+<meta property="og:article:section" content="Help" />
+<meta property="og:article:section:color" content="94f5ce" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="6 ❤" />
+<meta property="article:published_time" content="2023-10-17T18:52:39+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"SmoothWAN Engarde on Oracle Cloud","mainEntity":{"@type":"Question","name":"SmoothWAN Engarde on Oracle Cloud","text":"Hello,\n\nI have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work &hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2023-10-17T18:52:39.140Z","author":{"@type":"Person","name":"anon83253404","url":"https://smoothwan.discourse.group/u/anon83253404"},"acceptedAnswer":{"@type":"Answer","text":"I’m happy to report it’s working :smiley: thank you! Not sure if the issues were caused by t2.micro (1 CPU) previously. If you need me for testing Oracle or any future releases, let me know. I’ll join the discord.","upvoteCount":1,"datePublished":"2024-01-11T20:35:52.349Z","url":"https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/16","author":{"@type":"Person","name":"anon83253404","url":"https://smoothwan.discourse.group/u/anon83253404"}}}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="102.html">SmoothWAN Engarde on Oracle Cloud</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/help/4.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Help</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='SmoothWAN Engarde on Oracle Cloud'>
+      <link itemprop='url' href='102.html'>
+      <meta itemprop='datePublished' content='2023-10-17T18:52:39Z'>
+        <meta itemprop='articleSection' content='Help'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="102.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-10-17T18:52:39Z' class='post-time'>
+                    October 17, 2023,  6:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-18T17:51:48Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS?</p>
+<p>The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS.</p>
+<p>Can someone please help set up SmoothWAN with Engarde on Oracle Cloud? A script for AWS EC2 would be a bonus!</p>
+<p>Thanks in advance!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-10-21T06:31:58Z' class='post-time'>
+                    October 21, 2023,  6:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-21T06:31:58Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, Oracle and AWS are tricky to setup, and you need to open ports in the VPC page.<br>
+Will create a manual installation script next release for setup without cloud-init.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-10-21T06:48:13Z' class='post-time'>
+                    October 21, 2023,  6:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-21T06:48:13Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would greatly appreciate it! Thanks <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thematy'><span itemprop='name'>thematy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-11-05T16:30:43Z' class='post-time'>
+                    November 5, 2023,  4:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-11-06T12:29:23Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey, I tried to do on my own according your cloud-init, but not working <img src="../../../emoji.discourse-cdn.com/twitter/frowninge5bf.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"> maybe I do need more ports to be exposed in VCN on oracle? I did 1024-65000<br>
+Please correct me where can be a problem <img src="../../../emoji.discourse-cdn.com/twitter/confusede5bf.png?v=12" title=":confused:" class="emoji" alt=":confused:" loading="lazy" width="20" height="20"> (my second time writing shell script <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> )</p>
+<pre><code class="lang-auto">#!/bin/bash
+
+# ANSI color codes  // light colors
+ORANGE='\033[33m'
+RED='\033[91m'
+CYAN='\033[96m'
+RESET='\033[0m'
+
+# Check if you are running as sudo
+if [ "$EUID" -ne 0 ]; then
+  echo &amp;&amp; echo
+  echo -e "${RED}This script requires superuser privileges. Please run it with sudo.${RESET}"
+  exit 1
+fi
+
+# Start
+clear
+echo &amp;&amp; echo
+echo -e "${CYAN}Running the installation script for Engarde...${RESET}"
+echo
+sleep 3
+
+# Install WireGuard
+apt-get update
+apt-get install -y wireguard
+
+# Set the Password
+Password="7xzfz1MUwKvPRQ9tuXKF"
+
+# Disable firewalld and ufw
+systemctl disable firewalld
+systemctl stop firewalld
+ufw disable
+
+# Configure WireGuard
+SERVER_PUB_NIC=$(ip route | awk 'NR==1{print$5}')
+printf $Password | openssl dgst -binary -sha256 | openssl base64 -A &gt; /root/private-key
+ckey=$(cat /root/private-key | openssl dgst -binary -sha256 | openssl base64 -A)
+cpubkey=$(echo $ckey | wg pubkey)
+printf $ckey | openssl dgst -binary -sha256 | openssl base64 -A &gt; /root/preshared-key
+ip link add dev wg0 type wireguard
+ip address add dev wg0 10.202.0.5 peer 10.202.0.10
+wg set wg0 listen-port 65532 private-key /root/private-key peer $cpubkey preshared-key /root/preshared-key allowed-ips 10.202.0.10 persistent-keepalive 25
+ip link set up dev wg0
+
+# Download and install engarde-server
+wget https://github.com/SmoothWAN/engarde/releases/download/master/engarde-server.linux.arm64 -O /usr/bin/engarde-server
+chmod +x /usr/bin/engarde-server
+mkdir -p /etc/engarde
+wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN-misc/main/engarde/engarde-server.yml -O /etc/engarde/engarde.yml
+/usr/bin/engarde-server /etc/engarde/engarde.yml &amp;
+
+# Configure network settings
+ip link set wg0 mtu 1280
+ulimit -n 65535
+sysctl -w net.core.rmem_max=26214400
+sysctl -w net.core.rmem_default=26214400
+sysctl -w net.core.wmem_max=26214400
+sysctl -w net.core.wmem_default=26214400
+sysctl -w net.core.netdev_max_backlog=2048
+echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+
+# Configure iptables rules
+iptables -A FORWARD -i $SERVER_PUB_NIC -o wg0 -j ACCEPT
+iptables -A FORWARD -i wg0 -j ACCEPT
+iptables -t nat -A POSTROUTING -s 10.202.0.0/24 -j MASQUERADE
+
+# Change port range for port forwarding
+iptables -t nat -A PREROUTING -i $SERVER_PUB_NIC -p udp --dport 1024:65000 -j DNAT --to-destination 10.202.0.10:1024-65000
+iptables -t nat -A PREROUTING -i $SERVER_PUB_NIC -p tcp --dport 1024:65000 -j DNAT --to-destination 10.202.0.10:1024-65000
+
+# End
+echo &amp;&amp; echo
+echo -e "${CYAN}Script has been completed${RESET}"
+echo
+echo -e "${ORANGE}for further information visit SmoothWAN documentation --&gt;${RESET}"
+echo -e "${ORANGE}--&gt; https://smoothwan.com/engarde/${RESET}"
+echo &amp;&amp; echo
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-11-15T23:41:21Z' class='post-time'>
+                    November 15, 2023, 11:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-11-15T23:41:21Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would also appreciate if anyone has a solution in the meantime to use this with Oracle Cloud <img src="../../../emoji.discourse-cdn.com/twitter/slight_smilee5bf.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thematy'><span itemprop='name'>thematy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-12-06T13:53:47Z' class='post-time'>
+                    December 6, 2023,  1:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-12-06T13:53:47Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey there, is there some update on Oracle cloud installation?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-12-20T03:54:16Z' class='post-time'>
+                    December 20, 2023,  3:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-12-20T03:54:16Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, Engarde runs at <code>65531</code><br>
+I couldn’t open an Oracle account for testing unfortunately.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-12-20T13:05:01Z' class='post-time'>
+                    December 20, 2023,  1:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-12-20T13:08:01Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Talal, can you kindly provide a cloud-init script for Oracle? I should be able to test it. I am not an advanced user, but I do use engarde on Vultr on a daily basis.</p>
+<p>Otherwise, it would greatly help if you could test on Amazon AWS? Aside from Oracle and Amazon, I find that I have significantly higher gaming ping on other cloud providers.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thematy'><span itemprop='name'>thematy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-07T09:04:47Z' class='post-time'>
+                    January 7, 2024,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-07T09:04:47Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can test things too, just let me know.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T17:28:59Z' class='post-time'>
+                    January 11, 2024,  5:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T17:28:59Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Does anyone know of a solution or alternatives?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T18:28:52Z' class='post-time'>
+                    January 11, 2024,  6:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T18:28:52Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can’t make the script without testing firsthand unfortunately.<br>
+Would AWS be ok?<br>
+Edit: Just saw the previous reply mentioning it, will let you know soon.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T18:45:20Z' class='post-time'>
+                    January 11, 2024,  6:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T18:45:20Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Talal, I understand. Should you get the opportunity, please do test on Oracle. In the meantime, the AWS script will have a huge impact <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/bac9584778d9185afd36e43b0e4717f91762a82d.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T19:26:11Z' class='post-time'>
+                    January 11, 2024,  7:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T19:26:11Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Amazon AWS was fairly simple, haven’t tested with &gt;100Mbit connections with the t3.micro though:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/bac9584778d9185afd36e43b0e4717f91762a82d.jpg" data-download-href="/uploads/short-url/qEobHSEORVCR5gwDpoE83JMLNIp.jpeg?dl=1" title="Web capture_11-1-2024_215047_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_690x327.jpg" alt="Web capture_11-1-2024_215047_eu-north-1.console.aws.amazon.com" data-base62-sha1="qEobHSEORVCR5gwDpoE83JMLNIp" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_1380x654.jpeg 2x" data-dominant-color="EBECED"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_215047_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 99.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/693df2cf169253d0c053240f6a951c7f42762dc5.jpg" data-download-href="/uploads/short-url/f10RdDHqxjgR7KB4QUQvs8Alu0R.jpeg?dl=1" title="Web capture_11-1-2024_215217_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_690x327.jpg" alt="Web capture_11-1-2024_215217_eu-north-1.console.aws.amazon.com" data-base62-sha1="f10RdDHqxjgR7KB4QUQvs8Alu0R" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_1380x654.jpeg 2x" data-dominant-color="ECEDED"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_215217_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 116 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/9b949e9c32c069f20790dc2c71c0052816055c5f.jpg" data-download-href="/uploads/short-url/mckqhoSRgwrilWrfcY6JaJxBRy7.jpeg?dl=1" title="Web capture_11-1-2024_215254_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_690x327.jpg" alt="Web capture_11-1-2024_215254_eu-north-1.console.aws.amazon.com" data-base62-sha1="mckqhoSRgwrilWrfcY6JaJxBRy7" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_1380x654.jpeg 2x" data-dominant-color="EDEDEE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_215254_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 101 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/450e38c822e8aed43987621e1976d94234ece590.jpg" data-download-href="/uploads/short-url/9QTpLjFtjIhR6SVaADjlaNgLdJe.jpeg?dl=1" title="Web capture_11-1-2024_22720_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_690x327.jpg" alt="Web capture_11-1-2024_22720_eu-north-1.console.aws.amazon.com" data-base62-sha1="9QTpLjFtjIhR6SVaADjlaNgLdJe" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_1380x654.jpeg 2x" data-dominant-color="E7E9EA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_22720_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 159 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014.jpg" data-download-href="/uploads/short-url/yWFK8qPG4DdZ0e9iNM6fw6HnVuQ.jpeg?dl=1" title="Web capture_11-1-2024_222227_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_690x327.jpg" alt="Web capture_11-1-2024_222227_eu-north-1.console.aws.amazon.com" data-base62-sha1="yWFK8qPG4DdZ0e9iNM6fw6HnVuQ" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_1380x654.jpeg 2x" data-dominant-color="E8EAEA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_222227_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 162 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665.jpg" data-download-href="/uploads/short-url/7xVlXYjOXFWuXzsg3cBJmtutDPn.jpeg?dl=1" title="Web capture_11-1-2024_222248_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_690x327.jpg" alt="Web capture_11-1-2024_222248_eu-north-1.console.aws.amazon.com" data-base62-sha1="7xVlXYjOXFWuXzsg3cBJmtutDPn" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_1380x654.jpeg 2x" data-dominant-color="E8EAEB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_222248_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 153 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7.jpg" data-download-href="/uploads/short-url/5mS3isFZ0KHKuqQQTrs1NRnqWOP.jpeg?dl=1" title="Web capture_11-1-2024_222326_eu-north-1.console.aws.amazon.com"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_690x327.jpg" alt="Web capture_11-1-2024_222326_eu-north-1.console.aws.amazon.com" data-base62-sha1="5mS3isFZ0KHKuqQQTrs1NRnqWOP" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_1380x654.jpeg 2x" data-dominant-color="E9EBEB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Web capture_11-1-2024_222326_eu-north-1.console.aws.amazon.com</span><span class="informations">1767×838 147 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T19:39:17Z' class='post-time'>
+                    January 11, 2024,  7:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T19:39:17Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you please confirm that you used the exact same Cloud init script that is used for Vultr?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T19:41:09Z' class='post-time'>
+                    January 11, 2024,  7:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T19:41:09Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes it’s the same.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-11T20:35:52Z' class='post-time'>
+                    January 11, 2024,  8:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-11T20:35:52Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m happy to report it’s working <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> thank you! Not sure if the issues were caused by t2.micro (1 CPU) previously. If you need me for testing Oracle or any future releases, let me know. I’ll join the discord.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-12T20:41:17Z' class='post-time'>
+                    January 12, 2024,  8:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-12T20:41:17Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you tried doing similar steps in VPC (security list) with Oracle?<br>
+Note that the Ubuntu image in Oracle is modified and strict, you need to login to the VPS and run:</p>
+<pre><code class="lang-auto">iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -F
+</code></pre>
+<p>If that works then it needs to be added to the cloud-init field.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-13T12:33:42Z' class='post-time'>
+                    January 13, 2024, 12:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-13T12:33:42Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can confirm this is working for Oracle as well <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-13T12:45:02Z' class='post-time'>
+                    January 13, 2024, 12:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-13T12:45:02Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Should I add the IPTABLES commands by default for cloud-init?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-13T14:58:00Z' class='post-time'>
+                    January 13, 2024,  2:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-13T14:58:00Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It worked when I added the IPTABLES in the cloud-init before running the instance.</p>
+<p>Please note, I did not try logging into the VPS and running the IPTABLES commands manually.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-120">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../engarde-lag-spikes-and-low-tx/120.html' class='title raw-link raw-topic-link'>Engarde - Lag spikes and low TX</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>8</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>119</span>
+            </td>
+            <td>
+              March 2, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-39">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../customizing-dhcp-server-address-and-or-reverting-from-adguard/39.html' class='title raw-link raw-topic-link'>Customizing DHCP server address and/or Reverting from AdGuard</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>4</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>254</span>
+            </td>
+            <td>
+              April 3, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-164">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../save-changes-to-wan-interface-engarde/164.html' class='title raw-link raw-topic-link'>Save changes to WAN Interface - Engarde</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>21</span>
+            </td>
+            <td>
+              August 15, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-132">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../beryl-ax-smoothwan/132.html' class='title raw-link raw-topic-link'>Beryl AX SmoothWAN</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>1</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>180</span>
+            </td>
+            <td>
+              April 10, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-30">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.html' class='title raw-link raw-topic-link'>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>651</span>
+            </td>
+            <td>
+              May 2, 2023
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:16 GMT -->
+</html>

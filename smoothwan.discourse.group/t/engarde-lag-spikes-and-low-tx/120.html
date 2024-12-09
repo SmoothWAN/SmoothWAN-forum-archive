@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/engarde-lag-spikes-and-low-tx/120 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Engarde - Lag spikes and low TX - Help - SmoothWAN Forum</title>
+    <meta name="description" content="Hello, 
+I am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="120.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Engarde - Lag spikes and low TX&#39;" href="120.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:url" content="120.html" />
+<meta name="twitter:url" content="120.html" />
+<meta property="og:title" content="Engarde - Lag spikes and low TX" />
+<meta name="twitter:title" content="Engarde - Lag spikes and low TX" />
+<meta property="og:description" content="Hello,  I am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds or I get disconnected.  I have tried using each of my internet separately to isolate any issues, however the lag issue remains. This issue is persistent as long as I am using engarde with either single or dual internets. It never happens with normal WireGuard in SmoothWAN. So th..." />
+<meta name="twitter:description" content="Hello,  I am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds or I get disconnected.  I have tried using each of my internet separately to isolate any issues, however the lag issue remains. This issue is persistent as long as I am using engarde with either single or dual internets. It never happens with normal WireGuard in SmoothWAN. So th..." />
+<meta property="og:article:section" content="Help" />
+<meta property="og:article:section:color" content="94f5ce" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2024-01-16T00:05:38+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Engarde - Lag spikes and low TX","mainEntity":{"@type":"Question","name":"Engarde - Lag spikes and low TX","text":"Hello,\n\nI am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds or I get disconnected.\n\nI have tried using each of my internet separately to is&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-01-16T00:05:38.708Z","author":{"@type":"Person","name":"anon83253404","url":"https://smoothwan.discourse.group/u/anon83253404"}}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="120.html">Engarde - Lag spikes and low TX</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/help/4.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Help</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Engarde - Lag spikes and low TX'>
+      <link itemprop='url' href='120.html'>
+      <meta itemprop='datePublished' content='2024-01-16T00:05:38Z'>
+        <meta itemprop='articleSection' content='Help'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="120.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-01-16T00:05:38Z' class='post-time'>
+                    January 16, 2024, 12:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-16T00:11:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds or I get disconnected.</p>
+<p>I have tried using each of my internet separately to isolate any issues, however the lag issue remains. This issue is persistent as long as I am using engarde with either single or dual internets. It never happens with normal WireGuard in SmoothWAN. So this is clearly something related to engarde (client or server side settings).</p>
+<p>Further, I noticed that the “TX” data usage is very low as shown in SmoothWAN, for example:<br>
+RX: 31.59 GB (27575987 Pkts.)<br>
+TX: 3.59 GB (23370358 Pkts.)</p>
+<p>In my limited knowledge, I had thought maybe it’s something to do with MTU or ‘keep persistent = 25’ settings but changing it didn’t seem to have an effect - I’m not sure.</p>
+<p>Could any of this information give a clue about what’s happening?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-16T00:48:36Z' class='post-time'>
+                    January 16, 2024, 12:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-16T00:48:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This may need to be set (writeTimeout and client): <a href="https://github.com/porech/engarde/blob/cf9b487167c826cbdcfa2fa6ae39d04fac5e9ba0/engarde.yml.sample#L47" class="inline-onebox">engarde/engarde.yml.sample at cf9b487167c826cbdcfa2fa6ae39d04fac5e9ba0 · porech/engarde · GitHub</a></p>
+<p>You can fork SmoothWAN-docs repo, make the change then update the cloud-init script to point to your fork.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-19T19:11:20Z' class='post-time'>
+                    January 19, 2024,  7:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-19T19:23:52Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I really appreciate it! I’ve set writeTimeout to 1000 and clientTimeout to 30 that eliminated the lag spike so far. But I still experience gaming lag with Engarde, even when the ping isn’t fluctuating, as opposed to a stable single WireGuard connection. Do you think the gap between RX and TX causes lag?</p>
+<p>RX: 34.65 GB (32934957 Pkts.)<br>
+TX: 11.03 GB (25936582 Pkts.)</p>
+<p>Also, I note that it mostly causes ping/lag issue when it’s downloading. Both internets have sufficient bandwidths and don’t display this behaviour when using single WireGuard connection.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-19T22:18:18Z' class='post-time'>
+                    January 19, 2024, 10:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-19T22:18:18Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you tried using SQM to limit each WAN? (not SQM on wireguard)<br>
+Do note that if the fastest connection has high latency, the slower won’t reduce it.<br>
+For gaming I recommend setting all WANs speed in SQM to 10% less than the slowest WAN.<br>
+Use fq_codel if used on off-the-shelf router due to CPU time.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-31T19:25:29Z' class='post-time'>
+                    January 31, 2024,  7:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-31T19:25:29Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve tried SQM to limit each WAN as well as fq_codel. But this had no noticeable effects. I also tried SQM on LAN which did seem to improve ping / spikes somewhat, but the problem is definitely there. I think the problem is packet loss. I’m using Raspberry Pi 4.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-31T20:20:06Z' class='post-time'>
+                    January 31, 2024,  8:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-31T20:20:06Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What are your connection speeds?<br>
+You may need a PC for 100Mbit with Engarde.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-31T20:41:27Z' class='post-time'>
+                    January 31, 2024,  8:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-31T21:31:27Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>One is 15 Mpbs and the other is 50 Mbps. I have tried limiting speeds or SQM to equal or lower of the two but didn’t make any difference.</p>
+<p>I think it’s important to mention the engarde server is located a bit far (ping: 140ms). Its normal and consistent for this distance. Its only the occasional random lag spikes, or caused by certain actions in game, that result in disconnect or cause rubberbanding in game (only when using engarde). Ping also increases when downloading.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-02-06T01:49:44Z' class='post-time'>
+                    February 6, 2024,  1:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-02-06T01:49:44Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It may be worth check other server, as well as reducing the MTU to 1280 in case it’s a firewall issue.<br>
+This assumes that the spikes are caused by any large network activity.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/anon83253404'><span itemprop='name'>anon83253404</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-03-02T20:44:06Z' class='post-time'>
+                    March 2, 2024,  8:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-03-02T20:44:06Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Talal, I’ve experimented a lot in terms of MTU and SQM but that didn’t work. Interestingly I’ve noticed that when I run wireguard on my PC connected to the router that has engarde, basically VPN on VPN, then I don’t see these issues anymore. Does this give any clue as to what’s happening?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-102">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../smoothwan-engarde-on-oracle-cloud/102.html' class='title raw-link raw-topic-link'>SmoothWAN Engarde on Oracle Cloud</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>19</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>292</span>
+            </td>
+            <td>
+              January 13, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-129">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../adguard-breaks-tmobile-connections/129.html' class='title raw-link raw-topic-link'>AdGuard breaks Tmobile connections</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>123</span>
+            </td>
+            <td>
+              February 8, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-164">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../save-changes-to-wan-interface-engarde/164.html' class='title raw-link raw-topic-link'>Save changes to WAN Interface - Engarde</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>21</span>
+            </td>
+            <td>
+              August 15, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-121">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../interfaces-losing-configuration/121.html' class='title raw-link raw-topic-link'>Interfaces losing configuration</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>1</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>84</span>
+            </td>
+            <td>
+              January 19, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-94">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../wireguard-for-all-clients-working-but-cant-access-luci/94.html' class='title raw-link raw-topic-link'>Wireguard for all clients - working, but can&#39;t access LUCI?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/development/2.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #a0def5'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Development &amp; Feedback</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>8</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>227</span>
+            </td>
+            <td>
+              September 6, 2023
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/engarde-lag-spikes-and-low-tx/120 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:06 GMT -->
+</html>

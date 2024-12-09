@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Recommended method for installing on Proxmox</title>
+    <link>https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25</link>
+    <description>Is there a recommended method for installing on a Proxmox?
+
+Would the VirtualBox-AMD64-EFI-DiskImage.vdi.gz be the best image to start with?
+After creating a q35 VM with network interfaces I would run something like `qm importdisk 109 SmoothWAN-0.99.9HF4-VirtualBox-AMD64-EFI-DiskImage.vdi local-lvm`.
+Do I need to be using a UEFI BIOS?
+Is there a recommended way to increase the disk size? I think it creates a disk that&#39;s 4Gb but I&#39;d like to have more space to use ntopng.</description>
+    
+    <lastBuildDate>Tue, 19 Sep 2023 15:29:10 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Recommended method for installing on Proxmox</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Proxmox supports VMDK natively, use that image after extraction, and the importdisk command.<br>
+Next version will auto expand on first boot for the Pi and PC, current ntopng should work fine, I should rename to <code>at least 4GB</code>.</p>
+<p>Guide here: <a href="https://smoothwan.com/proxmox/" class="inline-onebox">Proxmox Example - SmoothWAN</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25/2</link>
+        <pubDate>Fri, 24 Mar 2023 02:51:43 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-25-2</guid>
+        <source url="https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25.rss">Recommended method for installing on Proxmox</source>
+      </item>
+      <item>
+        <title>Recommended method for installing on Proxmox</title>
+        <dc:creator><![CDATA[webmasterkai]]></dc:creator>
+        <description><![CDATA[
+            <p>Is there a recommended method for installing on a Proxmox?</p>
+<p>Would the VirtualBox-AMD64-EFI-DiskImage.vdi.gz be the best image to start with?<br>
+After creating a q35 VM with network interfaces I would run something like <code>qm importdisk 109 SmoothWAN-0.99.9HF4-VirtualBox-AMD64-EFI-DiskImage.vdi local-lvm</code>.<br>
+Do I need to be using a UEFI BIOS?<br>
+Is there a recommended way to increase the disk size? I think it creates a disk that’s 4Gb but I’d like to have more space to use ntopng.</p>
+          <p><a href="https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25/1</link>
+        <pubDate>Thu, 23 Mar 2023 23:09:19 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-25-1</guid>
+        <source url="https://smoothwan.discourse.group/t/recommended-method-for-installing-on-proxmox/25.rss">Recommended method for installing on Proxmox</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Mystery route 123.123.123.123</title>
+    <link>https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99</link>
+    <description>I’m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem. I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img
+
+I have the following extras activated:
+  -- Speedify
+  -- Tailscale
+
+The following route is in my routing table, and I don&#39;t know why, or how it was installed:
+
+123.123.123.123 via 100.68.15*.** dev wwan0
+
+&quot;wwan0&quot; is the Quectel-based 4G-LTE Cellular connection.
+
+123.123.123.123 is a Chinese-based IP which makes this seem even more suspicious.
+
+This is a new install and configuration, I started working on this last week and just got things working a day or so ago.  I don&#39;t recall this route being there prior to the SPeedify or Tailscale install, so I suspect one of those.
+I&#39;m using ModemManager to configure the Quectel interface, so tht could potentially be the culprit.
+
+Here are the logs and config from the machine:
+https://send.bitwarden.com/#WKz7pSpkpkekz7CRAFEnNw/Juq7vbLfAcHwuCoTDQlDwg
+
+Any idea what is installing this route, and more importantly, why?</description>
+    
+    <lastBuildDate>Thu, 05 Oct 2023 19:36:03 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Mystery route 123.123.123.123</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks!.  It looks like it is in the TinyFEC config, I think it must be a bug.  I never enabled it, and I can’t seem to get rid of it.  It’s no big deal, I’ll just ignore it.</p>
+          <p><a href="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/3</link>
+        <pubDate>Thu, 05 Oct 2023 19:36:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-99-3</guid>
+        <source url="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99.rss">Mystery route 123.123.123.123</source>
+      </item>
+      <item>
+        <title>Mystery route 123.123.123.123</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>The route is added by either TinyFEC or Engarde when enabled, 123.123.123.123 is a formatting example in the web UI dialog.</p>
+<p>Simply remove the IP in TinyFEC or Engarde as it seems like you have accidentally enabled one of them, else this is a bug. The route is meaningless in this state, it’s for making Engarde/TinyFEC use the latest connected WAN in case the user doesn’t set metric routes when they add multiple WAN interfaces. OpenWrt does not add default routes in this case.</p>
+<p>TODO: Moving to UI input text placeholders next release and converting to LUCI-JS api since there are few issues with the LUA based LuCI apps on new OpenWrt.</p>
+          <p><a href="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/2</link>
+        <pubDate>Wed, 04 Oct 2023 13:40:15 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-99-2</guid>
+        <source url="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99.rss">Mystery route 123.123.123.123</source>
+      </item>
+      <item>
+        <title>Mystery route 123.123.123.123</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem. I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img</p>
+<p>I have the following extras activated:<br>
+– Speedify<br>
+– Tailscale</p>
+<p>The following route is in my routing table, and I don’t know why, or how it was installed:</p>
+<p>123.123.123.123 via 100.68.15*.** dev wwan0</p>
+<p>“wwan0” is the Quectel-based 4G-LTE Cellular connection.</p>
+<p>123.123.123.123 is a Chinese-based IP which makes this seem even more suspicious.</p>
+<p>This is a new install and configuration, I started working on this last week and just got things working a day or so ago.  I don’t recall this route being there prior to the SPeedify or Tailscale install, so I suspect one of those.<br>
+I’m using ModemManager to configure the Quectel interface, so tht could potentially be the culprit.</p>
+<p>Here are the logs and config from the machine:<br>
+<a href="https://send.bitwarden.com/#WKz7pSpkpkekz7CRAFEnNw/Juq7vbLfAcHwuCoTDQlDwg" class="onebox" target="_blank" rel="noopener nofollow ugc">https://send.bitwarden.com/#WKz7pSpkpkekz7CRAFEnNw/Juq7vbLfAcHwuCoTDQlDwg</a></p>
+<p>Any idea what is installing this route, and more importantly, why?</p>
+          <p><a href="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99/1</link>
+        <pubDate>Wed, 04 Oct 2023 05:02:35 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-99-1</guid>
+        <source url="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99.rss">Mystery route 123.123.123.123</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Help with interface not coming up</title>
+    <link>https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61</link>
+    <description>After running successfully for awhile, I&#39;ve had my starlink connection become unavailable in smoothwan. The connection is working when I connect directly but in openwrt it&#39;s not working. 
+
+I&#39;ve tried manually bringing it up via &quot;ip link set &lt;device&gt; up&quot; but when I check the status it still shows as down. I&#39;m connecting it to a raspberry pi 4 via usb and have swapped 3 different usb adaptors. I don&#39;t see anything in dmesg. I&#39;ve restarted all combinations of devices. My other isps are working just fine. 
+
+How do I best troubleshoot? I can&#39;t find anything indicating what might be wrong.</description>
+    
+    <lastBuildDate>Wed, 26 Apr 2023 00:39:17 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Help with interface not coming up</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>That’s an interesting issue.</p>
+<aside class="quote no-group" data-username="zavius" data-post="1" data-topic="61">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/z/e79b87/48.png" class="avatar"> zavius:</div>
+<blockquote>
+<p>I don’t see anything in dmesg.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="zavius" data-post="1" data-topic="61">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/z/e79b87/48.png" class="avatar"> zavius:</div>
+<blockquote>
+<p>My other isps are working just fine.</p>
+</blockquote>
+</aside>
+<p>I’m guessing others are tethered hotspot/phone?</p>
+          <p><a href="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/4</link>
+        <pubDate>Wed, 26 Apr 2023 00:39:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-61-4</guid>
+        <source url="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61.rss">Help with interface not coming up</source>
+      </item>
+      <item>
+        <title>Help with interface not coming up</title>
+        <dc:creator><![CDATA[zavius]]></dc:creator>
+        <description><![CDATA[
+            <p>I noticed I was a still a release back because I didn’t have that setting. I have since upgraded, and then tried that setting but still no luck.</p>
+          <p><a href="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/3</link>
+        <pubDate>Tue, 25 Apr 2023 19:22:22 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-61-3</guid>
+        <source url="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61.rss">Help with interface not coming up</source>
+      </item>
+      <item>
+        <title>Help with interface not coming up</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, can you try disabling USB interface renamer as in the quick setup guide to check for any conflict?</p>
+          <p><a href="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/2</link>
+        <pubDate>Tue, 25 Apr 2023 17:56:56 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-61-2</guid>
+        <source url="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61.rss">Help with interface not coming up</source>
+      </item>
+      <item>
+        <title>Help with interface not coming up</title>
+        <dc:creator><![CDATA[zavius]]></dc:creator>
+        <description><![CDATA[
+            <p>After running successfully for awhile, I’ve had my starlink connection become unavailable in smoothwan. The connection is working when I connect directly but in openwrt it’s not working.</p>
+<p>I’ve tried manually bringing it up via “ip link set  up” but when I check the status it still shows as down. I’m connecting it to a raspberry pi 4 via usb and have swapped 3 different usb adaptors. I don’t see anything in dmesg. I’ve restarted all combinations of devices. My other isps are working just fine.</p>
+<p>How do I best troubleshoot? I can’t find anything indicating what might be wrong.</p>
+          <p><a href="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61/1</link>
+        <pubDate>Tue, 25 Apr 2023 17:09:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-61-1</guid>
+        <source url="https://smoothwan.discourse.group/t/help-with-interface-not-coming-up/61.rss">Help with interface not coming up</source>
+      </item>
+  </channel>
+</rss>

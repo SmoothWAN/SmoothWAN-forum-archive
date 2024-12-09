@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Slate AX Speedify throughput test result by Amos@Discord - Development &amp; Feedback - SmoothWAN Forum</title>
+    <meta name="description" content="Version 0.99.8">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="17.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Slate AX Speedify throughput test result by Amos@Discord&#39;" href="17.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/31f64ce9841356c1b7591c81bb8f26284d68ba0a.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/31f64ce9841356c1b7591c81bb8f26284d68ba0a.png" />
+<meta property="og:url" content="17.html" />
+<meta name="twitter:url" content="17.html" />
+<meta property="og:title" content="Slate AX Speedify throughput test result by Amos@Discord" />
+<meta name="twitter:title" content="Slate AX Speedify throughput test result by Amos@Discord" />
+<meta property="og:description" content="Version 0.99.8" />
+<meta name="twitter:description" content="Version 0.99.8" />
+<meta property="og:article:section" content="Development &amp; Feedback" />
+<meta property="og:article:section:color" content="a0def5" />
+<meta property="og:article:tag" content="performance" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2023-03-10T19:10:02+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="17.html">Slate AX Speedify throughput test result by Amos@Discord</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/development/2.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #a0def5'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Development &amp; Feedback</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='../../tag/performance.html' class='discourse-tag' rel="tag">performance</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Slate AX Speedify throughput test result by Amos@Discord'>
+      <link itemprop='url' href='17.html'>
+      <meta itemprop='datePublished' content='2023-03-10T19:10:02Z'>
+        <meta itemprop='articleSection' content='Development &amp; Feedback'>
+      <meta itemprop='keywords' content='performance'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="17.html">
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/31f64ce9841356c1b7591c81bb8f26284d68ba0a.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-03-10T19:10:02Z' class='post-time'>
+                    March 10, 2023,  7:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-10T19:40:30Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="onebox allowlistedgeneric" data-onebox-src="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid">
+  <header class="source">
+      <img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/7d636ef92c6101768bfd71f144cd5b54b56523b0.png" class="site-icon" width="32" height="32">
+
+      <a href="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid" target="_blank" rel="noopener">Speedify</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/363;"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/31f64ce9841356c1b7591c81bb8f26284d68ba0a.png" class="thumbnail" width="690" height="363" data-dominant-color="B7A1B0"></div>
+
+<h3><a href="https://speedify.com/speed-test-results/?u=274.42&amp;uu=Mbps&amp;d=205.93&amp;du=Mbps&amp;c=2&amp;t=1677776408.232&amp;ss=Spanien%20-%20Madrid" target="_blank" rel="noopener">Check out my Speed Test Result - Speedify</a></h3>
+
+  <p>How fast is your Internet? Combine connections for increased stability, speed, and security with Speedify!</p>
+
+  <p>
+    <span class="label1">Est. reading time: 2 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Version <code>0.99.8</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/clemiiiii'><span itemprop='name'>clemiiiii</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-24T18:38:33Z' class='post-time'>
+                    March 24, 2023,  6:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-24T18:38:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>wow, i can’t get more than 100mbits, still great and enouth for my projects, … maybe i have to change speedify servers… did u change any of the default speedify settings ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-24T18:46:46Z' class='post-time'>
+                    March 24, 2023,  6:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-24T18:46:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Interesting, do you mind sharing your setup?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/clemiiiii'><span itemprop='name'>clemiiiii</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b783bf30310cd5043a135e00f943dffc93d3e906.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-24T20:14:01Z' class='post-time'>
+                    March 24, 2023,  8:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-24T21:19:36Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>sure no problem with sharing data,</p>
+<p>in: eth cable - DOCSIS (unbelievable) stable 300 down 50 up</p>
+<ul>
+<li>starlink &amp;/ some stuff like 3g/4g/5g devices over usb/wifi/eth</li>
+</ul>
+<p>~100 normal usage - peaked nearly 200 (down) / 100+ up</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ">
+  <header class="source">
+
+      <a href="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ" target="_blank" rel="noopener nofollow ugc">onedrive.live.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/397;"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b783bf30310cd5043a135e00f943dffc93d3e906_2_690x397.png" class="thumbnail" width="690" height="397" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/b783bf30310cd5043a135e00f943dffc93d3e906_2_690x397.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b783bf30310cd5043a135e00f943dffc93d3e906.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/b783bf30310cd5043a135e00f943dffc93d3e906.png 2x" data-dominant-color="1A2229"></div>
+
+<h3><a href="https://onedrive.live.com/redir?resid=1BD678B6FB4602F5%21272168&amp;authkey=%21AHJYNY3tATpnhMw&amp;ithint=folder&amp;e=e0sUaJ" target="_blank" rel="noopener nofollow ugc">smoothwan</a></h3>
+
+  <p>Folder</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>kind of unsorted of topic mixed long story:</p>
+<p>sadly, no fixed setup now, just kind of experimenting</p>
+<p>hardware/device: AXT1800, SW/image from github: OpenWrt 21.02-SNAPSHOT r16399+159-c67509efd7 / LuCI openwrt-22.03 branch git-21.284.67084-e4d24f0</p>
+<p>using uplinks: [usually more than 1 <img src="../../../emoji.discourse-cdn.com/twitter/slight_smilee5bf.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> but not all at the same time normally, some problems with usb-hub&amp;/power (not sure at the moment)]</p>
+<ul>
+<li>
+<p>(sometimes) eth cable - starlink (old round) with (max around 300 down, 20-50 up)</p>
+</li>
+<li>
+<p>(usually) eth cable - DOCSIS cable with unbelievable stable 300 down 50 up</p>
+</li>
+<li>
+<p>(trying to get a final setup with) 1x to 3x usb emulated ethernet devices (CDC-Ethernet devices i guess) ztl/Huawei (depends on ISP/cell/contract utilization - 0-100 down/up)</p>
+</li>
+<li>
+<p>(trying to get a final setup with) 1x usb 4g/3g ncm Huawei device (depends on ISP/cell/contract utilization - 0-100 down/up)</p>
+</li>
+</ul>
+<p>(using lan as speed test client, or on directly on glx1800 or speedify stats)</p>
+<p>speedify (13.1.0.10834) settings: default (mostly connected to Vienna/AT servers, because of my location)</p>
+<p>but maybe my configuration or software setup is not optimal, installed to much extensions - no space left - trying to get sd card memory working ATM</p>
+<p>finally setup should be portable - without eth uplinks, but other topic</p>
+<p>sure that I can’t get that speeds with mobile connections (with that modems in that kind of city/district I’m right now) …</p>
+<p>but still with both eth never got that numbers (speedify statistics: top download 142, top upload 133 :O)</p>
+<p>…anyways not important for my project, just interesting to see that numbers at the same hardware (&amp;software?), CPU load wasn’t to high or not on all cores of the ax1800) btw haven’t installed all opkg updates (because of memory problems) but sometimes I’ve seen speeds like 300 M bits (with speedify) on pc/mac - yeah and speedify support told me something that i have to use a dedicated server or something, not sure how – should read that mail again - or not included in team account guess - because i was trying to get 300mbit DOCSIS + 200mbit 5g + … down, no i wanted to get more upload - anyways too much text <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+<p>buts its speedify… should be connectedly or combinedly or stabilili <img src="../../../emoji.discourse-cdn.com/twitter/smileye5bf.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+<p>depends on what are u trying to solve or to do - get 10mbits with 3 mobile connections or 2000mbits with 2 fiber connections</p>
+<p>or redundancyly or uploadily, all off topic and sry 4 editing post but no structure in it, still, …</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-24T22:19:10Z' class='post-time'>
+                    March 24, 2023, 10:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-24T22:19:10Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for the write up! it’s useful!<br>
+I’ll keep an eye on official OpenWrt support for the Slate/Flint which comes with a recent kernel ~6 years newer, and 64 bit with optimized crypto extensions. I managed to do 350-400Mbit with it.<br>
+Link: <a href="https://forum.openwrt.org/t/gl-inet-ax1800-new-router-openwrt-support/105163/314" class="inline-onebox">GL-iNet AX1800 new router - OpenWrt support? - #314 by radiomean - For Developers - OpenWrt Forum</a></p>
+<p>The Wi-Fi and USB are currently an issue, and flashing it requires the recovery method, will post an update once it’s stable for use.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-24T22:22:13Z' class='post-time'>
+                    March 24, 2023, 10:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-24T22:22:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Regarding SD card Ill add all the mounting utilities next release.<br>
+If the the official OpenWrt is stable enough you will have more package selection and kernel modules that are ready to install from official repos.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/clemiiiii'><span itemprop='name'>clemiiiii</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-26T15:19:47Z' class='post-time'>
+                    March 26, 2023,  3:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-26T15:19:47Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks for the information  <img src="../../../emoji.discourse-cdn.com/twitter/heart_eyes_cate5bf.png?v=12" title=":heart_eyes_cat:" class="emoji" alt=":heart_eyes_cat:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/41fb754d00a4332362de61cb3f95bed796849ed5.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-30T16:51:14Z' class='post-time'>
+                    April 30, 2023,  4:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-30T16:51:14Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I also have the Slate AX. Speeds on the Slate seem to top out 80Mbps. A cell phone connected to the same server can get 130+ at the same time of day. I’d love to know how to squeeze more out of the Slate AX, OR if a raspberry pi or an intel based solution would be better for ensuring top performance within the limits of the speedify server I’m connected to.</p>
+<p>Speedify connections (normal kids network traffic)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/41fb754d00a4332362de61cb3f95bed796849ed5.jpg" data-download-href="/uploads/short-url/9pHMvajjGTt0rWvG9ndhz1yCJ4p.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_690x432.jpg" alt="image" data-base62-sha1="9pHMvajjGTt0rWvG9ndhz1yCJ4p" width="690" height="432" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_690x432.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_1035x648.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/41fb754d00a4332362de61cb3f95bed796849ed5_2_1380x864.jpeg 2x" data-dominant-color="1D222A"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1652×1036 179 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Speedigy speed tests<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/dcee18c8367ac3a7cf13553ea45da0904b2ace9d.png" data-download-href="/uploads/short-url/vwra8GKyvHMYm7W6rzpPVhgJsVD.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/dcee18c8367ac3a7cf13553ea45da0904b2ace9d.png" alt="image" data-base62-sha1="vwra8GKyvHMYm7W6rzpPVhgJsVD" width="595" height="500" data-dominant-color="272627"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">750×630 64.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>With speedify disabled and still on the same Slate AX wifi. I did an ookla test on just the comcast<br>
+<img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/171a11a951ff2f54a195b1f08b4252fdac56c8f2.png" alt="image" data-base62-sha1="3imPJkzNo4mwpLM7xUiya4FeQBc" width="548" height="301"></p>
+<p>Cell phone same server with primary as cell carrier.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563.jpg" data-download-href="/uploads/short-url/k2hWB08yEs09vmWsIwf06QVtKsX.jpeg?dl=1" title="Screenshot_20230430_102424_Speedify" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_230x500.jpg" alt="Screenshot_20230430_102424_Speedify" data-base62-sha1="k2hWB08yEs09vmWsIwf06QVtKsX" width="230" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_230x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_345x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/8c6dbb55b5179affc59f7dfbec3b04db3bdd9563_2_460x1000.jpeg 2x" data-dominant-color="19191A"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot_20230430_102424_Speedify</span><span class="informations">1080×2340 259 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>CPU and load on the Slate seem reasonable. Gap is netdata disabled for a speedtest. No significant change with netdata disabled.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3.jpg" data-download-href="/uploads/short-url/a7t5HGH8XC0lgC6UR8hFEMLOwLh.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_690x461.jpg" alt="image" data-base62-sha1="a7t5HGH8XC0lgC6UR8hFEMLOwLh" width="690" height="461" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_690x461.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_1035x691.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/46ede2e588cb2b8602c1ce686c86ac7c3bd51fd3_2_1380x922.jpeg 2x" data-dominant-color="2E3035"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1285 121 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>htop during a speedtest (sorted on memory)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ae903409eb3c437a376499078fd51a90cfb52a75.png" data-download-href="/uploads/short-url/oUg26vUutKu081RxByhBkvNtwln.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_690x360.png" alt="image" data-base62-sha1="oUg26vUutKu081RxByhBkvNtwln" width="690" height="360" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_690x360.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ae903409eb3c437a376499078fd51a90cfb52a75_2_1035x540.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ae903409eb3c437a376499078fd51a90cfb52a75.png 2x" data-dominant-color="29372D"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1123×586 155 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T15:48:21Z' class='post-time'>
+                    May 2, 2023,  3:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T15:48:21Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Interesting, does the speed increase with less WANs connected?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T18:06:09Z' class='post-time'>
+                    May 2, 2023,  6:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T18:06:09Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There was no appreciable change in speed after disconnecting the hotspots.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T18:29:48Z' class='post-time'>
+                    May 2, 2023,  6:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T18:29:48Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You may try using (single) TCP as protocol to see if it’s openwrt related, by default it’s auto and usually TCP Multiple is chosen or vice versa, you can click on one of the connections in Speedify UI, then click on the IP address, it will show the protocol used.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T20:15:26Z' class='post-time'>
+                    May 2, 2023,  8:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T20:15:26Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Was TCP (8), TCP (4), TCP (8).<br>
+Changed to Single TCP.<br>
+No difference in total throughput.<br>
+Changed back to Auto.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-03T02:28:06Z' class='post-time'>
+                    May 3, 2023,  2:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-03T02:28:06Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Odd, not sure why, I think the Amos record was done with 0.99.8.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-54">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../wired-wan-on-slate-ax-not-working/54.html' class='title raw-link raw-topic-link'>Wired WAN on Slate AX not working</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>10</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>175</span>
+            </td>
+            <td>
+              April 17, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-56">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../smoothwan-with-gl-a1300-slate-plus/56.html' class='title raw-link raw-topic-link'>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>8</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>271</span>
+            </td>
+            <td>
+              July 23, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-57">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../slate-ax-cpu-to-100-and-all-network-traffic-ceased-reboot-required/57.html' class='title raw-link raw-topic-link'>Slate AX CPU to 100 and all network traffic ceased reboot required</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>16</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>242</span>
+            </td>
+            <td>
+              April 26, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-111">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../forwarding-and-policy-to-router-behind-smoothwan-router/111.html' class='title raw-link raw-topic-link'>Forwarding and policy to router behind SmoothWAN router</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>3</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>117</span>
+            </td>
+            <td>
+              April 10, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-153">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.html' class='title raw-link raw-topic-link'>I have a Slate GL-Net Router, Downloaded Speedify - now What?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>1</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>116</span>
+            </td>
+            <td>
+              May 17, 2024
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/slate-ax-speedify-throughput-test-result-by-amos-discord/17 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:33 GMT -->
+</html>

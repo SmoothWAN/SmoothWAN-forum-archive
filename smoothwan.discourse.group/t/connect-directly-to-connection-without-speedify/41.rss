@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Connect directly to connection without speedify</title>
+    <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41</link>
+    <description>Is there any way to use one of the connections for internet access without going though Speedify?   I have SmoothWAN set up on a Slate with three three connections (two wired, one wireless) that are bonded via Speedify.  The issue I am trying to address is that many services such as Netflix block VPN connections.  While Speedify does have what they call &#39;bypass&#39; mode, this does not always work.  However, on a pc, if I first connect directly though a local internet connection to Netflix and once streaming has started, I switch to speedify, the connection is not blocked.  I would like to be able to do the same with SmoothWAN</description>
+    
+    <lastBuildDate>Sat, 15 Jun 2024 07:58:54 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, unfortunately, the current method of bypass doesn’t handle interfaces going down and up, only loss of internet connectivity.</p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/6</link>
+        <pubDate>Sat, 15 Jun 2024 07:58:54 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-6</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[nilreb]]></dc:creator>
+        <description><![CDATA[
+            <p>talking to myself here: this doesn’t always work. for some reason, it gets blocked again, then unblocked, then blocked. it’s almost random.</p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/5</link>
+        <pubDate>Thu, 30 May 2024 17:26:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-5</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[nilreb]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for this. I was able to make this work. My (wired) LG TV can now bypass Speedify and stream Disney. Just wondering: is this still taking advantage of the bonded internet? The incoming interface is ‘lan’ only.</p>
+<p>Also I did not know what to put after my device IP eg 172.17.17.100/?? so I put 24 and it seems to work. For my other TV, can I use the same IP 172.17.17.100 and put /32? so I do not need to create a separate bypass route for each device? Thanks</p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/4</link>
+        <pubDate>Thu, 23 May 2024 17:36:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-4</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Added info here: <a href="https://smoothwan.com/wanbyp/" class="inline-onebox">Bypass clients to a specific WAN - SmoothWAN</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/3</link>
+        <pubDate>Mon, 03 Apr 2023 06:52:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-3</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes via PBR or VPN policy based routing, I’ll write a short guide for the next release, the current release is traffic leaky.</p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/2</link>
+        <pubDate>Sun, 02 Apr 2023 23:27:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-2</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+      <item>
+        <title>Connect directly to connection without speedify</title>
+        <dc:creator><![CDATA[meassick]]></dc:creator>
+        <description><![CDATA[
+            <p>Is there any way to use one of the connections for internet access without going though Speedify?   I have SmoothWAN set up on a Slate with three three connections (two wired, one wireless) that are bonded via Speedify.  The issue I am trying to address is that many services such as Netflix block VPN connections.  While Speedify does have what they call ‘bypass’ mode, this does not always work.  However, on a pc, if I first connect directly though a local internet connection to Netflix and once streaming has started, I switch to speedify, the connection is not blocked.  I would like to be able to do the same with SmoothWAN</p>
+          <p><a href="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41/1</link>
+        <pubDate>Sat, 01 Apr 2023 15:13:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-41-1</guid>
+        <source url="https://smoothwan.discourse.group/t/connect-directly-to-connection-without-speedify/41.rss">Connect directly to connection without speedify</source>
+      </item>
+  </channel>
+</rss>

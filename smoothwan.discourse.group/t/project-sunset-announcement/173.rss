@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Project Sunset Announcement</title>
+    <link>https://smoothwan.discourse.group/t/project-sunset-announcement/173</link>
+    <description>Project sunset after 3 years for the following reasons
+- [Speedify officially supports OpenWrt as of Q4 2024](https://support.speedify.com/article/918-openwrt)
+- GL.iNet auto build repos went private, certain patches for wlan-ap are missing.
+- Wi-Fi is unstable when using official OpenWrt sources on most GL.iNet devices.
+- ~~Speedify now requires a [seperate subscription for routers](https://speedify.com/store/#routers) and the pricing is very steep for me.~~
+Update: 3 years plan with occasional discounts is now on par with family plan 🎉
+
+Thank you contributors, Speedify support, and donors!
+
+**[Donate to Parrot Rescue Lebanon if you found this helpful 🦜](https://www.parrotrescuelebanon.com/)**   [spoiler]psst my birds live there[/spoiler]
+
+Discord chat has not been archived for user privacy reasons.
+Wiki site address moved to [Github pages](https://smoothwan.github.io/SmoothWAN-docs/)</description>
+    
+    <lastBuildDate>Wed, 27 Nov 2024 12:50:36 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/project-sunset-announcement/173.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Project Sunset Announcement</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Project sunset after 3 years for the following reasons</p>
+<ul>
+<li><a href="https://support.speedify.com/article/918-openwrt">Speedify officially supports OpenWrt as of Q4 2024</a></li>
+<li>GL.iNet auto build repos went private, certain patches for wlan-ap are missing.</li>
+<li>Wi-Fi is unstable when using official OpenWrt sources on most GL.iNet devices.</li>
+<li><s>Speedify now requires a <a href="https://speedify.com/store/#routers">seperate subscription for routers</a> and the pricing is very steep for me.</s><br>
+Update: 3 years plan with occasional discounts is now on par with family plan <img src="https://emoji.discourse-cdn.com/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"></li>
+</ul>
+<p>Thank you contributors, Speedify support, and donors!</p>
+<p><strong><a href="https://www.parrotrescuelebanon.com/">Donate to Parrot Rescue Lebanon if you found this helpful <img src="https://emoji.discourse-cdn.com/twitter/parrot.png?v=12" title=":parrot:" class="emoji" alt=":parrot:" loading="lazy" width="20" height="20"></a></strong>   <span class="spoiler"><a href="https://smoothwan.discourse.group/t/project-sunset-announcement/173/1">spoiler</a></span></p>
+<p>Discord chat has not been archived for user privacy reasons.<br>
+Wiki site address moved to <a href="https://smoothwan.github.io/SmoothWAN-docs/">Github pages</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/project-sunset-announcement/173/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/project-sunset-announcement/173/1</link>
+        <pubDate>Wed, 09 Oct 2024 15:05:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-173-1</guid>
+        <source url="https://smoothwan.discourse.group/t/project-sunset-announcement/173.rss">Project Sunset Announcement</source>
+      </item>
+  </channel>
+</rss>

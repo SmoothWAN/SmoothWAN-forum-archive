@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SmoothWAN Forum - Latest topics</title>
+    <link>https://smoothwan.discourse.group/latest</link>
+    <description>Latest topics</description>
+    
+      <lastBuildDate>Wed, 09 Oct 2024 15:05:25 +0000</lastBuildDate>
+      <atom:link href="https://smoothwan.discourse.group/latest.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Project Sunset Announcement</title>
+          <dc:creator><![CDATA[TalalM]]></dc:creator>
+          <category>Announcements</category>
+          <description><![CDATA[
+            <p>Project sunset after 3 years for the following reasons</p>
+<ul>
+<li><a href="https://support.speedify.com/article/918-openwrt">Speedify officially supports OpenWrt as of Q4 2024</a></li>
+<li>GL.iNet auto build repos went private, certain patches for wlan-ap are missing.</li>
+<li>Wi-Fi is unstable when using official OpenWrt sources on most GL.iNet devices.</li>
+<li><s>Speedify now requires a <a href="https://speedify.com/store/#routers">seperate subscription for routers</a> and the pricing is very steep for me.</s><br>
+Update: 3 years plan with occasional discounts is now on par with family plan <img src="https://emoji.discourse-cdn.com/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"></li>
+</ul>
+<p>Thank you contributors, Speedify support, and donors!</p>
+<p><strong><a href="https://www.parrotrescuelebanon.com/">Donate to Parrot Rescue Lebanon if you found this helpful <img src="https://emoji.discourse-cdn.com/twitter/parrot.png?v=12" title=":parrot:" class="emoji" alt=":parrot:" loading="lazy" width="20" height="20"></a></strong>   <span class="spoiler"><a href="https://smoothwan.discourse.group/t/project-sunset-announcement/173/1">spoiler</a></span></p>
+<p>Discord chat has not been archived for user privacy reasons.<br>
+Wiki site address moved to <a href="https://smoothwan.github.io/SmoothWAN-docs/">Github pages</a></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/project-sunset-announcement/173">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/project-sunset-announcement/173</link>
+          <pubDate>Wed, 09 Oct 2024 15:05:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-173</guid>
+          <source url="https://smoothwan.discourse.group/t/project-sunset-announcement/173.rss">Project Sunset Announcement</source>
+        </item>
+        <item>
+          <title>Speedify now supports OpenWrt officially</title>
+          <dc:creator><![CDATA[TalalM]]></dc:creator>
+          <category>Announcements</category>
+          <description><![CDATA[
+            <p>Routers now require a <a href="https://speedify.com/store/#routers">license</a>.<br>
+<a href="https://support.speedify.com/article/918-openwrt">Installation proccess</a> requires knowledge with OpenWrt.<br>
+Performance should be better than SmoothWAN and the <a href="https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119">unofficial installer</a>.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172</link>
+          <pubDate>Sat, 28 Sep 2024 05:22:30 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-172</guid>
+          <source url="https://smoothwan.discourse.group/t/speedify-now-supports-openwrt-officially/172.rss">Speedify now supports OpenWrt officially</source>
+        </item>
+        <item>
+          <title>DNS Server Address Default - How to Change?</title>
+          <dc:creator><![CDATA[garyd]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hi Developer, and enthusiast,</p>
+<p>First of all, I am really thanking the dev who made this possible.</p>
+<p>Today I have managed to install SmoothWAN to my SlateAX router.</p>
+<p>However, right off the bat, after installing it, I was not able to login to the gui. So, what I did was, change the IP address, since I was able to ssh.</p>
+<p>I’m not knowledgeable in firewalls and openwrt, but I can read instructions and guides <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Could someone please, tell me how to change the DNS server IP issue by the router?</p>
+<p>Because, it is still using <code>172.17.17.2</code>.</p>
+<p>I’ve updated the router IP address to <code>192.168.222.1</code> , since I can’t access the web ui via the default <code>172.17.17.2</code>. It was so strange why so, because on another machine I can access it.</p>
+<p>The current setting now is <code>192.168.222.1</code>, but the DNS the router is giving is <code>172.17.17.2</code><br>
+I’ve already did:<br>
+<strong>Network</strong> &gt; <strong>DHCP and DNS</strong> &gt; <strong>DNS forwardings</strong>:<br>
+<code>1.1.1.1</code><br>
+Can someone please, help!</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170</link>
+          <pubDate>Sat, 21 Sep 2024 15:27:02 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-170</guid>
+          <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+        </item>
+        <item>
+          <title>Save changes to WAN Interface - Engarde</title>
+          <dc:creator><![CDATA[squirrel]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I’ve set the <em>Override IPv4 routing table</em> for WAN interface to BYP1. However, any changes to WAN interface resets on restart of the device. Is there a simple, noob-friendly solution to keep it fixed to BYP1?</p>
+<p>Edit: This only happens to the WAN interface created by engarde. Any changes, including custom DNS, also gets reset to default upon device restart. I’m using Raspberry Pi 4.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164</link>
+          <pubDate>Tue, 06 Aug 2024 15:33:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-164</guid>
+          <source url="https://smoothwan.discourse.group/t/save-changes-to-wan-interface-engarde/164.rss">Save changes to WAN Interface - Engarde</source>
+        </item>
+        <item>
+          <title>Install on internal results in boot loop</title>
+          <dc:creator><![CDATA[ievis]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I have a J4125 router (the Chinese PC/OpnSense routers)</p>
+<p>I can flash and run SmoothWAN from USB with no issues using “SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img.gz” but if i try to install on the inbuilt SSD I get a boot loop. OpenWrt installs and runs with no issues. I have tried the following to no avail.</p>
+<p>Run SmoothWAN from USB and install on internal SSD the way SmoothWAN guide suggest<br>
+SmoothWAN from USB and install on internal SSD the way OpenWRT is installed<br>
+Linux LiveUSB. Installed mkusb and cloned extracted img file to internal SSD.</p>
+<p>All three result in the same bootloops</p>
+<p>Any help?</p>
+<p>Cheers</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162</link>
+          <pubDate>Fri, 02 Aug 2024 14:47:26 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-162</guid>
+          <source url="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162.rss">Install on internal results in boot loop</source>
+        </item>
+        <item>
+          <title>After reboot settings not saved</title>
+          <dc:creator><![CDATA[Andy88ctv]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Installed onto a Gl iNet Slate AX and enabled Speedify and set a password and all works but after a reboot both the password and Speedify have lost their settings?</p>
+            <p><small>7 posts - 3 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158</link>
+          <pubDate>Sat, 15 Jun 2024 07:30:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-158</guid>
+          <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+        </item>
+        <item>
+          <title>SmoothWAN on Proxmox - IP addresses</title>
+          <dc:creator><![CDATA[stuupifiedbyspeedify]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I was so excited to see there is a SmoothWAN VMWare image that could be used with Proxmox! I’ve gone ahead and followed the instructions in the guide and I currently have the guest running. However, I have one small issue…</p>
+<p>My Proxmox node has been a part of my infrastructure for some time and already provides other services for my network (on the 192.168 private address scheme). So, now that I’ve created the SmoothWAN guest, I can’t access it at the 172 addressing scheme.</p>
+<p>I’ve made a backup of the guest before I start futzing around too much… But how difficult will it be for me to change the SmoothWAN guest to operate on a 192 address? If I just change the IP address of the machine, what will break? What other apps have been installed and configured that will stop working?</p>
+<p>I’m going to give it a try… But, please let me know if there are any known issues or steps that I need to consider in switching the SmoothWAN instance over to a different subnet.</p>
+<p>Thank you!</p>
+<p>CB</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156</link>
+          <pubDate>Sun, 02 Jun 2024 03:30:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-156</guid>
+          <source url="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156.rss">SmoothWAN on Proxmox - IP addresses</source>
+        </item>
+        <item>
+          <title>I have a Slate GL-Net Router, Downloaded Speedify - now What?</title>
+          <dc:creator><![CDATA[Jax5er]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Newbie, Got file, downloaded the file onto my Slate Ax Router, now I can not connect to my Router.  Connects actually but says no Internet.  I look for the WiFi SmoothWAN Setup but also not there.  I thought was next step.  Not sure what to do?</p>
+<p>Steps I took:<br>
+Router on, PC signed into GL 5G wifi from router.  On PC went to router webpage address and under upgrades downloaded and brought over file to install.  I did hit Keep settings - (Maybe my issue)  It installed, once done no access to that webpage address any longer, and no wifi to select called SmoothWan.  My Router wifi shows up still, I connect but no interent?</p>
+<p>Any help would be great.</p>
+<p>Thanks,</p>
+<p>Brandon</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153</link>
+          <pubDate>Fri, 17 May 2024 14:19:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-153</guid>
+          <source url="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.rss">I have a Slate GL-Net Router, Downloaded Speedify - now What?</source>
+        </item>
+        <item>
+          <title>Broadcast access point issue</title>
+          <dc:creator><![CDATA[nilreb]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>So I got LAN and WAN running on Speedify</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://ibb.co/R6C9cdb">
+  <header class="source">
+      <img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/e9b1378b4b05e68a5e962037770dad0b4e91681f.png" class="site-icon" data-dominant-color="5EBFE8" width="300" height="300">
+
+      <a href="https://ibb.co/R6C9cdb" target="_blank" rel="noopener nofollow ugc">ImgBB</a>
+  </header>
+
+  <article class="onebox-body">
+    <img width="180" height="180" src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/9bf8af3d97abd5cd135c3535083307221b599695.png" class="thumbnail onebox-avatar" data-dominant-color="E2E6EF">
+
+<h3><a href="https://ibb.co/R6C9cdb" target="_blank" rel="noopener nofollow ugc">Screen-Shot-2024-05-17-at-5-01-57-AM hosted at ImgBB</a></h3>
+
+  <p>Image Screen-Shot-2024-05-17-at-5-01-57-AM hosted in ImgBB</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>But I can only get 2.4 GHZ to broadcast. Not the 5 GHZ. I don’t have a 2.4 hotspot to join but if I enter a value there as client on 2.4ghz and enable it, I would also lose the 2.4ghz access point.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/974630dd9b266dc6264fa6d08db23fcd48f734e6.png" data-download-href="/uploads/short-url/lAetQ96LFcvDDoquVqr7kaBjWx8.png?dl=1" title="Screen Shot 2024-05-17 at 5.09.44 AM" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/974630dd9b266dc6264fa6d08db23fcd48f734e6_2_690x361.png" alt="Screen Shot 2024-05-17 at 5.09.44 AM" data-base62-sha1="lAetQ96LFcvDDoquVqr7kaBjWx8" width="690" height="361" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/974630dd9b266dc6264fa6d08db23fcd48f734e6_2_690x361.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/974630dd9b266dc6264fa6d08db23fcd48f734e6_2_1035x541.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/974630dd9b266dc6264fa6d08db23fcd48f734e6_2_1380x722.png 2x" data-dominant-color="F4F4F4"></a></div><p></p>
+<p>I added two networks on 2.4ghz  access point. Is this how you get the combined wired and wireless sources to work?</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://ibb.co/72phX1G">
+  <header class="source">
+      <img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/e9b1378b4b05e68a5e962037770dad0b4e91681f.png" class="site-icon" data-dominant-color="5EBFE8" width="300" height="300">
+
+      <a href="https://ibb.co/72phX1G" target="_blank" rel="noopener nofollow ugc">ImgBB</a>
+  </header>
+
+  <article class="onebox-body">
+    <img width="180" height="180" src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3d6777a38314207ecada9e528b27426429325102.png" class="thumbnail onebox-avatar" data-dominant-color="F2F2F2">
+
+<h3><a href="https://ibb.co/72phX1G" target="_blank" rel="noopener nofollow ugc">Screen-Shot-2024-05-17-at-5-13-26-AM hosted at ImgBB</a></h3>
+
+  <p>Image Screen-Shot-2024-05-17-at-5-13-26-AM hosted in ImgBB</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+The only problem is that every time I change some setting in wireless, Wlan0 would drop from speedify and sometimes do not reappear unless I do a fresh install of smoothWan.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/broadcast-access-point-issue/151">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/broadcast-access-point-issue/151</link>
+          <pubDate>Fri, 17 May 2024 12:28:15 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-151</guid>
+          <source url="https://smoothwan.discourse.group/t/broadcast-access-point-issue/151.rss">Broadcast access point issue</source>
+        </item>
+        <item>
+          <title>Smoothwan with xfinitywifi</title>
+          <dc:creator><![CDATA[nilreb]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>New here. Is there a way to use smoothwan with xfinitywifi?  Also is there a way to change the macaddress on smoothwan wifi to spoof the xfinity portal.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150</link>
+          <pubDate>Thu, 16 May 2024 09:37:48 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-150</guid>
+          <source url="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150.rss">Smoothwan with xfinitywifi</source>
+        </item>
+        <item>
+          <title>DHCP relay help needed</title>
+          <dc:creator><![CDATA[jip]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I have the following case of using DHCP static leases by the current main router.</p>
+<p>I’m trying to setup SmoothWAN so that LAN devices would still be obtain IP addresses through SmoothWan running Speedify according to the main router DHCP settings. Naturally, WAN traffic from the devices would go via Speedify for bonded connections.</p>
+<p>I have the SmoothWan set up with Speedify working, but the correct settings for DHCP relay(?) are still elusive.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9.png" data-download-href="/uploads/short-url/xNQM7PKHa6a6xoEgT2wXJ6W5Hwl.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_528x499.png" alt="image" data-base62-sha1="xNQM7PKHa6a6xoEgT2wXJ6W5Hwl" width="528" height="499" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_528x499.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_792x748.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/ecea59ad5f200981f65fd32b01c3d97fa2676cf9_2_1056x998.png 2x" data-dominant-color="F7F7F8"></a></div><p></p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148</link>
+          <pubDate>Sat, 04 May 2024 11:41:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-148</guid>
+          <source url="https://smoothwan.discourse.group/t/dhcp-relay-help-needed/148.rss">DHCP relay help needed</source>
+        </item>
+        <item>
+          <title>Scan Logs Me Out Everytime</title>
+          <dc:creator><![CDATA[realdeal1977]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>New to Smoothwan.  On a Slate AX1800.</p>
+<p>Every time I go to Network/Simple Wi Fi Setup, and choose Scan on any frequency, it scans and then logs me out.  I log back in and it goes to that screen, but if I scan it logs me out.  Over and over.  Must be a bug?  Anything I can do?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140</link>
+          <pubDate>Thu, 04 Apr 2024 20:32:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-140</guid>
+          <source url="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140.rss">Scan Logs Me Out Everytime</source>
+        </item>
+        <item>
+          <title>Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</title>
+          <dc:creator><![CDATA[aloft]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I’d like to use Smoothwan on a RPI , where the RPI acts as the Access Points for my clients . The upstream consists of one wired connection, and 2 wifi connections , which will be bonded with Speedify.</p>
+<p>The RPI has one wifi chip on board, so I would need to add two Wifi USB chips.</p>
+<p>Is this possible with Smoothwan?  And is it possible with a RPI ?  I understand there might be some performance hits on frequency level due to running 3 wifi connections simultaneously, but am I wondering the the RPI and software can manage that all wifi connections at once.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137</link>
+          <pubDate>Mon, 18 Mar 2024 12:26:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-137</guid>
+          <source url="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137.rss">Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</source>
+        </item>
+        <item>
+          <title>Help with VPN over VPN using NordLynx</title>
+          <dc:creator><![CDATA[oedema]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hello, hoping someone here can help with configuration of VPN over VPN using NordLynx VPN service.</p>
+<p>I am running v0.99.5 and have successfully configure the wireguard interface using NordLynx. The service connects and shows that is active under the wireguard tab.</p>
+<p>What I am having trouble with is getting the router to send traffic through wireguard, instead it goes directly through Speedify. I have tried it with and without the “extra step for v99.9” show here: <a href="https://smoothwan.com/vpn/" class="inline-onebox" rel="noopener nofollow ugc">VPN over VPN - SmoothWAN</a></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/help-with-vpn-over-vpn-using-nordlynx/135">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/help-with-vpn-over-vpn-using-nordlynx/135</link>
+          <pubDate>Sun, 03 Mar 2024 00:03:32 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-135</guid>
+          <source url="https://smoothwan.discourse.group/t/help-with-vpn-over-vpn-using-nordlynx/135.rss">Help with VPN over VPN using NordLynx</source>
+        </item>
+        <item>
+          <title>Beryl AX SmoothWAN</title>
+          <dc:creator><![CDATA[tkabal]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Is it possible to install SmoothWAN on the Beryl AX or only the OpenWRT Speedify package? I can test any build if it helps.</p>
+<p>Thanks!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132</link>
+          <pubDate>Thu, 15 Feb 2024 03:33:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-132</guid>
+          <source url="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132.rss">Beryl AX SmoothWAN</source>
+        </item>
+        <item>
+          <title>X86 updates or kernel module installation?</title>
+          <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I know that there is a way to build a custom openwrt image for specific hardware but it exceeds my skillset at this time.<br>
+Is there a way to install custom kernel modules from within smoothwan? I tried standard linux updated commands in the terminal with no success.<br>
+Currently running on a bare metal N6005 fanless PC with 4x2.5Gb ports, would be great to know if I would benefit from custom kernel mods for my hardware.<br>
+I did go ahead and boot the PC from a live MX linux USB drive and ran update &amp; upgrade, installed to NVME drive, rebooted to NVME, verified updates all complete and then saved the output from lsmod for future reference.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130</link>
+          <pubDate>Tue, 06 Feb 2024 00:49:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-130</guid>
+          <source url="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130.rss">X86 updates or kernel module installation?</source>
+        </item>
+        <item>
+          <title>AdGuard breaks Tmobile connections</title>
+          <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>For the first time I tried adguard home feature today.<br>
+The Adguard GUI indicated it was working fine with metrics and whatnot.<br>
+Unfortunately, it immediately caused strange behavior in the Speedify GUI within smoothwan. Every other refresh cycle for the connection info it showed the 2 TMobile connections as dropped off of the active connection list or at the very least with 0 download, but my starlink and Pair and Share connections worked fine. (interestingly the phones connected through pair and share are google fi through TMobile)<br>
+If i disable Adguard home and reboot the router, all is back to normal.</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129</link>
+          <pubDate>Tue, 06 Feb 2024 00:42:59 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-129</guid>
+          <source url="https://smoothwan.discourse.group/t/adguard-breaks-tmobile-connections/129.rss">AdGuard breaks Tmobile connections</source>
+        </item>
+        <item>
+          <title>Avahai mDNS reflector setup</title>
+          <dc:creator><![CDATA[kuz]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Instructions:<br>
+Log onto your firewall Luci web interface and go to Network → Firewall → Traffic Rules tab. Under Open ports on router add a new rule for mDNS. This will be for UDP on port 5353</p>
+<p>Question:<br>
+When I look in this tab/section I am missing the “Open ports on router” section. Any advice on fixing this or possibly setting this up without the gui?</p>
+<p>Source:<br>
+<a href="https://blog.christophersmart.com/2020/03/30/resolving-mdns-across-vlans-with-avahi-on-openwrt/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://blog.christophersmart.com/2020/03/30/resolving-mdns-across-vlans-with-avahi-on-openwrt/</a></p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127</link>
+          <pubDate>Mon, 05 Feb 2024 02:11:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-127</guid>
+          <source url="https://smoothwan.discourse.group/t/avahai-mdns-reflector-setup/127.rss">Avahai mDNS reflector setup</source>
+        </item>
+        <item>
+          <title>Simplest hardware option</title>
+          <dc:creator><![CDATA[sean]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I have both RPI4 and NanoPi R5S hardware sitting around doing very little. I thought that this project might be a good use of them, however we rely on our broadband for our business, and I want to make sure it’s as easy to look after and reliable as possible.</p>
+<p>Currently, we have a FTTC VDSL modem connected over PPPoE into our QNAP router, which has ASUS AImesh hanging off it for Wifi, and draytek 10G switches for 10G to our desktops and 1G elsewhere.</p>
+<p>I don’t want to provide another wifi network, so the RPI option doesn’t look like it would work well. If I went for a Flint or Slate device, can I combine two ethernet WAN’s into one WAN into the QNAP router?</p>
+<p>Sean</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/simplest-hardware-option/123">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/simplest-hardware-option/123</link>
+          <pubDate>Sat, 20 Jan 2024 14:30:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-123</guid>
+          <source url="https://smoothwan.discourse.group/t/simplest-hardware-option/123.rss">Simplest hardware option</source>
+        </item>
+        <item>
+          <title>Interfaces losing configuration</title>
+          <dc:creator><![CDATA[rwathen]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>It has taken hours to get my configuration setup so that I have connection to my Netgear M6 through WAN (eth0), and my Verizon cell service (on iPhone) through wlan1.  Had it working and then if if I reboot anything I have to go back through the interfaces and set everything back up again.  Such a pain and makes this not a very viable solution to take to sporting events where between games I turn everything off to save battery power, then turn back on for the next event.  Any suggestions?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/interfaces-losing-configuration/121</link>
+          <pubDate>Thu, 18 Jan 2024 15:33:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-121</guid>
+          <source url="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121.rss">Interfaces losing configuration</source>
+        </item>
+        <item>
+          <title>Engarde - Lag spikes and low TX</title>
+          <dc:creator><![CDATA[anon83253404]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I am experiencing lag spikes in online games only when using engarde. The nature of lag spikes is such that sometimes my ping shoots up and keeps on increasing until it either returns to normal within few seconds or I get disconnected.</p>
+<p>I have tried using each of my internet separately to isolate any issues, however the lag issue remains. This issue is persistent as long as I am using engarde with either single or dual internets. It never happens with normal WireGuard in SmoothWAN. So this is clearly something related to engarde (client or server side settings).</p>
+<p>Further, I noticed that the “TX” data usage is very low as shown in SmoothWAN, for example:<br>
+RX: 31.59 GB (27575987 Pkts.)<br>
+TX: 3.59 GB (23370358 Pkts.)</p>
+<p>In my limited knowledge, I had thought maybe it’s something to do with MTU or ‘keep persistent = 25’ settings but changing it didn’t seem to have an effect - I’m not sure.</p>
+<p>Could any of this information give a clue about what’s happening?</p>
+            <p><small>9 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/engarde-lag-spikes-and-low-tx/120">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/engarde-lag-spikes-and-low-tx/120</link>
+          <pubDate>Tue, 16 Jan 2024 00:05:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-120</guid>
+          <source url="https://smoothwan.discourse.group/t/engarde-lag-spikes-and-low-tx/120.rss">Engarde - Lag spikes and low TX</source>
+        </item>
+        <item>
+          <title>Installing Speedify on any OpenWrt capable router unofficially</title>
+          <dc:creator><![CDATA[TalalM]]></dc:creator>
+          <category>Announcements</category>
+          <description><![CDATA[
+            <p>In case SmoothWAN does not support the hardware or sources are unavailable like the new GL.iNet devices and FriendlyWrt for NanoPi/BananaPi.</p>
+<p>Ported from SmoothWAN.<br>
+Requires familiarity with OpenWrt.</p>
+<p>Installation video for installing via web interface is provided:<br>
+<a href="https://github.com/TalalMash/Unofficial-Speedify-Installer-For-OpenWrt">TalalMash/Unofficial-Speedify-Installer-For-OpenWrt: Install &amp; configure Speedify using LuCI (github.com)</a></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119</link>
+          <pubDate>Thu, 11 Jan 2024 19:52:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-119</guid>
+          <source url="https://smoothwan.discourse.group/t/installing-speedify-on-any-openwrt-capable-router-unofficially/119.rss">Installing Speedify on any OpenWrt capable router unofficially</source>
+        </item>
+        <item>
+          <title>How to bypass one device out wan</title>
+          <dc:creator><![CDATA[whitieiii]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I have one android device that will not connect to the Internet… i can only connect it to the slate but it doesn’t give this device Internet and because my Slate AX with smooth wan is my only wifi in my camper I’m forced to connect to it… I have two wan Ethernets going into the slate ax… how can I send this android device through one of the two Ethernets directly and bypass everything else in the smooth wan router including Speedify and even the smooth wan dhcp… i just want it to seem like this android device is connected directly to one Ethernet cable</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118</link>
+          <pubDate>Thu, 04 Jan 2024 20:44:51 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-118</guid>
+          <source url="https://smoothwan.discourse.group/t/how-to-bypass-one-device-out-wan/118.rss">How to bypass one device out wan</source>
+        </item>
+        <item>
+          <title>Installing on other brand routers</title>
+          <dc:creator><![CDATA[Shane8johnson]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Sorry if this is a stupid question but I was wondering if it is possible to install smooth WAN on a different brand router?<br>
+For example open WRT can be installed on a Netgear R7800. Does the same concept apply to installing smoothwan on the R7800, since it is compatible with a openWRT install?</p>
+<p>Thanks</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115</link>
+          <pubDate>Fri, 15 Dec 2023 18:02:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-115</guid>
+          <source url="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115.rss">Installing on other brand routers</source>
+        </item>
+        <item>
+          <title>Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</title>
+          <dc:creator><![CDATA[spacesuitdiver]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>If I Enable the WAN WiFi to connect to a hot spot and share internet the moment I save I lose connection to the Master Access Point. This happens on both frequencies and the other is still available.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112</link>
+          <pubDate>Tue, 12 Dec 2023 08:13:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-112</guid>
+          <source url="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112.rss">Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</source>
+        </item>
+        <item>
+          <title>Forwarding and policy to router behind SmoothWAN router</title>
+          <dc:creator><![CDATA[velocity7]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hi, I have a router connected to my home network, which is then connected to a Slate AX running SmoothWAN, and the Slate AX is also running Speedify. I’m trying to do the following but having difficulty getting the right settings:</p>
+<ol>
+<li>Be able to do any kind of port forwarding to the internal router, whether that be from wan/wan6 (connectify0) or from portone/porttwo (eth0/eth1). So far I haven’t been able to get a standard FTP server on port 21 to be visible to the internet, whether I check from wan/wan6 or eth0/eth1.</li>
+<li>Be able to force things like BitTorrent to not operate on Speedify (e.g., force them to operate on either eth0 or eth1 only), even if it means restricting which port that BitTorrent can operate on. I have tried the Speedify Custom Bypass with ports used by BitTorrent with no success. It has worked for domains at the very least.</li>
+</ol>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111</link>
+          <pubDate>Sat, 09 Dec 2023 10:56:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-111</guid>
+          <source url="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss">Forwarding and policy to router behind SmoothWAN router</source>
+        </item>
+        <item>
+          <title>Bypass Speedify for specific (V)LAN</title>
+          <dc:creator><![CDATA[timirvin]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>I followed the instructions in <a href="https://smoothwan.com/wanbyp/" class="inline-onebox" rel="noopener nofollow ugc">Bypass clients to a specific WAN - SmoothWAN</a> to bypass a specific LAN (VLAN actually) to a specific WAN interface.</p>
+<p>The issue I ran into is one I did that, that WAN is removed from the “main” routing table, and so when I deactivate Speedify the traffic is forced over the other WAN (which in my case is the less desirable WAN interface).</p>
+<p>Once I setup the bypass as instructed, this is what I ended up with:</p>
+<pre><code class="lang-auto">root@SmoothWAN:~# ip rule
+0:      from all lookup local
+1:      from 10.26.11.0/24 iif br-lan.2 lookup BYP1
+5210:   from all fwmark 0x80000/0xff0000 lookup main
+5230:   from all fwmark 0x80000/0xff0000 lookup default
+5250:   from all fwmark 0x80000/0xff0000 unreachable
+5270:   from all lookup 52
+10000:  from 100.98.168.38 lookup BYP1
+20000:  from all to 100.98.168.38/10 lookup BYP1
+32766:  from all lookup main
+32767:  from all lookup default
+90010:  from all iif lo lookup BYP1
+root@SmoothWAN:~# ip route
+0.0.0.0/1 dev connectify0 scope link
+default via 10.202.0.1 dev connectify0 proto static
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+10.202.0.0/24 dev connectify0 proto kernel scope link src 10.202.0.2
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+128.0.0.0/1 dev connectify0 scope link
+root@SmoothWAN:~# ip route list table BYP1
+default via 100.64.0.1 dev eth0 proto static src 100.98.168.38 metric 10
+34.120.255.244 dev eth0 proto static scope link src 100.98.168.38 metric 10
+100.64.0.0/10 dev eth0 proto static scope link metric 10
+192.168.100.1 dev eth0 proto static scope link src 100.98.168.38 metric 10
+root@SmoothWAN:~#
+</code></pre>
+<p>You can see that the route via “eth0” has disappeared from the “main” routing table and only appears in the “BYP1” table.</p>
+<p>So, if I deactivate Speedify this is what the “main” table now looks like:</p>
+<pre><code class="lang-auto">root@SmoothWAN:~# ip route
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+</code></pre>
+<p>So all traffic is now heading out “wwan0”.  In this case, I’d like traffic in “main” and “BYP1” tables to both use “eth0” and “wwan0” is relegated to “metric 20” and ostensibly unused.</p>
+<p>Tim</p>
+            <p><small>10 posts - 3 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103</link>
+          <pubDate>Wed, 18 Oct 2023 06:25:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-103</guid>
+          <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+        </item>
+        <item>
+          <title>SmoothWAN Engarde on Oracle Cloud</title>
+          <dc:creator><![CDATA[anon83253404]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS?</p>
+<p>The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS.</p>
+<p>Can someone please help set up SmoothWAN with Engarde on Oracle Cloud? A script for AWS EC2 would be a bonus!</p>
+<p>Thanks in advance!</p>
+            <p><small>20 posts - 3 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102</link>
+          <pubDate>Tue, 17 Oct 2023 18:52:39 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-102</guid>
+          <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+        </item>
+        <item>
+          <title>Mystery route 123.123.123.123</title>
+          <dc:creator><![CDATA[timirvin]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I’m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem. I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img</p>
+<p>I have the following extras activated:<br>
+– Speedify<br>
+– Tailscale</p>
+<p>The following route is in my routing table, and I don’t know why, or how it was installed:</p>
+<p>123.123.123.123 via 100.68.15*.** dev wwan0</p>
+<p>“wwan0” is the Quectel-based 4G-LTE Cellular connection.</p>
+<p>123.123.123.123 is a Chinese-based IP which makes this seem even more suspicious.</p>
+<p>This is a new install and configuration, I started working on this last week and just got things working a day or so ago.  I don’t recall this route being there prior to the SPeedify or Tailscale install, so I suspect one of those.<br>
+I’m using ModemManager to configure the Quectel interface, so tht could potentially be the culprit.</p>
+<p>Here are the logs and config from the machine:<br>
+<a href="https://send.bitwarden.com/#WKz7pSpkpkekz7CRAFEnNw/Juq7vbLfAcHwuCoTDQlDwg" class="onebox" target="_blank" rel="noopener nofollow ugc">https://send.bitwarden.com/#WKz7pSpkpkekz7CRAFEnNw/Juq7vbLfAcHwuCoTDQlDwg</a></p>
+<p>Any idea what is installing this route, and more importantly, why?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99</link>
+          <pubDate>Wed, 04 Oct 2023 05:02:35 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-99</guid>
+          <source url="https://smoothwan.discourse.group/t/mystery-route-123-123-123-123/99.rss">Mystery route 123.123.123.123</source>
+        </item>
+        <item>
+          <title>Speedify UI not working</title>
+          <dc:creator><![CDATA[timirvin]]></dc:creator>
+          <category>Help</category>
+          <description><![CDATA[
+            <p>I am scratching and clawing my way to get this SmoothWAN firewall setup.</p>
+<p>I’m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem.  I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img</p>
+<p>I finally figured out I needed to deactivate the “Unique USB network interface naming” to get the QMI interface on the Quectel to work (though it wouldn’t work with the QMI Cellular interface type, but ModemManager does work, so that is fine).  I can pass traffic through this interface now.</p>
+<p>I then finally figured out I needed to delete the WAN and WAN6 interfaces and recreate a new WAN interface on “eth0” for my second (Ethernet-based) Internet connection.  That Internet path is also working.</p>
+<p>So, I then installed Speedify using the Luci UI, and new WAN and WAN6 interfaces were created pointing to “connectify0”, but with an error that the “Network device is not present”.  If I go to the “Overview” screen, the “Speedify UI” frame just says “Restart Speedify Service”.  Running “ps” from an ssh session I see “./speedify -d logs” running.  I have rebooted and I have restarted Speedify multiple times using the Luci UI.  The “logs” tab in the Luci VPN-&gt;Speedify section shows nothing.</p>
+<p>The Logs and Configs are available here (for 7 days): <a href="https://send.bitwarden.com/#Nz4F9P0X0kifRrCPAP_4UQ/PmuUQXjx5D9i1zDxH0nnAg" class="inline-onebox" rel="noopener nofollow ugc">Bitwarden Send</a></p>
+<p>Any help would be very appreciated.</p>
+<p>Tim</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://smoothwan.discourse.group/t/speedify-ui-not-working/98">Read full topic</a></p>
+          ]]></description>
+          <link>https://smoothwan.discourse.group/t/speedify-ui-not-working/98</link>
+          <pubDate>Mon, 02 Oct 2023 15:33:10 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">smoothwan.discourse.group-topic-98</guid>
+          <source url="https://smoothwan.discourse.group/t/speedify-ui-not-working/98.rss">Speedify UI not working</source>
+        </item>
+  </channel>
+</rss>

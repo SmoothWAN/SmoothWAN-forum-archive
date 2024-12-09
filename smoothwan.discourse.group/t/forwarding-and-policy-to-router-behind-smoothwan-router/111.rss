@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Forwarding and policy to router behind SmoothWAN router</title>
+    <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111</link>
+    <description>Hi, I have a router connected to my home network, which is then connected to a Slate AX running SmoothWAN, and the Slate AX is also running Speedify. I&#39;m trying to do the following but having difficulty getting the right settings:
+
+1. Be able to do any kind of port forwarding to the internal router, whether that be from wan/wan6 (connectify0) or from portone/porttwo (eth0/eth1). So far I haven&#39;t been able to get a standard FTP server on port 21 to be visible to the internet, whether I check from wan/wan6 or eth0/eth1.
+2. Be able to force things like BitTorrent to not operate on Speedify (e.g., force them to operate on either eth0 or eth1 only), even if it means restricting which port that BitTorrent can operate on. I have tried the Speedify Custom Bypass with ports used by BitTorrent with no success. It has worked for domains at the very least.</description>
+    
+    <lastBuildDate>Wed, 10 Apr 2024 16:48:06 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Forwarding and policy to router behind SmoothWAN router</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Unless the official Speedify OpenWrt support includes more bypass features I guess we need to fork VPN-PBR for more features.</p>
+          <p><a href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/4</link>
+        <pubDate>Wed, 10 Apr 2024 16:48:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-111-4</guid>
+        <source url="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss">Forwarding and policy to router behind SmoothWAN router</source>
+      </item>
+      <item>
+        <title>Forwarding and policy to router behind SmoothWAN router</title>
+        <dc:creator><![CDATA[kuz]]></dc:creator>
+        <description><![CDATA[
+            <p>Will the next version allow for use a policy type of bypass so that it can fail over to different lans or even back to speedify if the wan is not available?</p>
+<p>I am new but I saw in the Custom Bypasses tab it mentions " ‣ Navigate to <em>VPN-&gt;VPN Policy Routing</em> for static client/WAN specific settings." which doesn’t exist. I am hopeful to be able to setup an ordered list of interfaces for certain clients or vlans to prefer.</p>
+          <p><a href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/3</link>
+        <pubDate>Fri, 09 Feb 2024 16:55:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-111-3</guid>
+        <source url="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss">Forwarding and policy to router behind SmoothWAN router</source>
+      </item>
+      <item>
+        <title>Forwarding and policy to router behind SmoothWAN router</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, bypassing clients to a specific interface is currently done manually: <a href="https://smoothwan.com/wanbyp/">Bypass clients to a specific WAN - SmoothWAN</a><br>
+Next version will provide a UI with a different method.</p>
+<p>Regarding port forwarding, can you describe the method you used? Only Speedify dedicated server option allows port forwarding. For other WANs, make sure they’re in the red zone, match: wan to device, action: forward to IP. Then ofc the main router (behind Slate) should have the port open pointing to the Slate IP.</p>
+          <p><a href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/2</link>
+        <pubDate>Wed, 20 Dec 2023 04:16:53 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-111-2</guid>
+        <source url="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss">Forwarding and policy to router behind SmoothWAN router</source>
+      </item>
+      <item>
+        <title>Forwarding and policy to router behind SmoothWAN router</title>
+        <dc:creator><![CDATA[velocity7]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, I have a router connected to my home network, which is then connected to a Slate AX running SmoothWAN, and the Slate AX is also running Speedify. I’m trying to do the following but having difficulty getting the right settings:</p>
+<ol>
+<li>Be able to do any kind of port forwarding to the internal router, whether that be from wan/wan6 (connectify0) or from portone/porttwo (eth0/eth1). So far I haven’t been able to get a standard FTP server on port 21 to be visible to the internet, whether I check from wan/wan6 or eth0/eth1.</li>
+<li>Be able to force things like BitTorrent to not operate on Speedify (e.g., force them to operate on either eth0 or eth1 only), even if it means restricting which port that BitTorrent can operate on. I have tried the Speedify Custom Bypass with ports used by BitTorrent with no success. It has worked for domains at the very least.</li>
+</ol>
+          <p><a href="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111/1</link>
+        <pubDate>Sat, 09 Dec 2023 10:56:44 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-111-1</guid>
+        <source url="https://smoothwan.discourse.group/t/forwarding-and-policy-to-router-behind-smoothwan-router/111.rss">Forwarding and policy to router behind SmoothWAN router</source>
+      </item>
+  </channel>
+</rss>

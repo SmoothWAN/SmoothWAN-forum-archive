@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+    <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94</link>
+    <description>I&#39;m trying to setup Wireguard over Speedify, but when Wireguard connects I lose all access to Luci! Thankfully, I&#39;m running in proxmox, and can still access my proxmox host locally and disable wireguard via the serial console, at which point I gain Luci access access from LAN.
+
+Any suggestions on how to fix this?</description>
+    
+    <lastBuildDate>Wed, 06 Sep 2023 20:15:08 +0000</lastBuildDate>
+    <category>Development &amp; Feedback</category>
+    <atom:link href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <p>Figured I’d share some more information regarding:</p>
+<pre><code class="lang-auto">netifd: wg (31175): Name does not resolve: notarealaddress.com:51820
+</code></pre>
+<p>I think it is because I only had a CNAME to an A record, and no AAAA resolving. I added a <code>dnsmasq</code> entry to force a non-response for IPv6, and the Wireguard began starting up perfectly without issue.</p>
+<pre><code class="lang-auto">
+	list address '/notarealaddress.com/::'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/9</link>
+        <pubDate>Wed, 06 Sep 2023 20:15:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-9</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the report, I should test the differences between openwrt 22 and 23 with the current guide. (glinet is 22, PC is 23).<br>
+I’m guessing the WG auto-restart is for profiles with dynamic IP changes, otherwise it should reconnect*.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/8</link>
+        <pubDate>Mon, 04 Sep 2023 04:00:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-8</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <p>I got it working - I’m not 100% sure what it was, but I’ll post some changes from networking/firewall.</p>
+<ol>
+<li>Under the wireguard interface, added <code>option nohostroute '1'</code> and <code>option fwmark '0x100'</code>. I did this after looking at ip routes in OpenWrt, and saw a route established for the resolved IP of my wireguard server on the eth0 interface. I had to reboot after setting <code>nohostroute</code> for the route to disappear from OpenWrt.</li>
+<li>Wireguard was having difficulties resolving the DNS name that I use for my server at connectio time. I realized its because its adding the routing-rules to send all traffic before it resolves the domain name. So I added an explicit route for the DNS servers to use the <code>main</code> table (thus, speedify or eth0 if not up, without using Wireguard).</li>
+</ol>
+<pre><code class="lang-auto">
+config rule
+        option dest '1.0.0.1/32'
+        option lookup 'main'
+
+config rule
+        option dest '1.1.1.1/32'
+        option lookup 'main'
+</code></pre>
+<ol start="3">
+<li>Added <code>option dest '*'</code> under</li>
+</ol>
+<pre><code class="lang-auto">
+config rule
+        option name 'WireguardTag'
+        list proto 'udp'
+        option dest_port '51820'
+        option target 'MARK'
+        option set_mark '0x100'
+        option dest '*'
+</code></pre>
+<p>I was also having issues if the wireguard server went down - it seemed OpenWrt wouldn’t disable the interface. So I used the script from this gist in a crontab on every 5 minutes. <a href="https://gist.github.com/mattkasun/9a0e90d9d31b2c935d3f6d6e71dbece9" class="inline-onebox" rel="noopener nofollow ugc">wireguard watchdog script · GitHub</a></p>
+<p>I get notified if my external IP (As seen by lan clients) changes, so I can hop back in and re-up the wireguard. I’m using Wireguard because I found the Speedify Bypass didn’t work well for me, and many sites were blocked or throttled. Things seem great routing my internet Speedify → Wireguard through my primary residences’ 1G/1G fiber.</p>
+<p>Entire config:</p>
+<pre><code class="lang-auto"># cat /etc/config/firewall 
+
+config defaults
+        option syn_flood '1'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+
+config zone
+        option name 'lan'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'ACCEPT'
+        list network 'lan'
+
+config zone
+        option name 'wan'
+        option input 'REJECT'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+        option masq '1'
+        option mtu_fix '1'
+        option masq6 '1'
+        list network 'AutoWANeth1'
+        list network 'AutoWANeth2'
+        list network 'AutoWANeth3'
+        list network 'AutoWANeth4'
+        list network 'mp'
+        list network 'wan'
+        list network 'wan6'
+        list network 'wan'
+
+config forwarding
+        option src 'lan'
+        option dest 'wan'
+
+config rule
+        option name 'Allow-DHCP-Renew'
+        option src 'wan'
+        option proto 'udp'
+        option dest_port '68'
+        option target 'ACCEPT'
+        option family 'ipv4'
+
+config rule
+        option name 'Allow-Ping'
+        option src 'wan'
+        option proto 'icmp'
+        option icmp_type 'echo-request'
+        option family 'ipv4'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-IGMP'
+        option src 'wan'
+        option proto 'igmp'
+        option family 'ipv4'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-DHCPv6'
+        option src 'wan'
+        option proto 'udp'
+        option dest_port '546'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-MLD'
+        option src 'wan'
+        option proto 'icmp'
+        option src_ip 'fe80::/10'
+        list icmp_type '130/0'
+        list icmp_type '131/0'
+        list icmp_type '132/0'
+        list icmp_type '143/0'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ICMPv6-Input'
+        option src 'wan'
+        option proto 'icmp'
+        list icmp_type 'echo-request'
+        list icmp_type 'echo-reply'
+        list icmp_type 'destination-unreachable'
+        list icmp_type 'packet-too-big'
+        list icmp_type 'time-exceeded'
+        list icmp_type 'bad-header'
+        list icmp_type 'unknown-header-type'
+        list icmp_type 'router-solicitation'
+        list icmp_type 'neighbour-solicitation'
+        list icmp_type 'router-advertisement'
+        list icmp_type 'neighbour-advertisement'
+        option limit '1000/sec'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ICMPv6-Forward'
+        option src 'wan'
+        option dest '*'
+        option proto 'icmp'
+        list icmp_type 'echo-request'
+        list icmp_type 'echo-reply'
+        list icmp_type 'destination-unreachable'
+        list icmp_type 'packet-too-big'
+        list icmp_type 'time-exceeded'
+        list icmp_type 'bad-header'
+        list icmp_type 'unknown-header-type'
+        option limit '1000/sec'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-IPSec-ESP'
+        option src 'wan'
+        option dest 'lan'
+        option proto 'esp'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ISAKMP'
+        option src 'wan'
+        option dest 'lan'
+        option dest_port '500'
+        option proto 'udp'
+        option target 'ACCEPT'
+
+config include 'pbr'
+        option fw4_compatible '1'
+        option type 'script'
+        option path '/usr/share/pbr/pbr.firewall.include'
+
+config zone
+        option name 'Tailscale'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'ACCEPT'
+        option masq '1'
+        list device 'br-tailscale0'
+
+config forwarding
+        option src 'Tailscale'
+        option dest 'lan'
+
+config forwarding
+        option src 'Tailscale'
+        option dest 'wan'
+
+config forwarding
+        option src 'lan'
+        option dest 'Tailscale'
+
+config include 'miniupnpd'
+        option type 'script'
+        option path '/usr/share/miniupnpd/firewall.include'
+
+config rule
+        option name 'Allow-web'
+        list proto 'tcp'
+        option src 'wan'
+        option dest_port '80'
+        option target 'ACCEPT'
+        option enabled '0'
+
+config rule
+        option name 'WireguardTag'
+        list proto 'udp'
+        option dest_port '51820'
+        option target 'MARK'
+        option set_mark '0x100'
+        option dest '*'
+
+# cat /etc/config/network 
+
+config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'eth0'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option ipaddr '192.168.88.1'
+
+config interface 'AutoWANeth1'
+        option proto 'dhcp'
+        option device 'eth1'
+        option metric '31'
+        option peerdns '0'
+        list dns '8.8.8.8'
+
+config interface 'AutoWANeth2'
+        option proto 'dhcp'
+        option device 'eth2'
+        option metric '32'
+
+config interface 'AutoWANeth3'
+        option proto 'dhcp'
+        option device 'eth3'
+        option metric '33'
+
+config interface 'AutoWANeth4'
+        option proto 'dhcp'
+        option device 'eth4'
+        option metric '34'
+
+config interface 'AutoUSBeth5'
+        option proto 'dhcp'
+        option device 'eth5'
+        option metric '35'
+
+config interface 'AutoUSBeth6'
+        option proto 'dhcp'
+        option device 'eth6'
+        option metric '36'
+
+config interface 'AutoUSBeth7'
+        option proto 'dhcp'
+        option device 'eth7'
+        option metric '37'
+
+config interface 'AutoUSB0'
+        option proto 'dhcp'
+        option device 'usb0'
+        option metric '40'
+
+config interface 'AutoUSB1'
+        option proto 'dhcp'
+        option device 'usb1'
+        option metric '41'
+
+config interface 'AutoUSB2'
+        option proto 'dhcp'
+        option device 'usb2'
+        option metric '42'
+
+config interface 'AutoUSB3'
+        option proto 'dhcp'
+        option device 'usb3'
+        option metric '43'
+
+config rule
+        option dest '1.0.0.1/32'
+        option lookup 'main'
+
+config rule
+        option dest '1.1.1.1/32'
+        option lookup 'main'
+
+config rule
+        option priority '3276'
+        option mark '0x100'
+        option lookup 'main'
+
+config rule
+        option dest '192.168.1.254/32'
+        option lookup 'pbr_AutoWANeth1'
+
+config rule
+        option lookup 'BYP1'
+        option src '192.168.88.0/24'
+
+config route
+        option interface 'lan'
+        option table 'BYP1'
+        option target '192.168.88.0/24'
+
+config interface 'mp'
+        option proto 'wireguard'
+        option private_key '&lt;nope&gt;'
+        list addresses '10.10.10.2/24'
+        option peerdns '0'
+        list dns '1.1.1.1'
+        list dns '1.0.0.1'
+        option fwmark '0x100'
+        option ip4table 'BYP1'
+        option nohostroute '1'
+
+config wireguard_mp
+        option description 'Imported peer configuration'
+        option public_key '&lt;nope&gt;'
+        list allowed_ips '0.0.0.0/0'
+        option persistent_keepalive '25'
+        option endpoint_host '&lt;nope&gt;'
+        option endpoint_port '51820'
+        option route_allowed_ips '1'
+
+config route
+        option target '192.168.1.254/32'
+        option interface 'lan'
+        option disabled '1'
+
+config interface 'wan'
+        option force_link '0'
+        option proto 'static'
+        option device 'connectify0'
+        option ipaddr '10.202.0.2'
+        option netmask '255.255.255.0'
+        option gateway '10.202.0.1'
+
+config interface 'wan6'
+        option proto 'dhcpv6'
+        option device 'connectify0'
+        option reqaddress 'try'
+        option reqprefix 'auto'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/7</link>
+        <pubDate>Mon, 04 Sep 2023 03:37:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-7</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Not sure, what does <code>ip rule</code> show?</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/6</link>
+        <pubDate>Sun, 03 Sep 2023 23:58:23 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-6</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <p>Man, I feel dumb. Thanks for that. I can access the page again. It seems that when I turn on the WireGuard VPN, it’s bypassing Speedify. I can confirm by looking at the speedify graphs . Did anything else stand out to you?</p>
+<p>updated configs:</p>
+<pre><code class="lang-auto"># cat /etc/config/firewall
+
+config defaults
+        option syn_flood '1'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+
+config zone
+        option name 'lan'
+        list network 'lan'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'ACCEPT'
+
+config zone
+        option name 'wan'
+        option input 'REJECT'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+        option masq '1'
+        option mtu_fix '1'
+        option masq6 '1'
+        list network 'AutoWANeth1'
+        list network 'AutoWANeth2'
+        list network 'AutoWANeth3'
+        list network 'AutoWANeth4'
+        list network 'MP_Wireguard'
+        list network 'wan'
+        list network 'wan6'
+        list network 'wan'
+
+config forwarding
+        option src 'lan'
+        option dest 'wan'
+
+config rule
+        option name 'Allow-DHCP-Renew'
+        option src 'wan'
+        option proto 'udp'
+        option dest_port '68'
+        option target 'ACCEPT'
+        option family 'ipv4'
+
+config rule
+        option name 'Allow-Ping'
+        option src 'wan'
+        option proto 'icmp'
+        option icmp_type 'echo-request'
+        option family 'ipv4'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-IGMP'
+        option src 'wan'
+        option proto 'igmp'
+        option family 'ipv4'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-DHCPv6'
+        option src 'wan'
+        option proto 'udp'
+        option dest_port '546'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-MLD'
+        option src 'wan'
+        option proto 'icmp'
+        option src_ip 'fe80::/10'
+        list icmp_type '130/0'
+        list icmp_type '131/0'
+        list icmp_type '132/0'
+        list icmp_type '143/0'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ICMPv6-Input'
+        option src 'wan'
+        option proto 'icmp'
+        list icmp_type 'echo-request'
+        list icmp_type 'echo-reply'
+        list icmp_type 'destination-unreachable'
+        list icmp_type 'packet-too-big'
+        list icmp_type 'time-exceeded'
+        list icmp_type 'bad-header'
+        list icmp_type 'unknown-header-type'
+        list icmp_type 'router-solicitation'
+        list icmp_type 'neighbour-solicitation'
+        list icmp_type 'router-advertisement'
+        list icmp_type 'neighbour-advertisement'
+        option limit '1000/sec'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ICMPv6-Forward'
+        option src 'wan'
+        option dest '*'
+        option proto 'icmp'
+        list icmp_type 'echo-request'
+        list icmp_type 'echo-reply'
+        list icmp_type 'destination-unreachable'
+        list icmp_type 'packet-too-big'
+        list icmp_type 'time-exceeded'
+        list icmp_type 'bad-header'
+        list icmp_type 'unknown-header-type'
+        option limit '1000/sec'
+        option family 'ipv6'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-IPSec-ESP'
+        option src 'wan'
+        option dest 'lan'
+        option proto 'esp'
+        option target 'ACCEPT'
+
+config rule
+        option name 'Allow-ISAKMP'
+        option src 'wan'
+        option dest 'lan'
+        option dest_port '500'
+        option proto 'udp'
+        option target 'ACCEPT'
+
+config include 'pbr'
+        option fw4_compatible '1'
+        option type 'script'
+        option path '/usr/share/pbr/pbr.firewall.include'
+
+config zone
+        option name 'Tailscale'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+        option forward 'ACCEPT'
+        option masq '1'
+        list device 'br-tailscale0'
+
+config forwarding
+        option src 'Tailscale'
+        option dest 'lan'
+
+config forwarding
+        option src 'Tailscale'
+        option dest 'wan'
+
+config forwarding
+        option src 'lan'
+        option dest 'Tailscale'
+
+config include 'miniupnpd'
+        option type 'script'
+        option path '/usr/share/miniupnpd/firewall.include'
+
+config rule
+        option name 'Allow-web'
+        list proto 'tcp'
+        option src 'wan'
+        option dest_port '80'
+        option target 'ACCEPT'
+        option enabled '0'
+
+config rule
+        option name 'WireguardTag'
+        list proto 'udp'
+        option dest_port '51820'
+        option target 'MARK'
+        option set_mark '0x100'
+
+
+# cat /etc/config/network 
+
+config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'eth0'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option ipaddr '192.168.88.1'
+
+config interface 'AutoWANeth1'
+        option proto 'dhcp'
+        option device 'eth1'
+        option metric '31'
+        option peerdns '0'
+        list dns '8.8.8.8'
+
+config interface 'AutoWANeth2'
+        option proto 'dhcp'
+        option device 'eth2'
+        option metric '32'
+
+config interface 'AutoWANeth3'
+        option proto 'dhcp'
+        option device 'eth3'
+        option metric '33'
+
+config interface 'AutoWANeth4'
+        option proto 'dhcp'
+        option device 'eth4'
+        option metric '34'
+
+config interface 'AutoUSBeth5'
+        option proto 'dhcp'
+        option device 'eth5'
+        option metric '35'
+
+config interface 'AutoUSBeth6'
+        option proto 'dhcp'
+        option device 'eth6'
+        option metric '36'
+
+config interface 'AutoUSBeth7'
+        option proto 'dhcp'
+        option device 'eth7'
+        option metric '37'
+
+config interface 'AutoUSB0'
+        option proto 'dhcp'
+        option device 'usb0'
+        option metric '40'
+
+config interface 'AutoUSB1'
+        option proto 'dhcp'
+        option device 'usb1'
+        option metric '41'
+
+config interface 'AutoUSB2'
+        option proto 'dhcp'
+        option device 'usb2'
+        option metric '42'
+
+config interface 'AutoUSB3'
+        option proto 'dhcp'
+        option device 'usb3'
+        option metric '43'
+
+config interface 'MP_Wireguard'
+        option proto 'wireguard'
+        option private_key '&lt;nope&gt;'
+        list addresses '10.10.10.2/24'
+        option peerdns '0'
+        list dns '1.1.1.1'
+        list dns '1.0.0.1'
+        option ip4table 'BYP1'
+        option listen_port '51820'
+
+config wireguard_MP_Wireguard
+        option description 'Imported peer configuration'
+        option public_key '&lt;nope&gt;'
+        list allowed_ips '0.0.0.0/0'
+        option persistent_keepalive '25'
+        option private_key '&lt;nope&gt;'
+        option route_allowed_ips '1'
+        option endpoint_host '&lt;nope&gt;'
+        option endpoint_port '51820'
+
+config rule
+        option priority '3276'
+        option lookup 'main'
+        option mark '0x100'
+
+config rule
+        option lookup 'BYP1'
+        option src '192.168.88.0/24'
+
+config route
+        option interface 'lan'
+        option table 'BYP1'
+        option target '192.168.88.0/24'
+
+config interface 'wan'
+        option force_link '0'
+        option proto 'static'
+        option device 'connectify0'
+        option ipaddr '10.202.0.2'
+        option netmask '255.255.255.0'
+        option gateway '10.202.0.1'
+
+config interface 'wan6'
+        option proto 'dhcpv6'
+        option device 'connectify0'
+        option reqaddress 'try'
+        option reqprefix 'auto'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/5</link>
+        <pubDate>Sun, 03 Sep 2023 05:29:28 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-5</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Regarding step 3 and 5 in <a href="https://smoothwan.com/vpn/">https://smoothwan.com/vpn/</a> IP should end with 0.<br>
+e.g: <a href="http://192.168.88.0/24">192.168.88.0/24</a> in your case, will add a note.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/4</link>
+        <pubDate>Sun, 03 Sep 2023 04:12:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-4</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <pre><code class="lang-auto">
+config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'eth0'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option ipaddr '192.168.88.1'
+
+config interface 'AutoWANeth1'
+        option proto 'dhcp'
+        option device 'eth1'
+        option metric '31'
+        option peerdns '0'
+        list dns '8.8.8.8'
+
+config interface 'AutoWANeth2'
+        option proto 'dhcp'
+        option device 'eth2'
+        option metric '32'
+
+config interface 'AutoWANeth3'
+        option proto 'dhcp'
+        option device 'eth3'
+        option metric '33'
+
+config interface 'AutoWANeth4'
+        option proto 'dhcp'
+        option device 'eth4'
+        option metric '34'
+
+config interface 'AutoUSBeth5'
+        option proto 'dhcp'
+        option device 'eth5'
+        option metric '35'
+
+config interface 'AutoUSBeth6'
+        option proto 'dhcp'
+        option device 'eth6'
+        option metric '36'
+
+config interface 'AutoUSBeth7'
+        option proto 'dhcp'
+        option device 'eth7'
+        option metric '37'
+
+config interface 'AutoUSB0'
+        option proto 'dhcp'
+        option device 'usb0'
+        option metric '40'
+
+config interface 'AutoUSB1'
+        option proto 'dhcp'
+        option device 'usb1'
+        option metric '41'
+
+config interface 'AutoUSB2'
+        option proto 'dhcp'
+        option device 'usb2'
+        option metric '42'
+
+config interface 'AutoUSB3'
+        option proto 'dhcp'
+        option device 'usb3'
+        option metric '43'
+
+config interface 'wan'
+        option force_link '0'
+        option proto 'static'
+        option device 'connectify0'
+        option ipaddr '10.202.0.2'
+        option netmask '255.255.255.0'
+        option gateway '10.202.0.1'
+
+config interface 'wan6'
+        option proto 'dhcpv6'
+        option device 'connectify0'
+        option reqaddress 'try'
+        option reqprefix 'auto'
+
+config interface 'MP_Wireguard'
+        option proto 'wireguard'
+        option private_key '&lt;redacted priv_key_1&gt;'
+        list addresses '10.10.10.2/24'
+        option peerdns '0'
+        list dns '1.1.1.1'
+        list dns '1.0.0.1'
+        option ip4table 'BYP1'
+
+config wireguard_MP_Wireguard
+        option description 'Imported peer configuration'
+        option public_key '&lt;redated pub_key&gt;'
+        list allowed_ips '0.0.0.0/0'
+        option persistent_keepalive '25'
+        option private_key '&lt;redacted priv_key_1'
+        option route_allowed_ips '1'
+        option endpoint_host '&lt;redated IP - used to have DNS here buy tryig ip&gt;'
+
+config rule
+        option priority '3276'
+        option lookup 'main'
+        option mark '0x100'
+
+config rule
+        option src '192.168.88.1/24'
+        option lookup 'BYP1'
+
+config route
+        option interface 'lan'
+        option target '192.168.88.1/24'
+        option table 'BYP1'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/3</link>
+        <pubDate>Sun, 03 Sep 2023 01:51:11 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-3</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, please post the results of <code>cat /etc/config/network</code> with sensitive info redacted.<br>
+You can use the terminal in the web UI.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/2</link>
+        <pubDate>Sat, 02 Sep 2023 23:44:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-2</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+      <item>
+        <title>Wireguard for all clients - working, but can&#39;t access LUCI?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m trying to setup Wireguard over Speedify, but when Wireguard connects I lose all access to Luci! Thankfully, I’m running in proxmox, and can still access my proxmox host locally and disable wireguard via the serial console, at which point I gain Luci access access from LAN.</p>
+<p>Any suggestions on how to fix this?</p>
+          <p><a href="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94/1</link>
+        <pubDate>Sat, 02 Sep 2023 21:08:23 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-94-1</guid>
+        <source url="https://smoothwan.discourse.group/t/wireguard-for-all-clients-working-but-cant-access-luci/94.rss">Wireguard for all clients - working, but can&#39;t access LUCI?</source>
+      </item>
+  </channel>
+</rss>

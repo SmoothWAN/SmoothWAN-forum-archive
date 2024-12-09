@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Is the smoothwan image for RPI 4 work for RPI CM4 as well?</title>
+    <link>https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37</link>
+    <description>Hi, may i know if the image for RPI 4 work for RPI CM4 as well since there is difficulty to get RPI 4.</description>
+    
+    <lastBuildDate>Tue, 04 Apr 2023 01:26:12 +0000</lastBuildDate>
+    <category>Development &amp; Feedback</category>
+    <atom:link href="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Is the smoothwan image for RPI 4 work for RPI CM4 as well?</title>
+        <dc:creator><![CDATA[klloh]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, Thanks for the reply.</p>
+          <p><a href="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/3</link>
+        <pubDate>Tue, 04 Apr 2023 01:26:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-37-3</guid>
+        <source url="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37.rss">Is the smoothwan image for RPI 4 work for RPI CM4 as well?</source>
+      </item>
+      <item>
+        <title>Is the smoothwan image for RPI 4 work for RPI CM4 as well?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes it does with the exception of one of the USB 2.0 ports, I think that needs extra configuration, maybe not on the latest release.</p>
+          <p><a href="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/2</link>
+        <pubDate>Fri, 31 Mar 2023 20:10:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-37-2</guid>
+        <source url="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37.rss">Is the smoothwan image for RPI 4 work for RPI CM4 as well?</source>
+      </item>
+      <item>
+        <title>Is the smoothwan image for RPI 4 work for RPI CM4 as well?</title>
+        <dc:creator><![CDATA[klloh]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, may i know if the image for RPI 4 work for RPI CM4 as well since there is difficulty to get RPI 4.</p>
+          <p><a href="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37/1</link>
+        <pubDate>Thu, 30 Mar 2023 08:31:09 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-37-1</guid>
+        <source url="https://smoothwan.discourse.group/t/is-the-smoothwan-image-for-rpi-4-work-for-rpi-cm4-as-well/37.rss">Is the smoothwan image for RPI 4 work for RPI CM4 as well?</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SmoothWAN Engarde on Oracle Cloud</title>
+    <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102</link>
+    <description>Hello,
+
+I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS? 
+
+The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS.
+
+Can someone please help set up SmoothWAN with Engarde on Oracle Cloud? A script for AWS EC2 would be a bonus!
+
+Thanks in advance!</description>
+    
+    <lastBuildDate>Sat, 13 Jan 2024 14:58:00 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>It worked when I added the IPTABLES in the cloud-init before running the instance.</p>
+<p>Please note, I did not try logging into the VPS and running the IPTABLES commands manually.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/20</link>
+        <pubDate>Sat, 13 Jan 2024 14:58:00 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-20</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Should I add the IPTABLES commands by default for cloud-init?</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/19</link>
+        <pubDate>Sat, 13 Jan 2024 12:45:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-19</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>I can confirm this is working for Oracle as well <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> thanks!</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/18</link>
+        <pubDate>Sat, 13 Jan 2024 12:33:42 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-18</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Have you tried doing similar steps in VPC (security list) with Oracle?<br>
+Note that the Ubuntu image in Oracle is modified and strict, you need to login to the VPS and run:</p>
+<pre><code class="lang-auto">iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -F
+</code></pre>
+<p>If that works then it needs to be added to the cloud-init field.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/17</link>
+        <pubDate>Fri, 12 Jan 2024 20:41:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-17</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m happy to report it’s working <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> thank you! Not sure if the issues were caused by t2.micro (1 CPU) previously. If you need me for testing Oracle or any future releases, let me know. I’ll join the discord.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/16</link>
+        <pubDate>Thu, 11 Jan 2024 20:35:52 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-16</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes it’s the same.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/15</link>
+        <pubDate>Thu, 11 Jan 2024 19:41:09 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-15</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>Can you please confirm that you used the exact same Cloud init script that is used for Vultr?</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/14</link>
+        <pubDate>Thu, 11 Jan 2024 19:39:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-14</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Amazon AWS was fairly simple, haven’t tested with &gt;100Mbit connections with the t3.micro though:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/bac9584778d9185afd36e43b0e4717f91762a82d.jpeg" data-download-href="/uploads/short-url/qEobHSEORVCR5gwDpoE83JMLNIp.jpeg?dl=1" title="Web capture_11-1-2024_215047_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_690x327.jpeg" alt="Web capture_11-1-2024_215047_eu-north-1.console.aws.amazon.com" data-base62-sha1="qEobHSEORVCR5gwDpoE83JMLNIp" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/bac9584778d9185afd36e43b0e4717f91762a82d_2_1380x654.jpeg 2x" data-dominant-color="EBECED"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/693df2cf169253d0c053240f6a951c7f42762dc5.jpeg" data-download-href="/uploads/short-url/f10RdDHqxjgR7KB4QUQvs8Alu0R.jpeg?dl=1" title="Web capture_11-1-2024_215217_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_690x327.jpeg" alt="Web capture_11-1-2024_215217_eu-north-1.console.aws.amazon.com" data-base62-sha1="f10RdDHqxjgR7KB4QUQvs8Alu0R" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/693df2cf169253d0c053240f6a951c7f42762dc5_2_1380x654.jpeg 2x" data-dominant-color="ECEDED"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/9b949e9c32c069f20790dc2c71c0052816055c5f.jpeg" data-download-href="/uploads/short-url/mckqhoSRgwrilWrfcY6JaJxBRy7.jpeg?dl=1" title="Web capture_11-1-2024_215254_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_690x327.jpeg" alt="Web capture_11-1-2024_215254_eu-north-1.console.aws.amazon.com" data-base62-sha1="mckqhoSRgwrilWrfcY6JaJxBRy7" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9b949e9c32c069f20790dc2c71c0052816055c5f_2_1380x654.jpeg 2x" data-dominant-color="EDEDEE"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/450e38c822e8aed43987621e1976d94234ece590.jpeg" data-download-href="/uploads/short-url/9QTpLjFtjIhR6SVaADjlaNgLdJe.jpeg?dl=1" title="Web capture_11-1-2024_22720_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_690x327.jpeg" alt="Web capture_11-1-2024_22720_eu-north-1.console.aws.amazon.com" data-base62-sha1="9QTpLjFtjIhR6SVaADjlaNgLdJe" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/450e38c822e8aed43987621e1976d94234ece590_2_1380x654.jpeg 2x" data-dominant-color="E7E9EA"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014.jpeg" data-download-href="/uploads/short-url/yWFK8qPG4DdZ0e9iNM6fw6HnVuQ.jpeg?dl=1" title="Web capture_11-1-2024_222227_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_690x327.jpeg" alt="Web capture_11-1-2024_222227_eu-north-1.console.aws.amazon.com" data-base62-sha1="yWFK8qPG4DdZ0e9iNM6fw6HnVuQ" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/f4ebd1d6b6d8d5a5007345d2a48088a8a3296014_2_1380x654.jpeg 2x" data-dominant-color="E8EAEA"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665.jpeg" data-download-href="/uploads/short-url/7xVlXYjOXFWuXzsg3cBJmtutDPn.jpeg?dl=1" title="Web capture_11-1-2024_222248_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_690x327.jpeg" alt="Web capture_11-1-2024_222248_eu-north-1.console.aws.amazon.com" data-base62-sha1="7xVlXYjOXFWuXzsg3cBJmtutDPn" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/34e4f386de6ca3ac7d8c6e802a391f0ecb145665_2_1380x654.jpeg 2x" data-dominant-color="E8EAEB"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7.jpeg" data-download-href="/uploads/short-url/5mS3isFZ0KHKuqQQTrs1NRnqWOP.jpeg?dl=1" title="Web capture_11-1-2024_222326_eu-north-1.console.aws.amazon.com"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_690x327.jpeg" alt="Web capture_11-1-2024_222326_eu-north-1.console.aws.amazon.com" data-base62-sha1="5mS3isFZ0KHKuqQQTrs1NRnqWOP" width="690" height="327" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_690x327.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_1035x490.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/25a0bdca02ea1b9ec50b8cdd0f46ae15c2d394f7_2_1380x654.jpeg 2x" data-dominant-color="E9EBEB"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/13</link>
+        <pubDate>Thu, 11 Jan 2024 19:26:11 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-13</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Talal, I understand. Should you get the opportunity, please do test on Oracle. In the meantime, the AWS script will have a huge impact <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/12</link>
+        <pubDate>Thu, 11 Jan 2024 18:45:20 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-12</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I can’t make the script without testing firsthand unfortunately.<br>
+Would AWS be ok?<br>
+Edit: Just saw the previous reply mentioning it, will let you know soon.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/11</link>
+        <pubDate>Thu, 11 Jan 2024 18:28:52 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-11</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>Does anyone know of a solution or alternatives?</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/10</link>
+        <pubDate>Thu, 11 Jan 2024 17:28:59 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-10</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[thematy]]></dc:creator>
+        <description><![CDATA[
+            <p>I can test things too, just let me know.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/9</link>
+        <pubDate>Sun, 07 Jan 2024 09:04:47 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-9</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Talal, can you kindly provide a cloud-init script for Oracle? I should be able to test it. I am not an advanced user, but I do use engarde on Vultr on a daily basis.</p>
+<p>Otherwise, it would greatly help if you could test on Amazon AWS? Aside from Oracle and Amazon, I find that I have significantly higher gaming ping on other cloud providers.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/8</link>
+        <pubDate>Wed, 20 Dec 2023 13:05:01 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-8</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, Engarde runs at <code>65531</code><br>
+I couldn’t open an Oracle account for testing unfortunately.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/7</link>
+        <pubDate>Wed, 20 Dec 2023 03:54:16 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-7</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[thematy]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey there, is there some update on Oracle cloud installation?</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/6</link>
+        <pubDate>Wed, 06 Dec 2023 13:53:47 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-6</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>I would also appreciate if anyone has a solution in the meantime to use this with Oracle Cloud <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/5</link>
+        <pubDate>Wed, 15 Nov 2023 23:41:21 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-5</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[thematy]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey, I tried to do on my own according your cloud-init, but not working <img src="https://emoji.discourse-cdn.com/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"> maybe I do need more ports to be exposed in VCN on oracle? I did 1024-65000<br>
+Please correct me where can be a problem <img src="https://emoji.discourse-cdn.com/twitter/confused.png?v=12" title=":confused:" class="emoji" alt=":confused:" loading="lazy" width="20" height="20"> (my second time writing shell script <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> )</p>
+<pre><code class="lang-auto">#!/bin/bash
+
+# ANSI color codes  // light colors
+ORANGE='\033[33m'
+RED='\033[91m'
+CYAN='\033[96m'
+RESET='\033[0m'
+
+# Check if you are running as sudo
+if [ "$EUID" -ne 0 ]; then
+  echo &amp;&amp; echo
+  echo -e "${RED}This script requires superuser privileges. Please run it with sudo.${RESET}"
+  exit 1
+fi
+
+# Start
+clear
+echo &amp;&amp; echo
+echo -e "${CYAN}Running the installation script for Engarde...${RESET}"
+echo
+sleep 3
+
+# Install WireGuard
+apt-get update
+apt-get install -y wireguard
+
+# Set the Password
+Password="7xzfz1MUwKvPRQ9tuXKF"
+
+# Disable firewalld and ufw
+systemctl disable firewalld
+systemctl stop firewalld
+ufw disable
+
+# Configure WireGuard
+SERVER_PUB_NIC=$(ip route | awk 'NR==1{print$5}')
+printf $Password | openssl dgst -binary -sha256 | openssl base64 -A &gt; /root/private-key
+ckey=$(cat /root/private-key | openssl dgst -binary -sha256 | openssl base64 -A)
+cpubkey=$(echo $ckey | wg pubkey)
+printf $ckey | openssl dgst -binary -sha256 | openssl base64 -A &gt; /root/preshared-key
+ip link add dev wg0 type wireguard
+ip address add dev wg0 10.202.0.5 peer 10.202.0.10
+wg set wg0 listen-port 65532 private-key /root/private-key peer $cpubkey preshared-key /root/preshared-key allowed-ips 10.202.0.10 persistent-keepalive 25
+ip link set up dev wg0
+
+# Download and install engarde-server
+wget https://github.com/SmoothWAN/engarde/releases/download/master/engarde-server.linux.arm64 -O /usr/bin/engarde-server
+chmod +x /usr/bin/engarde-server
+mkdir -p /etc/engarde
+wget https://raw.githubusercontent.com/SmoothWAN/SmoothWAN-misc/main/engarde/engarde-server.yml -O /etc/engarde/engarde.yml
+/usr/bin/engarde-server /etc/engarde/engarde.yml &amp;
+
+# Configure network settings
+ip link set wg0 mtu 1280
+ulimit -n 65535
+sysctl -w net.core.rmem_max=26214400
+sysctl -w net.core.rmem_default=26214400
+sysctl -w net.core.wmem_max=26214400
+sysctl -w net.core.wmem_default=26214400
+sysctl -w net.core.netdev_max_backlog=2048
+echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+
+# Configure iptables rules
+iptables -A FORWARD -i $SERVER_PUB_NIC -o wg0 -j ACCEPT
+iptables -A FORWARD -i wg0 -j ACCEPT
+iptables -t nat -A POSTROUTING -s 10.202.0.0/24 -j MASQUERADE
+
+# Change port range for port forwarding
+iptables -t nat -A PREROUTING -i $SERVER_PUB_NIC -p udp --dport 1024:65000 -j DNAT --to-destination 10.202.0.10:1024-65000
+iptables -t nat -A PREROUTING -i $SERVER_PUB_NIC -p tcp --dport 1024:65000 -j DNAT --to-destination 10.202.0.10:1024-65000
+
+# End
+echo &amp;&amp; echo
+echo -e "${CYAN}Script has been completed${RESET}"
+echo
+echo -e "${ORANGE}for further information visit SmoothWAN documentation --&gt;${RESET}"
+echo -e "${ORANGE}--&gt; https://smoothwan.com/engarde/${RESET}"
+echo &amp;&amp; echo
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/4</link>
+        <pubDate>Sun, 05 Nov 2023 16:30:43 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-4</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>I would greatly appreciate it! Thanks <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/3</link>
+        <pubDate>Sat, 21 Oct 2023 06:48:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-3</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, Oracle and AWS are tricky to setup, and you need to open ports in the VPC page.<br>
+Will create a manual installation script next release for setup without cloud-init.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/2</link>
+        <pubDate>Sat, 21 Oct 2023 06:31:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-2</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+      <item>
+        <title>SmoothWAN Engarde on Oracle Cloud</title>
+        <dc:creator><![CDATA[anon83253404]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I have spent many months configuring SmoothWAN with Engarde on my Raspberry Pi 4. I love using SmoothWAN. However, I cannot get it to work on Oracle Cloud VPS or Amazon AWS due to my limited knowledge - I believe they require some changes to the syntax in cloud init script, in order to work on Oracle/AWS?</p>
+<p>The guidelines specify how to set it up on Vultr using Cloud init script. However, Vultr seems to trigger huge latency spikes in some games. The same script does not work on Oracle/AWS.</p>
+<p>Can someone please help set up SmoothWAN with Engarde on Oracle Cloud? A script for AWS EC2 would be a bonus!</p>
+<p>Thanks in advance!</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102/1</link>
+        <pubDate>Tue, 17 Oct 2023 18:52:39 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-102-1</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-engarde-on-oracle-cloud/102.rss">SmoothWAN Engarde on Oracle Cloud</source>
+      </item>
+  </channel>
+</rss>

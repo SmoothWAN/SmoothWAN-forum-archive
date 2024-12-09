@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Speedify UI not working</title>
+    <link>https://smoothwan.discourse.group/t/speedify-ui-not-working/98</link>
+    <description>I am scratching and clawing my way to get this SmoothWAN firewall setup.
+
+I&#39;m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem.  I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img
+
+I finally figured out I needed to deactivate the &quot;Unique USB network interface naming&quot; to get the QMI interface on the Quectel to work (though it wouldn&#39;t work with the QMI Cellular interface type, but ModemManager does work, so that is fine).  I can pass traffic through this interface now.
+
+I then finally figured out I needed to delete the WAN and WAN6 interfaces and recreate a new WAN interface on &quot;eth0&quot; for my second (Ethernet-based) Internet connection.  That Internet path is also working.
+
+So, I then installed Speedify using the Luci UI, and new WAN and WAN6 interfaces were created pointing to &quot;connectify0&quot;, but with an error that the &quot;Network device is not present&quot;.  If I go to the &quot;Overview&quot; screen, the &quot;Speedify UI&quot; frame just says &quot;Restart Speedify Service&quot;.  Running &quot;ps&quot; from an ssh session I see &quot;./speedify -d logs&quot; running.  I have rebooted and I have restarted Speedify multiple times using the Luci UI.  The &quot;logs&quot; tab in the Luci VPN-&gt;Speedify section shows nothing.
+
+The Logs and Configs are available here (for 7 days): https://send.bitwarden.com/#Nz4F9P0X0kifRrCPAP_4UQ/PmuUQXjx5D9i1zDxH0nnAg
+
+Any help would be very appreciated.
+
+Tim</description>
+    
+    <lastBuildDate>Tue, 03 Oct 2023 01:26:18 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/speedify-ui-not-working/98.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Speedify UI not working</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>THANK YOU!  I was wondering what I should do with those unneeded interfaces.<br>
+Using Incognito mode on the browser worked great to get Speedify to work.  It is all set up and working now.</p>
+<p>Thanks for the help!</p>
+          <p><a href="https://smoothwan.discourse.group/t/speedify-ui-not-working/98/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/speedify-ui-not-working/98/3</link>
+        <pubDate>Tue, 03 Oct 2023 01:26:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-98-3</guid>
+        <source url="https://smoothwan.discourse.group/t/speedify-ui-not-working/98.rss">Speedify UI not working</source>
+      </item>
+      <item>
+        <title>Speedify UI not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, make sure you remove the AutoWANeth* when adding your own and bridging other ports to br-lan, <code>Starlink</code> and eth1-3 in your case.</p>
+<p>Regarding “Restart Speedify Service”: Check if any of your browser extensions is blocking, especially adblockers.</p>
+          <p><a href="https://smoothwan.discourse.group/t/speedify-ui-not-working/98/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/speedify-ui-not-working/98/2</link>
+        <pubDate>Mon, 02 Oct 2023 16:29:53 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-98-2</guid>
+        <source url="https://smoothwan.discourse.group/t/speedify-ui-not-working/98.rss">Speedify UI not working</source>
+      </item>
+      <item>
+        <title>Speedify UI not working</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>I am scratching and clawing my way to get this SmoothWAN firewall setup.</p>
+<p>I’m running on a PC-based platform, with non-USB Ethernet ports, and a Quectel EC25 LTE modem.  I am using this image: SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img</p>
+<p>I finally figured out I needed to deactivate the “Unique USB network interface naming” to get the QMI interface on the Quectel to work (though it wouldn’t work with the QMI Cellular interface type, but ModemManager does work, so that is fine).  I can pass traffic through this interface now.</p>
+<p>I then finally figured out I needed to delete the WAN and WAN6 interfaces and recreate a new WAN interface on “eth0” for my second (Ethernet-based) Internet connection.  That Internet path is also working.</p>
+<p>So, I then installed Speedify using the Luci UI, and new WAN and WAN6 interfaces were created pointing to “connectify0”, but with an error that the “Network device is not present”.  If I go to the “Overview” screen, the “Speedify UI” frame just says “Restart Speedify Service”.  Running “ps” from an ssh session I see “./speedify -d logs” running.  I have rebooted and I have restarted Speedify multiple times using the Luci UI.  The “logs” tab in the Luci VPN-&gt;Speedify section shows nothing.</p>
+<p>The Logs and Configs are available here (for 7 days): <a href="https://send.bitwarden.com/#Nz4F9P0X0kifRrCPAP_4UQ/PmuUQXjx5D9i1zDxH0nnAg" class="inline-onebox" rel="noopener nofollow ugc">Bitwarden Send</a></p>
+<p>Any help would be very appreciated.</p>
+<p>Tim</p>
+          <p><a href="https://smoothwan.discourse.group/t/speedify-ui-not-working/98/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/speedify-ui-not-working/98/1</link>
+        <pubDate>Mon, 02 Oct 2023 15:33:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-98-1</guid>
+        <source url="https://smoothwan.discourse.group/t/speedify-ui-not-working/98.rss">Speedify UI not working</source>
+      </item>
+  </channel>
+</rss>

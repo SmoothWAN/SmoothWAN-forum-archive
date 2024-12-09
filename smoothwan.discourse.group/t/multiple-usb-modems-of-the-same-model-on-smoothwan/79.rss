@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Multiple USB Modems of the same Model on SmoothWAN</title>
+    <link>https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79</link>
+    <description>Hey guys,
+
+Hoping you can help me figure this one out. I&#39;m sure it&#39;s something simple and I&#39;m just not using the right search terms when searching online.
+
+I currently have SmoothWAN 0.99.9 HF5 running on my Gl-iNet AX1800 (aka Flint)
+
+For modems, I have 3x USB Sleds with RM520N-GL Modems plugged into the flint via USB cables.
+
+I&#39;ve got &quot;Unique USB network interface naming&quot; disable (unchecked) Speedify &gt; Options
+
+And I&#39;ve created 3x new Interfaces as &quot;Modem Manager&quot;, set the unique Gateway metrics for all three and add them to the WAN firewall.
+
+![CleanShot 2023-06-14 at 12.21.07@2x|348x500](upload://69PRQxAsNgrVf4THf3Z6tqXVsrF.jpeg)
+
+
+The problem is that I can&#39;t tell which modem is which in the Modem Manager config in Luci?
+
+They all show as the exact same (see screenshot below) so I don&#39;t know which one is which and can&#39;t get the setup working.
+
+![CleanShot 2023-06-14 at 11.41.51@2x|623x500](upload://7ARzFWqIDXhT0NCO60lDnOWpgAY.png)</description>
+    
+    <lastBuildDate>Wed, 20 Dec 2023 04:00:33 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Multiple USB Modems of the same Model on SmoothWAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Is exposing the device path in that menu enough for next release?</p>
+          <p><a href="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/4</link>
+        <pubDate>Wed, 20 Dec 2023 04:00:33 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-79-4</guid>
+        <source url="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79.rss">Multiple USB Modems of the same Model on SmoothWAN</source>
+      </item>
+      <item>
+        <title>Multiple USB Modems of the same Model on SmoothWAN</title>
+        <dc:creator><![CDATA[spacesuitdiver]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="https://smoothwan.discourse.group/u/chansearrington">chansearrington</a> did you get things squared away? You can kinda hack at it and inspect the browser dropdown to figure out the underlying device <code>/sys....</code> I think OR just go in and use a combination of <code>mmcli -L</code> and <code>mmcli -m x</code> to interrogate the modems and their device paths then edit the interfaces in <code>/etc/config/network</code></p>
+          <p><a href="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/3</link>
+        <pubDate>Mon, 04 Dec 2023 06:33:59 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-79-3</guid>
+        <source url="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79.rss">Multiple USB Modems of the same Model on SmoothWAN</source>
+      </item>
+      <item>
+        <title>Multiple USB Modems of the same Model on SmoothWAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="chansearrington" data-post="1" data-topic="79">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://yyz2.discourse-cdn.com/free1/user_avatar/smoothwan.discourse.group/chansearrington/48/35_2.png" class="avatar"> chansearrington:</div>
+<blockquote>
+<p>RM520N-GL</p>
+</blockquote>
+</aside>
+<p>Would QMI work instead of ModemManager?</p>
+          <p><a href="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/2</link>
+        <pubDate>Sun, 18 Jun 2023 10:43:27 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-79-2</guid>
+        <source url="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79.rss">Multiple USB Modems of the same Model on SmoothWAN</source>
+      </item>
+      <item>
+        <title>Multiple USB Modems of the same Model on SmoothWAN</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey guys,</p>
+<p>Hoping you can help me figure this one out. I’m sure it’s something simple and I’m just not using the right search terms when searching online.</p>
+<p>I currently have SmoothWAN 0.99.9 HF5 running on my Gl-iNet AX1800 (aka Flint)</p>
+<p>For modems, I have 3x USB Sleds with RM520N-GL Modems plugged into the flint via USB cables.</p>
+<p>I’ve got “Unique USB network interface naming” disable (unchecked) Speedify &gt; Options</p>
+<p>And I’ve created 3x new Interfaces as “Modem Manager”, set the unique Gateway metrics for all three and add them to the WAN firewall.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2b29b2a7b6c39ce31a760a89ab150c5fb3e3e40b.jpeg" data-download-href="/uploads/short-url/69PRQxAsNgrVf4THf3Z6tqXVsrF.jpeg?dl=1" title="CleanShot 2023-06-14 at 12.21.07@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2b29b2a7b6c39ce31a760a89ab150c5fb3e3e40b_2_348x500.jpeg" alt="CleanShot 2023-06-14 at 12.21.07@2x" data-base62-sha1="69PRQxAsNgrVf4THf3Z6tqXVsrF" width="348" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2b29b2a7b6c39ce31a760a89ab150c5fb3e3e40b_2_348x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2b29b2a7b6c39ce31a760a89ab150c5fb3e3e40b_2_522x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/2b29b2a7b6c39ce31a760a89ab150c5fb3e3e40b_2_696x1000.jpeg 2x" data-dominant-color="F1F1F4"></a></div><p></p>
+<p>The problem is that I can’t tell which modem is which in the Modem Manager config in Luci?</p>
+<p>They all show as the exact same (see screenshot below) so I don’t know which one is which and can’t get the setup working.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/353a009afadd5cdac9346384da0b8b20a948080c.png" data-download-href="/uploads/short-url/7ARzFWqIDXhT0NCO60lDnOWpgAY.png?dl=1" title="CleanShot 2023-06-14 at 11.41.51@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/353a009afadd5cdac9346384da0b8b20a948080c_2_623x500.png" alt="CleanShot 2023-06-14 at 11.41.51@2x" data-base62-sha1="7ARzFWqIDXhT0NCO60lDnOWpgAY" width="623" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/353a009afadd5cdac9346384da0b8b20a948080c_2_623x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/353a009afadd5cdac9346384da0b8b20a948080c_2_934x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/353a009afadd5cdac9346384da0b8b20a948080c_2_1246x1000.png 2x" data-dominant-color="DADADC"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79/1</link>
+        <pubDate>Wed, 14 Jun 2023 17:21:49 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-79-1</guid>
+        <source url="https://smoothwan.discourse.group/t/multiple-usb-modems-of-the-same-model-on-smoothwan/79.rss">Multiple USB Modems of the same Model on SmoothWAN</source>
+      </item>
+  </channel>
+</rss>

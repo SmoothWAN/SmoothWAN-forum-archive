@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+    <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19</link>
+    <description>Good afternoon,
+I&#39;m on the latest X86 version of SmoothWAN, and I&#39;ve noticed that USB modems in MBIM or QMI mode don&#39;t seem to work like they did in previous versions. I know there was some work done in this latest release in regards to USB devices, but I need some guidance on how to set up a USB MBIM modem now. It looks like the changes worked great for Android tethering, it&#39;s working perfect.</description>
+    
+    <lastBuildDate>Mon, 04 Dec 2023 06:31:02 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[spacesuitdiver]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m available to test too, I have 2 modems I plan to have in USB Sleds (I have 3 total), EM160 and 2xEM12. I’ve used that luci-app-atcommands plugin with a base OpenWRT on my Convexa-B and it worked with some tweaking to the interface path was all IIRC.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/18</link>
+        <pubDate>Mon, 04 Dec 2023 06:31:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-18</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>I don’t know if they license their OpenWRT image. They sell their own hardware at <a href="http://outdoorrouter.com" rel="noopener nofollow ugc">outdoorrouter.com</a></p>
+<p>On the 4IceG stuff I’m more than willing to test. Just let me know when / where / how.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/17</link>
+        <pubDate>Mon, 24 Apr 2023 04:11:56 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-17</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Outdoor Router looks pretty clean, not sure where the license is, regarding the 4IceG packages, they will be added if tested along with the tweaks to get it running.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/16</link>
+        <pubDate>Thu, 20 Apr 2023 16:02:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-16</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>Here are some screenshots from the “Outdoor Router” that I purchased just for reference, but like I said, the stuff that you linked to is a lot better</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1641961ad320650526b05b713a06db847fad4ecc.png" data-download-href="/uploads/short-url/3aT1oiqIjcyrkD5UYCMfW4Xv6ag.png?dl=1" title="CleanShot 2023-04-20 at 02.24.45@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1641961ad320650526b05b713a06db847fad4ecc_2_259x500.png" alt="CleanShot 2023-04-20 at 02.24.45@2x" data-base62-sha1="3aT1oiqIjcyrkD5UYCMfW4Xv6ag" width="259" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1641961ad320650526b05b713a06db847fad4ecc_2_259x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1641961ad320650526b05b713a06db847fad4ecc_2_388x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/1641961ad320650526b05b713a06db847fad4ecc_2_518x1000.png 2x" data-dominant-color="F3F4EF"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/e5332a057f2f148733491707c001b283fd71e4b3.png" data-download-href="/uploads/short-url/wHAXtYtB6so6MolDVi4lm06fAht.png?dl=1" title="CleanShot 2023-04-20 at 02.44.16@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/e5332a057f2f148733491707c001b283fd71e4b3_2_614x500.png" alt="CleanShot 2023-04-20 at 02.44.16@2x" data-base62-sha1="wHAXtYtB6so6MolDVi4lm06fAht" width="614" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/e5332a057f2f148733491707c001b283fd71e4b3_2_614x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/e5332a057f2f148733491707c001b283fd71e4b3_2_921x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/e5332a057f2f148733491707c001b283fd71e4b3_2_1228x1000.png 2x" data-dominant-color="EBEEEA"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/98258aeaa6de35db3f31599dccf91c536cfcb4b2.png" data-download-href="/uploads/short-url/lHX0DoQnUx8Tihh9nISBOq69p62.png?dl=1" title="CleanShot 2023-04-20 at 02.45.07@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/98258aeaa6de35db3f31599dccf91c536cfcb4b2_2_611x500.png" alt="CleanShot 2023-04-20 at 02.45.07@2x" data-base62-sha1="lHX0DoQnUx8Tihh9nISBOq69p62" width="611" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/98258aeaa6de35db3f31599dccf91c536cfcb4b2_2_611x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/98258aeaa6de35db3f31599dccf91c536cfcb4b2_2_916x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/98258aeaa6de35db3f31599dccf91c536cfcb4b2_2_1222x1000.png 2x" data-dominant-color="F2F4F2"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/d9a12001dcf870cf2f9b65b2197623d7201ed1cd.png" data-download-href="/uploads/short-url/v3eOPzGpoboeFDas5w3SaoaN7JP.png?dl=1" title="CleanShot 2023-04-20 at 02.46.03@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d9a12001dcf870cf2f9b65b2197623d7201ed1cd_2_515x499.png" alt="CleanShot 2023-04-20 at 02.46.03@2x" data-base62-sha1="v3eOPzGpoboeFDas5w3SaoaN7JP" width="515" height="499" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d9a12001dcf870cf2f9b65b2197623d7201ed1cd_2_515x499.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d9a12001dcf870cf2f9b65b2197623d7201ed1cd_2_772x748.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/d9a12001dcf870cf2f9b65b2197623d7201ed1cd_2_1030x998.png 2x" data-dominant-color="EFF1EF"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/0a78bfffcb0c20c7b83cfe28e9a4017b826ab00f.png" data-download-href="/uploads/short-url/1uDtMzUeJ9Q88nil0I4UDS0JX6n.png?dl=1" title="CleanShot 2023-04-20 at 02.46.21@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0a78bfffcb0c20c7b83cfe28e9a4017b826ab00f_2_690x367.png" alt="CleanShot 2023-04-20 at 02.46.21@2x" data-base62-sha1="1uDtMzUeJ9Q88nil0I4UDS0JX6n" width="690" height="367" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0a78bfffcb0c20c7b83cfe28e9a4017b826ab00f_2_690x367.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0a78bfffcb0c20c7b83cfe28e9a4017b826ab00f_2_1035x550.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/0a78bfffcb0c20c7b83cfe28e9a4017b826ab00f_2_1380x734.png 2x" data-dominant-color="ECEFEB"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/42fbe23db9e9999b036979275c9928d7c3e94f32.png" data-download-href="/uploads/short-url/9yzaDgjZw1CevTxql7R88jJqe9I.png?dl=1" title="CleanShot 2023-04-20 at 02.46.44@2x" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/42fbe23db9e9999b036979275c9928d7c3e94f32_2_659x500.png" alt="CleanShot 2023-04-20 at 02.46.44@2x" data-base62-sha1="9yzaDgjZw1CevTxql7R88jJqe9I" width="659" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/42fbe23db9e9999b036979275c9928d7c3e94f32_2_659x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/42fbe23db9e9999b036979275c9928d7c3e94f32_2_988x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/42fbe23db9e9999b036979275c9928d7c3e94f32_2_1318x1000.png 2x" data-dominant-color="F1F4F1"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/15</link>
+        <pubDate>Thu, 20 Apr 2023 07:55:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-15</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>No, I don’t think so. I think this version that you linked to is actually better!</p>
+<p>Apparently, that user/dev has a ton of great modem tools! I love the AT Command solution he has too.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/4IceG/luci-app-atcommands">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/4IceG/luci-app-atcommands" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/cb899ca5f6c025093d03d1bb4183b2327cad377c_2_690x345.png" class="thumbnail" data-dominant-color="F0F0EC" width="690" height="345" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/cb899ca5f6c025093d03d1bb4183b2327cad377c_2_690x345.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/cb899ca5f6c025093d03d1bb4183b2327cad377c_2_1035x517.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/cb899ca5f6c025093d03d1bb4183b2327cad377c.png 2x"></div>
+
+<h3><a href="https://github.com/4IceG/luci-app-atcommands" target="_blank" rel="noopener nofollow ugc">GitHub - 4IceG/luci-app-atcommands: LuCI interface for the sms-tool. The user...</a></h3>
+
+  <p>LuCI interface for the sms-tool. The user interface supports only AT commands. (LuCI JS)  - GitHub - 4IceG/luci-app-atcommands: LuCI interface for the sms-tool. The user interface supports only AT ...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>All of his tools would be incredibly helpful in SmoothWAN, IMO.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/4IceG?tab=repositories">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/4IceG?tab=repositories" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/590ed95035138765847aa6a9956baf057985350a.png" class="thumbnail onebox-avatar" data-dominant-color="A6868F" width="300" height="300">
+
+<h3><a href="https://github.com/4IceG?tab=repositories" target="_blank" rel="noopener nofollow ugc">4IceG - Repositories</a></h3>
+
+  <p>4IceG has 29 repositories available. Follow their code on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Are these something you guys have planned?</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/14</link>
+        <pubDate>Thu, 20 Apr 2023 07:51:16 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-14</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[webmasterkai]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m not aware of any default Luci benefit to one over the other. I just find the ModemManager works better with my device and hardware config. The firmware I’ve used that has an interface specific to LTE modems is ROOter <a href="https://www.ofmodemsandmen.com" rel="noopener nofollow ugc">https://www.ofmodemsandmen.com</a> <a href="http://aturnofthenut.com/autobuilds/" class="inline-onebox" rel="noopener nofollow ugc">ROOter Autobuilds</a> <a href="https://github.com/ofmodemsandmen/RooterSource" class="inline-onebox" rel="noopener nofollow ugc">GitHub - ofmodemsandmen/RooterSource: Source for ROOter Build System</a></p>
+<p>In my (in)experience I’ve noticed the following of ModemManager:<br>
+<strong>Pros:</strong></p>
+<ul>
+<li>Provides a uniform and consistent interface to manage cellular modems regardless of the underlying hardware/software config. It’s used outside the OpenWRT project.</li>
+<li>Supports a wide range of modems and protocols.</li>
+<li>Supports auto-connection, SIM switching, SMS, and USSD.</li>
+<li>Has good integration with NetworkManager which is the default network management tool on many Linux distributions.</li>
+<li>Provides reception/connection quality, diagnostics and debugging information in the cli.</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>ModemManager can be more resource-intensive than other options.</li>
+<li>Configuration and customization of ModemManager outside the basic UI provided may require more advanced technical knowledge.</li>
+</ul>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/13</link>
+        <pubDate>Fri, 07 Apr 2023 01:37:01 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-13</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://smoothwan.discourse.group/u/chansearrington">@chansearrington</a> is it the same as: <a href="https://forum.openwrt.org/t/luci-js-app-luci-app-modemband-set-lte-bands-for-selected-4g-modems/122014" class="inline-onebox">LuCI JS APP: Luci-app-modemband (Set LTE bands for selected 4G modems) - Community Builds, Projects &amp; Packages - OpenWrt Forum</a> ?</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/12</link>
+        <pubDate>Thu, 06 Apr 2023 19:19:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-12</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://smoothwan.discourse.group/u/webmasterkai">@webmasterkai</a> what are the pros / cons of choosing ModemManager as the Interface vs NCM vs QMI Cellular?</p>
+<p>I’m currently using ModemManager, but I don’t really get any benefit in Luci from doing so, that I can tell.</p>
+<p>Another OpenWRT Modem / Router Combo I have has the cellular signal strength on the Overview page / band locking options under the interface settings / etc.</p>
+<p>Am I missing something?</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/11</link>
+        <pubDate>Thu, 06 Apr 2023 16:04:00 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-11</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Option released in 0.99.5HF5.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/10</link>
+        <pubDate>Mon, 03 Apr 2023 06:55:00 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-10</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Adding this next release:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/9bae4d78fadddc95eb041e15a1ecb8af9aa1eee8.png" data-download-href="/uploads/short-url/mddrSaB6B7t5vdJkhWlXcQTTFiM.png?dl=1" title="image"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9bae4d78fadddc95eb041e15a1ecb8af9aa1eee8_2_546x500.png" alt="image" data-base62-sha1="mddrSaB6B7t5vdJkhWlXcQTTFiM" width="546" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9bae4d78fadddc95eb041e15a1ecb8af9aa1eee8_2_546x500.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/9bae4d78fadddc95eb041e15a1ecb8af9aa1eee8_2_819x750.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/9bae4d78fadddc95eb041e15a1ecb8af9aa1eee8.png 2x" data-dominant-color="F6F5F6"></a></div><p></p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/9</link>
+        <pubDate>Sat, 01 Apr 2023 03:59:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-9</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you so much for this. I spent hours trying to figure out what was going on before finding this answer. Thank you!!!</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/8</link>
+        <pubDate>Sat, 01 Apr 2023 03:30:30 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-8</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ll add the option for the automatic naming as optional, it is needed for PBR and for Speedify to remember WAN settings, but I guess this seems to be counter intuitive for many.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/7</link>
+        <pubDate>Fri, 24 Mar 2023 16:16:07 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-7</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[webmasterkai]]></dc:creator>
+        <description><![CDATA[
+            <p>I ran into this issue with M.2 modem (using usb interface). I deleted the auto generated dhcp interface, rebooted and then added a new ModemManager interface, giving it a metric and assigning to WAN firewall zone. I also had to fix the previously generated auto interface for a USB tethered android phone. Now it’s working correctly.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/6</link>
+        <pubDate>Fri, 24 Mar 2023 11:21:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-6</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Note that if you use PBR, you need to add the interface name of the newly created profile in <code>Supported Interfaces</code> (Advanced tab).</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/5</link>
+        <pubDate>Fri, 10 Mar 2023 19:38:30 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-5</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, sorry about that, if you’re experienced enough with OpenWrt delete <code>/etc/hotplug.d/net/99-usbnamer</code><br>
+NCM/QMI dongles are not officially supported by SmoothWAN.</p>
+<p>Example in terminal:<br>
+<code>rm /etc/hotplug.d/net/99-usbnamer</code></p>
+<p>I’ll use a different form of detection in next release with a new UI.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/3</link>
+        <pubDate>Fri, 10 Mar 2023 19:37:59 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-3</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[guest23354]]></dc:creator>
+        <description><![CDATA[
+            <p>To add some more info, it looks like the USB Modem in both MBIM and QMI modes is created as a “DHCP Client” interface automatically, and changing it to either “Modem Manager” or “QMI Cellular” doesn’t work.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/2</link>
+        <pubDate>Fri, 10 Mar 2023 19:37:41 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-2</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+      <item>
+        <title>V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</title>
+        <dc:creator><![CDATA[guest23354]]></dc:creator>
+        <description><![CDATA[
+            <p>Good afternoon,<br>
+I’m on the latest X86 version of SmoothWAN, and I’ve noticed that USB modems in MBIM or QMI mode don’t seem to work like they did in previous versions. I know there was some work done in this latest release in regards to USB devices, but I need some guidance on how to set up a USB MBIM modem now. It looks like the changes worked great for Android tethering, it’s working perfect.</p>
+          <p><a href="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19/1</link>
+        <pubDate>Fri, 10 Mar 2023 19:37:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-19-1</guid>
+        <source url="https://smoothwan.discourse.group/t/v0-99-9-hf4-quectel-rm520n-gl-in-usb-sled/19.rss">V0.99.9 HF4 - Quectel RM520N-GL in USB Sled</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</title>
+    <link>https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112</link>
+    <description>If I Enable the WAN WiFi to connect to a hot spot and share internet the moment I save I lose connection to the Master Access Point. This happens on both frequencies and the other is still available.</description>
+    
+    <lastBuildDate>Wed, 20 Dec 2023 04:10:40 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Reference: <a href="https://github.com/SmoothWAN/SmoothWAN/issues/172">Client and master wireless interfaces need to be on the same channel on Slate and Flint routers · Issue #172 · SmoothWAN/SmoothWAN (github.com)</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112/2</link>
+        <pubDate>Wed, 20 Dec 2023 04:10:40 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-112-2</guid>
+        <source url="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112.rss">Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</source>
+      </item>
+      <item>
+        <title>Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</title>
+        <dc:creator><![CDATA[spacesuitdiver]]></dc:creator>
+        <description><![CDATA[
+            <p>If I Enable the WAN WiFi to connect to a hot spot and share internet the moment I save I lose connection to the Master Access Point. This happens on both frequencies and the other is still available.</p>
+          <p><a href="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112/1</link>
+        <pubDate>Tue, 12 Dec 2023 08:13:14 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-112-1</guid>
+        <source url="https://smoothwan.discourse.group/t/cant-join-wi-fi-and-broadcast-access-point-simultainiously/112.rss">Can&#39;t join Wi-Fi and broadcast Access Point simultainiously</source>
+      </item>
+  </channel>
+</rss>

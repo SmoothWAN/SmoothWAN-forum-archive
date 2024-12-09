@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>After reboot settings not saved</title>
+    <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158</link>
+    <description>Installed onto a Gl iNet Slate AX and enabled Speedify and set a password and all works but after a reboot both the password and Speedify have lost their settings?</description>
+    
+    <lastBuildDate>Sat, 21 Sep 2024 19:15:18 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[nilreb]]></dc:creator>
+        <description><![CDATA[
+            <p>I found it.</p>
+<p>A power outage caused an issue. Wifi radioS were ok but I could not connect to the internet. After resetting slate. This issue came up. I reflashed and it seems ok now.</p>
+<p>Thanks</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/7</link>
+        <pubDate>Sat, 21 Sep 2024 19:15:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-7</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for the report, how old is the installation?<br>
+A simple way to solve it is to reflash, follow <a href="https://github.com/SmoothWAN/SmoothWAN/releases">How to update?</a>.</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/6</link>
+        <pubDate>Sat, 21 Sep 2024 18:51:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-6</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[nilreb]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi I have the same issue now. When I unplug Slate AX, everything resets. Where do I untick to keep settings?</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/5</link>
+        <pubDate>Sat, 21 Sep 2024 12:04:14 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-5</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks for report, added to setup instructions.</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/4</link>
+        <pubDate>Sat, 06 Jul 2024 16:28:31 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-4</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[Andy88ctv]]></dc:creator>
+        <description><![CDATA[
+            <p>The problem was the power supply.When I switched to a 3A one the upgrade process worked and the settings stuck after reboot</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/3</link>
+        <pubDate>Sat, 06 Jul 2024 14:43:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-3</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, you may have missed unticking keep setting on installation, try resetting in System → Flash / Backup Firmware.</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/2</link>
+        <pubDate>Sat, 15 Jun 2024 07:56:20 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-2</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+      <item>
+        <title>After reboot settings not saved</title>
+        <dc:creator><![CDATA[Andy88ctv]]></dc:creator>
+        <description><![CDATA[
+            <p>Installed onto a Gl iNet Slate AX and enabled Speedify and set a password and all works but after a reboot both the password and Speedify have lost their settings?</p>
+          <p><a href="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158/1</link>
+        <pubDate>Sat, 15 Jun 2024 07:30:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-158-1</guid>
+        <source url="https://smoothwan.discourse.group/t/after-reboot-settings-not-saved/158.rss">After reboot settings not saved</source>
+      </item>
+  </channel>
+</rss>

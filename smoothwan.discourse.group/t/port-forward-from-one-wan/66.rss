@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Port forward from one WAN?</title>
+    <link>https://smoothwan.discourse.group/t/port-forward-from-one-wan/66</link>
+    <description>Hi! Is it possible to port-forward from one WAN?
+
+I have a DSL connection that&#39;s somewhat flaky, and an LTE modem providing redundancy. I have tailscale, but would like to just be able to access the system via the mostly-up DSL connection as well.
+
+I&#39;m guessing easy option would be to listen on multiple interfaces/IPs and set up split tunneling on that second interface. Curious if there&#39;s any other options native options.
+
+Right now, my setup actually has another router behind SmoothWan, so the split tunneling doesn&#39;t really work for me (but could if I reworked my network).
+
+Edit: Seem to have gotten it working.
+
+For some debugging history - I used `tcpdump` with various options to confirm that packets were leaving Smoothwan to my downstream router, and coming back with a repsonse from the router. From there, I had to figure out how to get tracing working - it was relatively simple, except that `logread` isn&#39;t the tool to see them - use `nft monitor trace`. From here, I could see that the responses were going out via `connectify0`, which wont work. But I saw stuff about PBR in the traces, so I tried adding a PBR with just &quot;local port&quot; only set, and it seems to work.
+
+tl;dr
+1. Add a regular old port forward
+2. Add a PBR with the same local IP / port to the interface of your choice.
+
+I&#39;m not sure if there are any downsides to the approach I took.</description>
+    
+    <lastBuildDate>Fri, 12 May 2023 05:14:03 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/port-forward-from-one-wan/66.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Port forward from one WAN?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi! Yes that sounds right, glad it works, you could also use IP rules instead of PBR in case it gives you problems: <a href="https://smoothwan.com/wanbyp/">Bypass clients to a specific WAN - SmoothWAN</a><br>
+You can also add additional firewall zone similar to WAN to ensure that the port forwarding rule does not apply to other unwanted interfaces.</p>
+          <p><a href="https://smoothwan.discourse.group/t/port-forward-from-one-wan/66/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/port-forward-from-one-wan/66/2</link>
+        <pubDate>Fri, 12 May 2023 05:14:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-66-2</guid>
+        <source url="https://smoothwan.discourse.group/t/port-forward-from-one-wan/66.rss">Port forward from one WAN?</source>
+      </item>
+      <item>
+        <title>Port forward from one WAN?</title>
+        <dc:creator><![CDATA[johhen]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi! Is it possible to port-forward from one WAN?</p>
+<p>I have a DSL connection that’s somewhat flaky, and an LTE modem providing redundancy. I have tailscale, but would like to just be able to access the system via the mostly-up DSL connection as well.</p>
+<p>I’m guessing easy option would be to listen on multiple interfaces/IPs and set up split tunneling on that second interface. Curious if there’s any other options native options.</p>
+<p>Right now, my setup actually has another router behind SmoothWan, so the split tunneling doesn’t really work for me (but could if I reworked my network).</p>
+<p>Edit: Seem to have gotten it working.</p>
+<p>For some debugging history - I used <code>tcpdump</code> with various options to confirm that packets were leaving Smoothwan to my downstream router, and coming back with a repsonse from the router. From there, I had to figure out how to get tracing working - it was relatively simple, except that <code>logread</code> isn’t the tool to see them - use <code>nft monitor trace</code>. From here, I could see that the responses were going out via <code>connectify0</code>, which wont work. But I saw stuff about PBR in the traces, so I tried adding a PBR with just “local port” only set, and it seems to work.</p>
+<p>tl;dr</p>
+<ol>
+<li>Add a regular old port forward</li>
+<li>Add a PBR with the same local IP / port to the interface of your choice.</li>
+</ol>
+<p>I’m not sure if there are any downsides to the approach I took.</p>
+          <p><a href="https://smoothwan.discourse.group/t/port-forward-from-one-wan/66/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/port-forward-from-one-wan/66/1</link>
+        <pubDate>Thu, 11 May 2023 22:28:12 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-66-1</guid>
+        <source url="https://smoothwan.discourse.group/t/port-forward-from-one-wan/66.rss">Port forward from one WAN?</source>
+      </item>
+  </channel>
+</rss>

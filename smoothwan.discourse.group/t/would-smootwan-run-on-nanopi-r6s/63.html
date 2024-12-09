@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Would SmootWAN run on NanoPi R6S? - Help - SmoothWAN Forum</title>
+    <meta name="description" content="In searching for higher performance OpenWRT hardware I found this article SQM for 1 Gbps Lines W... | BookStack 
+Would SmoothWAN run on this hardware? 
+In there the 2022-12-06 update says recommended hardware NanoPi R6S 
+&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.0.beta3-dev - https://github.com/discourse/discourse version 35656a1d5fe86f4aa14a60a44de2c0d1f6a41215">
+<link rel="icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#f9fcff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="63.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="SmoothWAN Forum Search">
+
+    <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aabf9.css_%3b%20filename_%3dUTF-8%27%27color_definitions_base__1_2fd08b630e2e173ecc4d9090eb26db3f182aab?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" class="light-scheme"/><link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a716f4c69270b98f87c48.css_%3b%20filename_%3dUTF-8%27%27color_definitions_air-light-s_12_1_97cd8256f1ca62566a4a?__ws=smoothwan.discourse.group" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme"/>
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27checklist_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-adplugin_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-adplugin"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-akismet_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-akismet"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-cakeday_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-cakeday"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-details_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-lazy-videos_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-local-dates_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.c?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-narrative-bot_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e4?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-presence_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-solved_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-solved"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27footnote_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27hosted-site_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="hosted-site"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27spoiler-alert_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-ai_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-ai_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27discourse-reactions_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca64?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="discourse-reactions_desktop"  />
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781.css_%3b%20filename_%3dUTF-8%27%27poll_desktop_9258ead2aa7dc7a96ffe0b2089a5b7ca643a4781e41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../yyz2.discourse-cdn.com/free1/stylesheets/desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5f.css_%3b%20filename_%3dUTF-8%27%27desktop_theme_1_1653767a2120603d38aafab509834c0911dfda5fe41b.css?__ws=smoothwan.discourse.group" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="1" data-theme-name="default"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Would SmootWAN run on NanoPi R6S?&#39;" href="63.rss" />
+    <meta property="og:site_name" content="SmoothWAN Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:image" content="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/3613a64d67b74a57a3b28c01cd298fd2c723dd92.png" />
+<meta property="og:url" content="63.html" />
+<meta name="twitter:url" content="63.html" />
+<meta property="og:title" content="Would SmootWAN run on NanoPi R6S?" />
+<meta name="twitter:title" content="Would SmootWAN run on NanoPi R6S?" />
+<meta property="og:description" content="In searching for higher performance OpenWRT hardware I found this article SQM for 1 Gbps Lines W... | BookStack  Would SmoothWAN run on this hardware?  In there the 2022-12-06 update says recommended hardware NanoPi R6S       CPU: Quad-core ARM Cortex-A76(up to 2.4GHz) and quad-core Cortex-A55 CPU (up to 1.8GHz)     GPU: Mali-G610 MP4, compatible with OpenGLES 1.1, 2.0, and 3.2, OpenCL up to 2.2 and Vulkan1.2   NPU 6TOPs, supports INT4/INT8/INT16/FP16   RAM 64-bit 8GB LPDDR4X at 2133MHz    OS Su..." />
+<meta name="twitter:description" content="In searching for higher performance OpenWRT hardware I found this article SQM for 1 Gbps Lines W... | BookStack  Would SmoothWAN run on this hardware?  In there the 2022-12-06 update says recommended hardware NanoPi R6S       CPU: Quad-core ARM Cortex-A76(up to 2.4GHz) and quad-core Cortex-A55 CPU (up to 1.8GHz)     GPU: Mali-G610 MP4, compatible with OpenGLES 1.1, 2.0, and 3.2, OpenCL up to 2.2 and Vulkan1.2   NPU 6TOPs, supports INT4/INT8/INT16/FP16   RAM 64-bit 8GB LPDDR4X at 2133MHz    OS Su..." />
+<meta property="og:article:section" content="Help" />
+<meta property="og:article:section:color" content="94f5ce" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2023-04-30T17:21:27+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Would SmootWAN run on NanoPi R6S?","mainEntity":{"@type":"Question","name":"Would SmootWAN run on NanoPi R6S?","text":"In searching for higher performance OpenWRT hardware I found this article <a href=\"https://wiki.stoplagging.com/books/technical-guides/page/sqm-for-1-gbps-lines-with-openwrt\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">SQM for 1 Gbps Lines W... | BookStack<\/a>\n\nWould SmoothWAN run on this hardware?\n\nIn there the 2022-12-06 update says recommended hardware NanoPi R6S\n\n<a href=\"https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289\" target=\"_blank\" rel=\"noopener nofollow ugc\">NanoPi R6S<\/a>\n\nThe NanoPi R6S (as “R6S”) is an open-sourced mini IoT ga&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2023-04-30T17:21:27.718Z","author":{"@type":"Person","name":"thumper","url":"https://smoothwan.discourse.group/u/thumper"}}}</script>
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="../../index.html">
+    SmoothWAN Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="63.html">Would SmootWAN run on NanoPi R6S?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/help/4.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Help</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Would SmootWAN run on NanoPi R6S?'>
+      <link itemprop='url' href='63.html'>
+      <meta itemprop='datePublished' content='2023-04-30T17:21:27Z'>
+        <meta itemprop='articleSection' content='Help'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='SmoothWAN Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6375c8796e6998ed686c6f7039ade6edea006f54.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="63.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-04-30T17:21:27Z' class='post-time'>
+                    April 30, 2023,  5:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-30T17:21:27Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In searching for higher performance OpenWRT hardware I found this article <a href="https://wiki.stoplagging.com/books/technical-guides/page/sqm-for-1-gbps-lines-with-openwrt" class="inline-onebox" rel="noopener nofollow ugc">SQM for 1 Gbps Lines W... | BookStack</a></p>
+<p>Would SmoothWAN run on this hardware?</p>
+<p>In there the 2022-12-06 update says recommended hardware NanoPi R6S</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289">
+  <header class="source">
+      <img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/feacf2d91efcaa27c654948cd7068f10c3c546e0.png" class="site-icon" data-dominant-color="92CD73" width="16" height="16">
+
+      <a href="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289" target="_blank" rel="noopener nofollow ugc">friendlyelec.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289" target="_blank" rel="noopener nofollow ugc">NanoPi R6S</a></h3>
+
+  <p>The NanoPi R6S (as “R6S”) is an open-sourced mini IoT gateway device with two 2.5G and one Gbps Ethernet ports, designed and developed by FriendlyElec.It is integrated with a Rockchip RK3588S CPU, 8GB LPDDR4x RAM and 32GB eMMC flash. It supports...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>CPU:</th>
+<th>Quad-core ARM Cortex-A76(up to 2.4GHz) and quad-core Cortex-A55 CPU (up to 1.8GHz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU:</td>
+<td>Mali-G610 MP4, compatible with OpenGLES 1.1, 2.0, and 3.2, OpenCL up to 2.2 and Vulkan1.2</td>
+</tr>
+<tr>
+<td>NPU</td>
+<td>6TOPs, supports INT4/INT8/INT16/FP16</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>64-bit 8GB LPDDR4X at 2133MHz</td>
+</tr>
+</tbody>
+</table>
+</div><p>OS Support	<br>
+FriendlyWrt 21.02<br>
+FriendlyWrt 22.03<br>
+Android 12 Tablet<br>
+Android 12 TV<br>
+FriendlyCore Lite 20.04<br>
+Debian 10 Desktop<br>
+Debian 11 Desktop<br>
+Ubuntu 22.04 Desktop<br>
+Linux-5.10-LTS<br>
+U-boot-2017.09</p>
+<p>No built in wifi, but I use access points at home anyway.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T15:50:46Z' class='post-time'>
+                    May 2, 2023,  3:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T15:50:46Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Need to take a look at FriendlyWrt builds and test, I’m not familiar or have any FriendlyWrt device but it shouldn’t be difficult.<br>
+I should create another Speedify OpenWrt package with <code>glibc</code> for installation on pre-installed *Wrt, will post it here once done.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1bf2fcad0f19ad5f6a464043ad282aec9e55e736.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-02T19:39:29Z' class='post-time'>
+                    May 2, 2023,  7:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-02T19:39:29Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve ordered an R6S. Should have it tomorrow.<br>
+Based on the supported OS list I should be able to make something work. SmoothWAN would be great though…<br>
+<img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1bf2fcad0f19ad5f6a464043ad282aec9e55e736.png" alt="image" data-base62-sha1="3ZfujE9ITAaUTtQJBHmjykqUq1M" width="379" height="140"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-03T02:29:17Z' class='post-time'>
+                    May 3, 2023,  2:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-03T02:29:17Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Will create a draft to test soon (source in branch).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-03T23:49:33Z' class='post-time'>
+                    May 3, 2023, 11:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-03T23:49:33Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What can I do to help?<br>
+I received the R6S today. I was able to get the base image (rk3588-sd-friendlywrt-22.03-20230412.img.gz) flashed just to make sure the device worked. I could try their ubuntu image so that I can just experiment with speedify in the meantime.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/148fe2ad6731197c250a690f96314d2d45bc4860.jpg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-04T08:32:56Z' class='post-time'>
+                    May 4, 2023,  8:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-04T08:32:56Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I did some testing with the ubuntu image running from an SD card.<br>
+My iptables is rusty, but I cobbled together enough to route some packets.<br>
+I installed AdGuardHome for dhcp and dns, and speedify.<br>
+There are three CPU groups the efficiency cores 0-3 and then two groups of the performance cores 4,5 and 6,7.<br>
+I enabled irqbalance and did some speed tests. 175Mbps over speedify.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/148fe2ad6731197c250a690f96314d2d45bc4860.jpg" data-download-href="/uploads/short-url/2VTP00iEPVur1BFIExPtzr64rbG.jpeg?dl=1" title="20230504_005713" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_666x500.jpg" alt="20230504_005713" data-base62-sha1="2VTP00iEPVur1BFIExPtzr64rbG" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_1332x1000.jpeg 2x" data-dominant-color="5B5C5B"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">20230504_005713</span><span class="informations">1920×1440 332 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852.jpg" data-download-href="/uploads/short-url/hW28k22cVojc1gpnGpYEv6J0a9I.jpeg?dl=1" title="20230504_005718" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_666x500.jpg" alt="20230504_005718" data-base62-sha1="hW28k22cVojc1gpnGpYEv6J0a9I" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_1332x1000.jpeg 2x" data-dominant-color="4E5B54"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">20230504_005718</span><span class="informations">1920×1440 387 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6c85a3851c7e6ed55214198a06373938e3d0602d.jpg" data-download-href="/uploads/short-url/fu1SXK3EU1rOEfhom9bUnrTK1Ep.jpeg?dl=1" title="20230504_005721" rel="noopener nofollow ugc"><img src="../../../canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_666x500.jpg" alt="20230504_005721" data-base62-sha1="fu1SXK3EU1rOEfhom9bUnrTK1Ep" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_1332x1000.jpeg 2x" data-dominant-color="8B8C8D"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">20230504_005721</span><span class="informations">1920×1440 334 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>This looks very promising. I use a netgear nighthawk wifi-6 mesh for access points. And don’t have any need for wifi-wan.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/TalalM'><span itemprop='name'>TalalM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-04T21:26:26Z' class='post-time'>
+                    May 4, 2023,  9:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-04T21:26:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The docker GitHub action builds from FriendlyWrt are useful, currently building one, created a testing thread on GH issues.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" href='https://smoothwan.discourse.group/u/thumper'><span itemprop='name'>thumper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-04T21:55:54Z' class='post-time'>
+                    May 4, 2023,  9:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-04T21:55:54Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Cool. I need to learn about github actions.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    <div id="related-topics" class="more-topics__list " role="complementary" aria-labelledby="related-topics-title">
+  <h3 id="related-topics-title" class="more-topics__list-title">
+    Related topics
+  </h3>
+  <div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+    <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+    <table class='topic-list'>
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th></th>
+          <th class="replies">Replies</th>
+          <th class="views">Views</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="topic-list-item" id="topic-list-item-123">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='1'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../simplest-hardware-option/123.html' class='title raw-link raw-topic-link'>Simplest hardware option</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>1</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>109</span>
+            </td>
+            <td>
+              January 21, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-30">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='2'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.html' class='title raw-link raw-topic-link'>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>5</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>651</span>
+            </td>
+            <td>
+              May 2, 2023
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-119">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='3'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../installing-speedify-on-any-openwrt-capable-router-unofficially/119.html' class='title raw-link raw-topic-link'>Installing Speedify on any OpenWrt capable router unofficially</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/announcements/5.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #fabed9'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Announcements</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                      <a href='../../tag/openwrt.html' class='discourse-tag'>openwrt</a>
+                      
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>0</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>214</span>
+            </td>
+            <td>
+              January 11, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-115">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='4'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../installing-on-other-brand-routers/115.html' class='title raw-link raw-topic-link'>Installing on other brand routers</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>151</span>
+            </td>
+            <td>
+              February 6, 2024
+            </td>
+          </tr>
+          <tr class="topic-list-item" id="topic-list-item-130">
+            <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <meta itemprop='position' content='5'>
+              <span class="link-top-line">
+                <a itemprop='url' href='../x86-updates-or-kernel-module-installation/130.html' class='title raw-link raw-topic-link'>X86 updates or kernel module installation?</a>
+              </span>
+              <div class="link-bottom-line">
+                  <a href='../../c/help/4.html' class='badge-wrapper bullet'>
+                    <span class='badge-category-bg' style='background-color: #94f5ce'></span>
+                    <span class='badge-category clear-badge'>
+                      <span class='category-name'>Help</span>
+                    </span>
+                  </a>
+                  <div class="discourse-tags">
+                  </div>
+              </div>
+            </td>
+            <td class="replies">
+              <span class='posts' title='posts'>2</span>
+            </td>
+            <td class="views">
+              <span class='views' title='views'>69</span>
+            </td>
+            <td>
+              February 6, 2024
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='https://smoothwan.discourse.group/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org/">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+
+<!-- Mirrored from smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Dec 2024 17:51:41 GMT -->
+</html>

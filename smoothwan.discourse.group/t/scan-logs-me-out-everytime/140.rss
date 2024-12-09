@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Scan Logs Me Out Everytime</title>
+    <link>https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140</link>
+    <description>New to Smoothwan.  On a Slate AX1800.
+
+Every time I go to Network/Simple Wi Fi Setup, and choose Scan on any frequency, it scans and then logs me out.  I log back in and it goes to that screen, but if I scan it logs me out.  Over and over.  Must be a bug?  Anything I can do?</description>
+    
+    <lastBuildDate>Wed, 10 Apr 2024 16:34:08 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Scan Logs Me Out Everytime</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Looks like it has been rebooting.<br>
+Next version will use an app to be installed on GL.iNet latest firmware to resolve many Wi-Fi issues.</p>
+          <p><a href="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/3</link>
+        <pubDate>Wed, 10 Apr 2024 16:34:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-140-3</guid>
+        <source url="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140.rss">Scan Logs Me Out Everytime</source>
+      </item>
+      <item>
+        <title>Scan Logs Me Out Everytime</title>
+        <dc:creator><![CDATA[realdeal1977]]></dc:creator>
+        <description><![CDATA[
+            <p>I restored to “factory” and it works now.  Not sure what the deal was.</p>
+          <p><a href="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/2</link>
+        <pubDate>Fri, 05 Apr 2024 11:50:33 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-140-2</guid>
+        <source url="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140.rss">Scan Logs Me Out Everytime</source>
+      </item>
+      <item>
+        <title>Scan Logs Me Out Everytime</title>
+        <dc:creator><![CDATA[realdeal1977]]></dc:creator>
+        <description><![CDATA[
+            <p>New to Smoothwan.  On a Slate AX1800.</p>
+<p>Every time I go to Network/Simple Wi Fi Setup, and choose Scan on any frequency, it scans and then logs me out.  I log back in and it goes to that screen, but if I scan it logs me out.  Over and over.  Must be a bug?  Anything I can do?</p>
+          <p><a href="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140/1</link>
+        <pubDate>Thu, 04 Apr 2024 20:32:54 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-140-1</guid>
+        <source url="https://smoothwan.discourse.group/t/scan-logs-me-out-everytime/140.rss">Scan Logs Me Out Everytime</source>
+      </item>
+  </channel>
+</rss>

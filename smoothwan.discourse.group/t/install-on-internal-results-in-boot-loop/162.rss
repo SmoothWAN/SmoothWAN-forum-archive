@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Install on internal results in boot loop</title>
+    <link>https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162</link>
+    <description>I have a J4125 router (the Chinese PC/OpnSense routers)
+
+I can flash and run SmoothWAN from USB with no issues using &quot;SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img.gz&quot; but if i try to install on the inbuilt SSD I get a boot loop. OpenWrt installs and runs with no issues. I have tried the following to no avail.
+
+
+Run SmoothWAN from USB and install on internal SSD the way SmoothWAN guide suggest
+SmoothWAN from USB and install on internal SSD the way OpenWRT is installed
+Linux LiveUSB. Installed mkusb and cloned extracted img file to internal SSD.
+
+All three result in the same bootloops
+
+Any help?
+
+Cheers</description>
+    
+    <lastBuildDate>Tue, 06 Aug 2024 14:42:04 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Install on internal results in boot loop</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>It restarts twice on first run to expand as mentioned in <a href="https://smoothwan.com/intinstall/" class="inline-onebox">Install to internal drive - SmoothWAN</a>, did it restart infinitely?</p>
+          <p><a href="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162/2</link>
+        <pubDate>Tue, 06 Aug 2024 14:42:04 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-162-2</guid>
+        <source url="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162.rss">Install on internal results in boot loop</source>
+      </item>
+      <item>
+        <title>Install on internal results in boot loop</title>
+        <dc:creator><![CDATA[ievis]]></dc:creator>
+        <description><![CDATA[
+            <p>I have a J4125 router (the Chinese PC/OpnSense routers)</p>
+<p>I can flash and run SmoothWAN from USB with no issues using “SmoothWAN-0.99.9HF5-PC-EFI-AMD64-DiskImage-or-WebUI.img.gz” but if i try to install on the inbuilt SSD I get a boot loop. OpenWrt installs and runs with no issues. I have tried the following to no avail.</p>
+<p>Run SmoothWAN from USB and install on internal SSD the way SmoothWAN guide suggest<br>
+SmoothWAN from USB and install on internal SSD the way OpenWRT is installed<br>
+Linux LiveUSB. Installed mkusb and cloned extracted img file to internal SSD.</p>
+<p>All three result in the same bootloops</p>
+<p>Any help?</p>
+<p>Cheers</p>
+          <p><a href="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162/1</link>
+        <pubDate>Fri, 02 Aug 2024 14:47:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-162-1</guid>
+        <source url="https://smoothwan.discourse.group/t/install-on-internal-results-in-boot-loop/162.rss">Install on internal results in boot loop</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Basic Slate AX setup for Dummies needed - where did I go wrong?</title>
+    <link>https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35</link>
+    <description>Hi - I&#39;m completely new to SmoothWAN and router setup, but have followed all the instructions correctly as far as I know...
+My problem is understanding what SmoothWAN actually provides when installed on a GL.iNet Slate AX router.
+I hope to use it to provide more reliable internet access by bonding signals from at least 2 phones (Samsung Galaxy S20FE 5G on T-Mobile network - ethernet tethering or USB tethering) and a portable hotspot (GlocalMe g4 Pro 4G LTE Mobile Hotspot Router via wifi) together to provide access to a Yolobox Mini for streaming video to YouTube or Facebook by connecting to the router wifi... Is this a realistic scenario?
+
+I configured the Slate router as mentioned in the documentation - renaming the GL-AXT1800-xxx and GL-AXT1800-xxx-5G SSIDs to SPOT-2.4G and SPOT-5G respectively - no problems here...
+I then updated the router firmware to install the SmoothWAN UI (latest v0.99.9) and enable Speedify (paid account) - following the instructions provided on the SmoothWAN site and in Erik Gulbrandsen&#39;s YouTube video (https://youtu.be/hq0CAyElQ-Y) to the best of my limited ability...
+
+And this is where I run into problems - I can&#39;t access either of the 2.4 or 5G wifi networks anymore after this SmoothWAN install - any assistance on how to resolve this would be appreciated!
+
+Regards
+Heinrich</description>
+    
+    <lastBuildDate>Thu, 06 Apr 2023 06:44:37 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Basic Slate AX setup for Dummies needed - where did I go wrong?</title>
+        <dc:creator><![CDATA[saboy]]></dc:creator>
+        <description><![CDATA[
+            <p>Thanks! Will upgrade this weekend! It’s amazing how fast updates are coming.</p>
+          <p><a href="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/4</link>
+        <pubDate>Thu, 06 Apr 2023 06:44:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-35-4</guid>
+        <source url="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35.rss">Basic Slate AX setup for Dummies needed - where did I go wrong?</source>
+      </item>
+      <item>
+        <title>Basic Slate AX setup for Dummies needed - where did I go wrong?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Update to latest and follow the guide here: <a href="https://smoothwan.com/installation/" class="inline-onebox">Quick Setup - SmoothWAN</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/3</link>
+        <pubDate>Mon, 03 Apr 2023 06:54:19 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-35-3</guid>
+        <source url="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35.rss">Basic Slate AX setup for Dummies needed - where did I go wrong?</source>
+      </item>
+      <item>
+        <title>Basic Slate AX setup for Dummies needed - where did I go wrong?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m releasing a new version with a new Wi-Fi menu for easier and error free configuration today.<br>
+Yes the scenario is optimal.<br>
+Will also update the outdated tutorial soon.</p>
+          <p><a href="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/2</link>
+        <pubDate>Fri, 31 Mar 2023 20:12:52 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-35-2</guid>
+        <source url="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35.rss">Basic Slate AX setup for Dummies needed - where did I go wrong?</source>
+      </item>
+      <item>
+        <title>Basic Slate AX setup for Dummies needed - where did I go wrong?</title>
+        <dc:creator><![CDATA[saboy]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi - I’m completely new to SmoothWAN and router setup, but have followed all the instructions correctly as far as I know…<br>
+My problem is understanding what SmoothWAN actually provides when installed on a GL.iNet Slate AX router.<br>
+I hope to use it to provide more reliable internet access by bonding signals from at least 2 phones (Samsung Galaxy S20FE 5G on T-Mobile network - ethernet tethering or USB tethering) and a portable hotspot (GlocalMe g4 Pro 4G LTE Mobile Hotspot Router via wifi) together to provide access to a Yolobox Mini for streaming video to YouTube or Facebook by connecting to the router wifi… Is this a realistic scenario?</p>
+<p>I configured the Slate router as mentioned in the documentation - renaming the GL-AXT1800-xxx and GL-AXT1800-xxx-5G SSIDs to SPOT-2.4G and SPOT-5G respectively - no problems here…<br>
+I then updated the router firmware to install the SmoothWAN UI (latest v0.99.9) and enable Speedify (paid account) - following the instructions provided on the SmoothWAN site and in Erik Gulbrandsen’s YouTube video (<a href="https://youtu.be/hq0CAyElQ-Y" class="inline-onebox" rel="noopener nofollow ugc">Join 2 or 3 Cell Connections for 1 fast connection. Slate Router Smoothwan Installation - YouTube</a>) to the best of my limited ability…</p>
+<p>And this is where I run into problems - I can’t access either of the 2.4 or 5G wifi networks anymore after this SmoothWAN install - any assistance on how to resolve this would be appreciated!</p>
+<p>Regards<br>
+Heinrich</p>
+          <p><a href="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35/1</link>
+        <pubDate>Thu, 30 Mar 2023 00:44:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-35-1</guid>
+        <source url="https://smoothwan.discourse.group/t/basic-slate-ax-setup-for-dummies-needed-where-did-i-go-wrong/35.rss">Basic Slate AX setup for Dummies needed - where did I go wrong?</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Interfaces losing configuration</title>
+    <link>https://smoothwan.discourse.group/t/interfaces-losing-configuration/121</link>
+    <description>It has taken hours to get my configuration setup so that I have connection to my Netgear M6 through WAN (eth0), and my Verizon cell service (on iPhone) through wlan1.  Had it working and then if if I reboot anything I have to go back through the interfaces and set everything back up again.  Such a pain and makes this not a very viable solution to take to sporting events where between games I turn everything off to save battery power, then turn back on for the next event.  Any suggestions?</description>
+    
+    <lastBuildDate>Fri, 19 Jan 2024 02:30:05 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Interfaces losing configuration</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>This sounds like a failed firmware update, you can try reflashing the image to make sure.<br>
+(<code>/etc/uci-defaults</code> should be empty)</p>
+          <p><a href="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/interfaces-losing-configuration/121/2</link>
+        <pubDate>Fri, 19 Jan 2024 02:30:05 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-121-2</guid>
+        <source url="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121.rss">Interfaces losing configuration</source>
+      </item>
+      <item>
+        <title>Interfaces losing configuration</title>
+        <dc:creator><![CDATA[rwathen]]></dc:creator>
+        <description><![CDATA[
+            <p>It has taken hours to get my configuration setup so that I have connection to my Netgear M6 through WAN (eth0), and my Verizon cell service (on iPhone) through wlan1.  Had it working and then if if I reboot anything I have to go back through the interfaces and set everything back up again.  Such a pain and makes this not a very viable solution to take to sporting events where between games I turn everything off to save battery power, then turn back on for the next event.  Any suggestions?</p>
+          <p><a href="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/interfaces-losing-configuration/121/1</link>
+        <pubDate>Thu, 18 Jan 2024 15:33:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-121-1</guid>
+        <source url="https://smoothwan.discourse.group/t/interfaces-losing-configuration/121.rss">Interfaces losing configuration</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+    <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30</link>
+    <description>Looking for advice on which hardware setup I should use for SmoothWAN
+
+I currently have both a Raspberry Pi 4B and a GL-iNET Flint router, but I&#39;d be willing to get something else if there&#39;s a better alternative.
+
+No matter which one is used, it will be:
+* Acting as the network hub for 6x wireless Cameras used in Live Video Production
+* Connected to 3x USB Modems
+* Running Speedify
+* Will NOT be acting as a WiFi Access Point
+* Have a Unifi Access Point plugged into it through POE acting as the Wifi Access Point for the network.
+* Providing a LAN connection to a Mac mini.
+
+*Specs for both below*
+
+**Raspberry Pi 4B**
+* Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GH
+* 8GB LPDDR4-3200 RAM
+
+**GL-iNet AX1800 (Flint)**
+* IPQ6000 Quad-core Arm Processor @1.2GHz
+* 1.5GHz Network Processing Unit (??????????)
+* DDR3L 512MB
+
+The Raspberry Pi has a bigger processor and a LOT more RAM, but the Flint router has an additional 1.5GHZ NPU (I&#39;m honestly not sure what this even does or if it&#39;s even used by the SmoothWAN firmare.)
+
+Any thoughts? Opinions? Advice?</description>
+    
+    <lastBuildDate>Tue, 02 May 2023 16:27:55 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Packet steering may be only useful for interfaces not handled by the NSS like VPNs and USB network, will enable next release (if stable*), it must be enabled for SQM for best performance.<br>
+AFAIK, the NSS does more than shortcut forwarding and offloading, there is a front-end/back-end interfacing with the kernel, e.g the ethernet ports from the Linux networking side are virtual.</p>
+<p>More info: <a href="https://people.netfilter.org/pablo/netdev0.1/slides/IPQ806x-Hardware-acceleration_v2.pdf">IPQ806x-Hardware-acceleration_v2.pdf (netfilter.org)</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/6</link>
+        <pubDate>Tue, 02 May 2023 16:20:55 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-6</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I think the name was changed to Packet Steering. It was still called hardware offload on my MT-1300</p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/5</link>
+        <pubDate>Tue, 02 May 2023 16:01:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-5</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>The majority of the networking stack is already offloaded, disabling it completely seems to be difficult.</p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/4</link>
+        <pubDate>Tue, 02 May 2023 15:52:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-4</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="TalalM" data-post="2" data-topic="30">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://yyz2.discourse-cdn.com/free1/user_avatar/smoothwan.discourse.group/talalm/48/115_2.png" class="avatar"> TalalM:</div>
+<blockquote>
+<p>The Flint/Slate CPU is much weaker than the Pi but is still able to do few hundred megabits with Speedify with offloading</p>
+</blockquote>
+</aside>
+<p>Where is the hardware offloading setting?</p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/3</link>
+        <pubDate>Sun, 30 Apr 2023 16:57:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-3</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>The NPU is used in SmoothWAN and it’s mostly for forwarding packets between interfaces like Wi-Fi leaving a room for the CPU to do other tasks in a nut shell. It provides server-grade network performance for the Ethernet ports that is somewhat overkill for the intended use. The Flint/Slate CPU is much weaker than the Pi but is still able to do few hundred megabits with Speedify with offloading.</p>
+<p>Qotom series seems to be more fitting for the setup with the integrated ports and reliability, the Pi has power issues and stability and it’s more suitable for DIY and non-critical applications.<br>
+And Proxmox runs well on it if you need to run SmoothWAN alongside Ubuntu/Windows for Unifi applications or other purposes using the VMDK image.</p>
+<p>SBCs are becoming more irrelevant for networking looking at the cost, e.g NanoPi R6S, BPis, RPi, Odroid etc.</p>
+<p>Edit: The Flint has less power delivery issues than the Slate AX, I’d go for that.</p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/2</link>
+        <pubDate>Sun, 26 Mar 2023 21:54:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-2</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+      <item>
+        <title>Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>Looking for advice on which hardware setup I should use for SmoothWAN</p>
+<p>I currently have both a Raspberry Pi 4B and a GL-iNET Flint router, but I’d be willing to get something else if there’s a better alternative.</p>
+<p>No matter which one is used, it will be:</p>
+<ul>
+<li>Acting as the network hub for 6x wireless Cameras used in Live Video Production</li>
+<li>Connected to 3x USB Modems</li>
+<li>Running Speedify</li>
+<li>Will NOT be acting as a WiFi Access Point</li>
+<li>Have a Unifi Access Point plugged into it through POE acting as the Wifi Access Point for the network.</li>
+<li>Providing a LAN connection to a Mac mini.</li>
+</ul>
+<p><em>Specs for both below</em></p>
+<p><strong>Raspberry Pi 4B</strong></p>
+<ul>
+<li>Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GH</li>
+<li>8GB LPDDR4-3200 RAM</li>
+</ul>
+<p><strong>GL-iNet AX1800 (Flint)</strong></p>
+<ul>
+<li>IPQ6000 Quad-core Arm Processor <span class="mention">@1.2GHz</span>
+</li>
+<li>1.5GHz Network Processing Unit (???)</li>
+<li>DDR3L 512MB</li>
+</ul>
+<p>The Raspberry Pi has a bigger processor and a LOT more RAM, but the Flint router has an additional 1.5GHZ NPU (I’m honestly not sure what this even does or if it’s even used by the SmoothWAN firmare.)</p>
+<p>Any thoughts? Opinions? Advice?</p>
+          <p><a href="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30/1</link>
+        <pubDate>Sun, 26 Mar 2023 21:39:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-30-1</guid>
+        <source url="https://smoothwan.discourse.group/t/choosing-hardware-for-smoothwan-raspberry-pi-4-vs-gl-inet-flint/30.rss">Choosing Hardware for SmoothWAN: Raspberry Pi 4 vs GL-iNET Flint</source>
+      </item>
+  </channel>
+</rss>

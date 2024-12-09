@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Bypass Speedify for specific (V)LAN</title>
+    <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103</link>
+    <description>Hi,
+
+I followed the instructions in https://smoothwan.com/wanbyp/ to bypass a specific LAN (VLAN actually) to a specific WAN interface.
+
+The issue I ran into is one I did that, that WAN is removed from the &quot;main&quot; routing table, and so when I deactivate Speedify the traffic is forced over the other WAN (which in my case is the less desirable WAN interface).
+
+Once I setup the bypass as instructed, this is what I ended up with:
+
+```
+root@SmoothWAN:~# ip rule
+0:      from all lookup local
+1:      from 10.26.11.0/24 iif br-lan.2 lookup BYP1
+5210:   from all fwmark 0x80000/0xff0000 lookup main
+5230:   from all fwmark 0x80000/0xff0000 lookup default
+5250:   from all fwmark 0x80000/0xff0000 unreachable
+5270:   from all lookup 52
+10000:  from 100.98.168.38 lookup BYP1
+20000:  from all to 100.98.168.38/10 lookup BYP1
+32766:  from all lookup main
+32767:  from all lookup default
+90010:  from all iif lo lookup BYP1
+root@SmoothWAN:~# ip route
+0.0.0.0/1 dev connectify0 scope link
+default via 10.202.0.1 dev connectify0 proto static
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+10.202.0.0/24 dev connectify0 proto kernel scope link src 10.202.0.2
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+128.0.0.0/1 dev connectify0 scope link
+root@SmoothWAN:~# ip route list table BYP1
+default via 100.64.0.1 dev eth0 proto static src 100.98.168.38 metric 10
+34.120.255.244 dev eth0 proto static scope link src 100.98.168.38 metric 10
+100.64.0.0/10 dev eth0 proto static scope link metric 10
+192.168.100.1 dev eth0 proto static scope link src 100.98.168.38 metric 10
+root@SmoothWAN:~#
+```
+
+You can see that the route via &quot;eth0&quot; has disappeared from the &quot;main&quot; routing table and only appears in the &quot;BYP1&quot; table.
+
+So, if I deactivate Speedify this is what the &quot;main&quot; table now looks like:
+
+```
+root@SmoothWAN:~# ip route
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+```
+
+So all traffic is now heading out &quot;wwan0&quot;.  In this case, I&#39;d like traffic in &quot;main&quot; and &quot;BYP1&quot; tables to both use &quot;eth0&quot; and &quot;wwan0&quot; is relegated to &quot;metric 20&quot; and ostensibly unused.
+
+Tim</description>
+    
+    <lastBuildDate>Wed, 20 Dec 2023 03:59:19 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, thanks for the feedback, next version will have a UI and will rely completely on firewall markings (L3), not routes which will solve the many issues discussed here.</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/10</link>
+        <pubDate>Wed, 20 Dec 2023 03:59:19 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-10</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[velocity7]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey <a class="mention" href="https://smoothwan.discourse.group/u/timirvin">@timirvin</a> , just as an update… it seems I have an extreme corner case that is blocking the ability for me to use BYP1:</p>
+<ol>
+<li>eth1 loses connectivity to cable internet (interface still up via Technicolor TC4400)</li>
+<li>Speedify eventually flags connection as down</li>
+<li>When eth1 regains connectivity, Speedify doesn’t pick it up and even <em>removes</em> it from the list of connections</li>
+<li>Only way to recover from this is to restart eth1 interface</li>
+</ol>
+<p>Now, this has created a situation where if eth1 is on BYP1, even if I restart it, and even if the entry was re-added back to the regular ip route table, Speedify still doesn’t pick it up unless I restart Speedify.</p>
+<p>On a sidenote, would you happen to have a good idea how to get the router to recover eth1 in this particular scenario, regardless of whether it was on BYP1? Or would that be more a question for <a class="mention" href="https://smoothwan.discourse.group/u/talalm">@TalalM</a> ?</p>
+<p>EDIT: So I can recover eth1 by adding the following cronjob:</p>
+<pre><code class="lang-auto">* * * * * /root/checketh1.sh
+</code></pre>
+<pre><code class="lang-auto">#!/bin/sh
+  
+checketh1() {
+    if ping -I eth1 google.com -w 2 &gt; /dev/null; then
+        :
+    else
+        logger "disconnected, restarting eth1"
+        ifdown PortOne
+        sleep 3
+        ifup PortOne
+    fi
+}
+
+checketh1
+</code></pre>
+<p>Now I’m stuck figuring out why Speedify doesn’t detect eth1 when it’s on BYP1, even after it’s been restarted and even when I run the following command and it works:</p>
+<pre><code class="lang-auto">ping -I eth1 google.com -w 2
+</code></pre>
+<p>So at this point I’m left waiting for <a class="mention" href="https://smoothwan.discourse.group/u/talalm">@TalalM</a> to hopefully come up with a solution where we can add eth0 or eth1 to a bypass table, without it being removed from the main table (and thus impacting Speedify when it enumerates)</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/9</link>
+        <pubDate>Wed, 13 Dec 2023 07:14:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-9</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[velocity7]]></dc:creator>
+        <description><![CDATA[
+            <p>Looks like this works. I should probably note that in my case, I had a second ethernet adapter that acts as a totally different subnet, and it ended up being that I had to add the following on top of your existing instructions:</p>
+<p>In Network → Routing:</p>
+<ol>
+<li>When adding the IPv4 rule from the original instructions, make sure that the device is pointing towards the second ethernet adapter, not “lan” or “br-lan”.</li>
+</ol>
+<p>In Network → Firewall:</p>
+<ol>
+<li>Make sure the second ethernet adapter is not in the same firewall category as “lan”.</li>
+<li>Add a firewall rule called “lan_cable” which points towards the second ethernet adapter as the device, set input/output/forward to accept.</li>
+<li>Add a second firewall rule called “cable” which points towards PortOne (eth1) device, with input/output/forward at defaults, masquerading/MSS clamping checked, and “allow forward from source zones” set to “lan_cable”.</li>
+</ol>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/8</link>
+        <pubDate>Mon, 11 Dec 2023 03:31:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-8</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>Here are my notes on this solution.</p><aside class="onebox githubgist" data-onebox-src="https://gist.github.com/irvintim/45651e6da37a616597d476f90a93c990">
+  <header class="source">
+
+      <a href="https://gist.github.com/irvintim/45651e6da37a616597d476f90a93c990" target="_blank" rel="noopener nofollow ugc">gist.github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://gist.github.com/irvintim/45651e6da37a616597d476f90a93c990" target="_blank" rel="noopener nofollow ugc">https://gist.github.com/irvintim/45651e6da37a616597d476f90a93c990</a></h4>
+
+  <h5>SmoothWAN Speedify Bypass VIA VLAN.md</h5>
+  <pre><code class="Markdown">## Problem
+When using Speedify to avoid Starlink outages, the approach is effective except for certain sites, particularly TV streamers. These sites dislike the Internet Service Provider (ISP) or ISPs that the Speedify VPN transits. Consequently, these streamers and other sites, such as Etsy, block traffic that originates from the Speedify source address.
+
+## Solution
+To address this issue, create a separate VLAN and corresponding Wi-Fi network that specifically utilizes the Starlink gateway, bypassing Speedify. TVs can connect to this dedicated Wi-Fi network to avoid Speedify blocks, and other devices can switch to this network as needed to circumvent the blocks.
+
+## Architecture
+### Router:
+SmoothWAN (OpenWRT) is running on a dedicated Single Board Computer (SBC) with multiple GigE Ethernet ports and an onboard cellular modem.
+### ISPs:</code></pre>
+    This file has been truncated. <a href="https://gist.github.com/irvintim/45651e6da37a616597d476f90a93c990" target="_blank" rel="noopener nofollow ugc">show original</a>
+
+<p>
+</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/7</link>
+        <pubDate>Mon, 11 Dec 2023 02:50:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-7</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[velocity7]]></dc:creator>
+        <description><![CDATA[
+            <p>Curious if you have full instructions for your setup, including how to add the cron job etc.? Largely curious as I’m trying to create a specific VLAN that bypasses Speedify as well, and I’m encountering the same problem as you where, eth1 in my case, disappears from the routing table when it gets added to BYP1, which impacts Speedify when it tries to enumerate connections.</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/6</link>
+        <pubDate>Sun, 10 Dec 2023 23:10:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-6</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>Actually, I just figured out how to run the route add in cron, so iI have a workaround for now.  If you come up with a fix for the <a href="https://smoothwan.com/wanbyp/" rel="noopener nofollow ugc">Bypass clients to a specific WAN - SmoothWAN</a> instructions let me know, but otherwise I am set for now.</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/5</link>
+        <pubDate>Sun, 10 Dec 2023 18:25:28 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-5</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi checking back in on this issue.  I haven’t found a way to consistently get the eth0 route added back into the routing take after following the <a href="https://smoothwan.com/wanbyp/" rel="noopener nofollow ugc">Bypass clients to a specific WAN - SmoothWAN</a> instructions to create a bypass for a 2nd VLAN on network.</p>
+<p>The other side effect of this issue is that when this route is missing, Speedify uses my wwan0 route (cellular) for it’s bypass traffic, which has resulted in slow connections (and expensive cell bills).</p>
+<p>I tried putting an <code>ip route add...</code> in /etc/rc.local but tht isn’t working.  If cron was running I’d just have it try to add the route every few minutes to make sure it’s in place.</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/4</link>
+        <pubDate>Sun, 10 Dec 2023 17:52:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-4</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>This is what I am trying to do:</p>
+<p>I have 2 WANs:<br>
+eth0 == Starlink<br>
+wwan0 == Cellular backup</p>
+<p>Speedify is configured to use “eth0” primarily but to failover to “wwan0” if Starlink is out (or blocked by a tree).</p>
+<p>My “main” routing table (before implementing the bypass from your wiki) was:</p>
+<pre><code class="lang-auto">default via 10.202.0.1 dev connectify0 proto static
+default via 100.64.0.1 dev eth0 proto static src 100.98.168.38 metric 10
+default via 100.70.233.128 dev wwan0 proto static src 100.70.233.127 metric 20
+</code></pre>
+<p>So when Speedify is turned off, the traffic will flow via eth0 to Starlink.  It turns out I have many sites I access that don’t like Speedify, so I have had to turn it off more than I expected.</p>
+<p>One such site is Netflix, and the Speedify internal bypass isn’t working for that, so I decided to put the TVs on a separate VLAN and use the <a href="https://smoothwan.com/wanbyp/" class="inline-onebox" rel="noopener nofollow ugc">Bypass clients to a specific WAN - SmoothWAN</a> instructions to send them out Starlink (eth0) all the time (bypassing Speedify).</p>
+<p>When I implemented the bypass procedure from the wiki, the route to eth0 disappeared from the “main” routing table, so now, when I turn off Speedify, the traffic flows out wwan0 instead of eth0.</p>
+<p>I was able to fix this by manually running an <code>ip route add</code> command and adding that route back in.  But ideally, the bypass wouldn’t remove the route from the “main” table when it added it to the “BYP1” table.</p>
+<p>Hopefully, that is more clear.</p>
+<p>Thanks for your help.</p>
+<p>Tim</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/3</link>
+        <pubDate>Sat, 21 Oct 2023 07:11:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-3</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>If I understand correctly, you want to failover to interfaces other than wwan0 in case Speedify is off?</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/2</link>
+        <pubDate>Sat, 21 Oct 2023 06:33:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-2</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+      <item>
+        <title>Bypass Speedify for specific (V)LAN</title>
+        <dc:creator><![CDATA[timirvin]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>I followed the instructions in <a href="https://smoothwan.com/wanbyp/" class="inline-onebox" rel="noopener nofollow ugc">Bypass clients to a specific WAN - SmoothWAN</a> to bypass a specific LAN (VLAN actually) to a specific WAN interface.</p>
+<p>The issue I ran into is one I did that, that WAN is removed from the “main” routing table, and so when I deactivate Speedify the traffic is forced over the other WAN (which in my case is the less desirable WAN interface).</p>
+<p>Once I setup the bypass as instructed, this is what I ended up with:</p>
+<pre><code class="lang-auto">root@SmoothWAN:~# ip rule
+0:      from all lookup local
+1:      from 10.26.11.0/24 iif br-lan.2 lookup BYP1
+5210:   from all fwmark 0x80000/0xff0000 lookup main
+5230:   from all fwmark 0x80000/0xff0000 lookup default
+5250:   from all fwmark 0x80000/0xff0000 unreachable
+5270:   from all lookup 52
+10000:  from 100.98.168.38 lookup BYP1
+20000:  from all to 100.98.168.38/10 lookup BYP1
+32766:  from all lookup main
+32767:  from all lookup default
+90010:  from all iif lo lookup BYP1
+root@SmoothWAN:~# ip route
+0.0.0.0/1 dev connectify0 scope link
+default via 10.202.0.1 dev connectify0 proto static
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+10.202.0.0/24 dev connectify0 proto kernel scope link src 10.202.0.2
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+128.0.0.0/1 dev connectify0 scope link
+root@SmoothWAN:~# ip route list table BYP1
+default via 100.64.0.1 dev eth0 proto static src 100.98.168.38 metric 10
+34.120.255.244 dev eth0 proto static scope link src 100.98.168.38 metric 10
+100.64.0.0/10 dev eth0 proto static scope link metric 10
+192.168.100.1 dev eth0 proto static scope link src 100.98.168.38 metric 10
+root@SmoothWAN:~#
+</code></pre>
+<p>You can see that the route via “eth0” has disappeared from the “main” routing table and only appears in the “BYP1” table.</p>
+<p>So, if I deactivate Speedify this is what the “main” table now looks like:</p>
+<pre><code class="lang-auto">root@SmoothWAN:~# ip route
+default via 100.65.134.17 dev wwan0 proto static src 100.65.134.16 metric 20
+10.26.10.0/24 dev br-lan.1 proto kernel scope link src 10.26.10.1
+10.26.11.0/24 dev br-lan.2 proto kernel scope link src 10.26.11.1
+100.65.134.0/27 dev wwan0 proto static scope link metric 20
+123.123.123.123 via 100.65.134.17 dev wwan0
+</code></pre>
+<p>So all traffic is now heading out “wwan0”.  In this case, I’d like traffic in “main” and “BYP1” tables to both use “eth0” and “wwan0” is relegated to “metric 20” and ostensibly unused.</p>
+<p>Tim</p>
+          <p><a href="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103/1</link>
+        <pubDate>Wed, 18 Oct 2023 06:25:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-103-1</guid>
+        <source url="https://smoothwan.discourse.group/t/bypass-speedify-for-specific-v-lan/103.rss">Bypass Speedify for specific (V)LAN</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>DNS Server Address Default - How to Change?</title>
+    <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170</link>
+    <description>Hi Developer, and enthusiast,
+
+First of all, I am really thanking the dev who made this possible.
+
+Today I have managed to install SmoothWAN to my SlateAX router.
+
+However, right off the bat, after installing it, I was not able to login to the gui. So, what I did was, change the IP address, since I was able to ssh.
+
+I&#39;m not knowledgeable in firewalls and openwrt, but I can read instructions and guides :slight_smile: 
+
+Could someone please, tell me how to change the DNS server IP issue by the router?
+
+Because, it is still using `172.17.17.2`.
+
+I&#39;ve updated the router IP address to `192.168.222.1` , since I can&#39;t access the web ui via the default `172.17.17.2`. It was so strange why so, because on another machine I can access it.
+
+The current setting now is `192.168.222.1`, but the DNS the router is giving is `172.17.17.2`
+I&#39;ve already did:
+**Network** &gt; **DHCP and DNS** &gt; **DNS forwardings**:
+`1.1.1.1`
+Can someone please, help!</description>
+    
+    <lastBuildDate>Sat, 28 Sep 2024 05:16:06 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>DNS Server Address Default - How to Change?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Good to hear.<br>
+The number defines the options: <a href="https://efficientip.com/glossary/dhcp-option/" class="inline-onebox">Understanding DHCP Options | EfficientIP</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/5</link>
+        <pubDate>Sat, 28 Sep 2024 05:16:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-170-5</guid>
+        <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+      </item>
+      <item>
+        <title>DNS Server Address Default - How to Change?</title>
+        <dc:creator><![CDATA[garyd]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="TalalM" data-post="2" data-topic="170">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://yyz2.discourse-cdn.com/free1/user_avatar/smoothwan.discourse.group/talalm/48/115_2.png" class="avatar"> TalalM:</div>
+<blockquote>
+<p><code>172.17.x.x</code> is often used by docker or enterprise VPNs, it was chosen to avoid issues with browser cache when using other routers with same IP in the same browser.</p>
+</blockquote>
+</aside>
+<p>Also, I forgot to respond to this, and say thank you! I discovered that there is a docker engine running inside the Unraid Hypervisor. The machine that I am working with the SmoothWAN router, is a Guest VM under Unraid.</p>
+          <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/4</link>
+        <pubDate>Sun, 22 Sep 2024 10:56:43 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-170-4</guid>
+        <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+      </item>
+      <item>
+        <title>DNS Server Address Default - How to Change?</title>
+        <dc:creator><![CDATA[garyd]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Talal,</p>
+<p>Happy Blessed Sunday! Thank you so much for your help. Really appreciate it.</p>
+<p>That greatly helped.</p>
+<p>On another topic, I hope this is not too much to ask, what does that <code>6</code> mean, in <code>6.192.168.223.1</code>?</p>
+          <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/3</link>
+        <pubDate>Sun, 22 Sep 2024 10:54:18 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-170-3</guid>
+        <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+      </item>
+      <item>
+        <title>DNS Server Address Default - How to Change?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, try this:</p>
+<ol>
+<li><strong>Network</strong> &gt; <strong>Interfaces</strong> &gt; <strong>Edit</strong> next to LAN</li>
+<li><strong>DHCP Server</strong> &gt; <strong>Advanced Settings</strong></li>
+<li>Set <strong>DHCP Options</strong> to <code>6,192.168.222.1</code></li>
+</ol>
+<p><code>172.17.x.x</code> is often used by docker or enterprise VPNs, it was chosen to avoid issues with browser cache when using other routers with same IP in the same browser.</p>
+          <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/2</link>
+        <pubDate>Sat, 21 Sep 2024 18:45:06 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-170-2</guid>
+        <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+      </item>
+      <item>
+        <title>DNS Server Address Default - How to Change?</title>
+        <dc:creator><![CDATA[garyd]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi Developer, and enthusiast,</p>
+<p>First of all, I am really thanking the dev who made this possible.</p>
+<p>Today I have managed to install SmoothWAN to my SlateAX router.</p>
+<p>However, right off the bat, after installing it, I was not able to login to the gui. So, what I did was, change the IP address, since I was able to ssh.</p>
+<p>I’m not knowledgeable in firewalls and openwrt, but I can read instructions and guides <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Could someone please, tell me how to change the DNS server IP issue by the router?</p>
+<p>Because, it is still using <code>172.17.17.2</code>.</p>
+<p>I’ve updated the router IP address to <code>192.168.222.1</code> , since I can’t access the web ui via the default <code>172.17.17.2</code>. It was so strange why so, because on another machine I can access it.</p>
+<p>The current setting now is <code>192.168.222.1</code>, but the DNS the router is giving is <code>172.17.17.2</code><br>
+I’ve already did:<br>
+<strong>Network</strong> &gt; <strong>DHCP and DNS</strong> &gt; <strong>DNS forwardings</strong>:<br>
+<code>1.1.1.1</code><br>
+Can someone please, help!</p>
+          <p><a href="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170/1</link>
+        <pubDate>Sat, 21 Sep 2024 15:27:02 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-170-1</guid>
+        <source url="https://smoothwan.discourse.group/t/dns-server-address-default-how-to-change/170.rss">DNS Server Address Default - How to Change?</source>
+      </item>
+  </channel>
+</rss>

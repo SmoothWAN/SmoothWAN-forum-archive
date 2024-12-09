@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Would SmootWAN run on NanoPi R6S?</title>
+    <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63</link>
+    <description>In searching for higher performance OpenWRT hardware I found this article https://wiki.stoplagging.com/books/technical-guides/page/sqm-for-1-gbps-lines-with-openwrt
+
+Would SmoothWAN run on this hardware? 
+
+In there the 2022-12-06 update says recommended hardware NanoPi R6S
+https://www.friendlyelec.com/index.php?route=product/product&amp;path=69&amp;product_id=289
+
+|CPU:|Quad-core ARM Cortex-A76(up to 2.4GHz) and quad-core Cortex-A55 CPU (up to 1.8GHz)|
+|---|---|
+|GPU:|Mali-G610 MP4, compatible with OpenGLES 1.1, 2.0, and 3.2, OpenCL up to 2.2 and Vulkan1.2|
+|NPU|6TOPs, supports INT4/INT8/INT16/FP16|
+|RAM|64-bit 8GB LPDDR4X at 2133MHz|
+
+OS Support	
+FriendlyWrt 21.02
+FriendlyWrt 22.03
+Android 12 Tablet
+Android 12 TV
+FriendlyCore Lite 20.04
+Debian 10 Desktop
+Debian 11 Desktop
+Ubuntu 22.04 Desktop
+Linux-5.10-LTS
+U-boot-2017.09
+
+No built in wifi, but I use access points at home anyway.</description>
+    
+    <lastBuildDate>Thu, 04 May 2023 21:55:54 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Cool. I need to learn about github actions.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/8</link>
+        <pubDate>Thu, 04 May 2023 21:55:54 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-8</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>The docker GitHub action builds from FriendlyWrt are useful, currently building one, created a testing thread on GH issues.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/7</link>
+        <pubDate>Thu, 04 May 2023 21:26:26 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-7</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I did some testing with the ubuntu image running from an SD card.<br>
+My iptables is rusty, but I cobbled together enough to route some packets.<br>
+I installed AdGuardHome for dhcp and dns, and speedify.<br>
+There are three CPU groups the efficiency cores 0-3 and then two groups of the performance cores 4,5 and 6,7.<br>
+I enabled irqbalance and did some speed tests. 175Mbps over speedify.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/148fe2ad6731197c250a690f96314d2d45bc4860.jpeg" data-download-href="/uploads/short-url/2VTP00iEPVur1BFIExPtzr64rbG.jpeg?dl=1" title="20230504_005713" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_666x500.jpeg" alt="20230504_005713" data-base62-sha1="2VTP00iEPVur1BFIExPtzr64rbG" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/148fe2ad6731197c250a690f96314d2d45bc4860_2_1332x1000.jpeg 2x" data-dominant-color="5B5C5B"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852.jpeg" data-download-href="/uploads/short-url/hW28k22cVojc1gpnGpYEv6J0a9I.jpeg?dl=1" title="20230504_005718" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_666x500.jpeg" alt="20230504_005718" data-base62-sha1="hW28k22cVojc1gpnGpYEv6J0a9I" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/7db45fdac126a567ae6e9bc8c2b1679b3ed1d852_2_1332x1000.jpeg 2x" data-dominant-color="4E5B54"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/6c85a3851c7e6ed55214198a06373938e3d0602d.jpeg" data-download-href="/uploads/short-url/fu1SXK3EU1rOEfhom9bUnrTK1Ep.jpeg?dl=1" title="20230504_005721" rel="noopener nofollow ugc"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_666x500.jpeg" alt="20230504_005721" data-base62-sha1="fu1SXK3EU1rOEfhom9bUnrTK1Ep" width="666" height="500" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_666x500.jpeg, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_999x750.jpeg 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/6c85a3851c7e6ed55214198a06373938e3d0602d_2_1332x1000.jpeg 2x" data-dominant-color="8B8C8D"></a></div><p></p>
+<p>This looks very promising. I use a netgear nighthawk wifi-6 mesh for access points. And don’t have any need for wifi-wan.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/6</link>
+        <pubDate>Thu, 04 May 2023 08:32:56 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-6</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>What can I do to help?<br>
+I received the R6S today. I was able to get the base image (rk3588-sd-friendlywrt-22.03-20230412.img.gz) flashed just to make sure the device worked. I could try their ubuntu image so that I can just experiment with speedify in the meantime.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/5</link>
+        <pubDate>Wed, 03 May 2023 23:49:33 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-5</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Will create a draft to test soon (source in branch).</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/4</link>
+        <pubDate>Wed, 03 May 2023 02:29:17 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-4</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>I’ve ordered an R6S. Should have it tomorrow.<br>
+Based on the supported OS list I should be able to make something work. SmoothWAN would be great though…<br>
+<img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/1bf2fcad0f19ad5f6a464043ad282aec9e55e736.png" alt="image" data-base62-sha1="3ZfujE9ITAaUTtQJBHmjykqUq1M" width="379" height="140"></p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/3</link>
+        <pubDate>Tue, 02 May 2023 19:39:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-3</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Need to take a look at FriendlyWrt builds and test, I’m not familiar or have any FriendlyWrt device but it shouldn’t be difficult.<br>
+I should create another Speedify OpenWrt package with <code>glibc</code> for installation on pre-installed *Wrt, will post it here once done.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/2</link>
+        <pubDate>Tue, 02 May 2023 15:50:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-2</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+      <item>
+        <title>Would SmootWAN run on NanoPi R6S?</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>In searching for higher performance OpenWRT hardware I found this article <a href="https://wiki.stoplagging.com/books/technical-guides/page/sqm-for-1-gbps-lines-with-openwrt" class="inline-onebox" rel="noopener nofollow ugc">SQM for 1 Gbps Lines W... | BookStack</a></p>
+<p>Would SmoothWAN run on this hardware?</p>
+<p>In there the 2022-12-06 update says recommended hardware NanoPi R6S</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289">
+  <header class="source">
+      <img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/feacf2d91efcaa27c654948cd7068f10c3c546e0.png" class="site-icon" data-dominant-color="92CD73" width="16" height="16">
+
+      <a href="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289" target="_blank" rel="noopener nofollow ugc">friendlyelec.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.friendlyelec.com/index.php?route=product%2Fproduct&amp;path=69&amp;product_id=289" target="_blank" rel="noopener nofollow ugc">NanoPi R6S</a></h3>
+
+  <p>The NanoPi R6S (as “R6S”) is an open-sourced mini IoT gateway device with two 2.5G and one Gbps Ethernet ports, designed and developed by FriendlyElec.It is integrated with a Rockchip RK3588S CPU, 8GB LPDDR4x RAM and 32GB eMMC flash. It supports...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>CPU:</th>
+<th>Quad-core ARM Cortex-A76(up to 2.4GHz) and quad-core Cortex-A55 CPU (up to 1.8GHz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU:</td>
+<td>Mali-G610 MP4, compatible with OpenGLES 1.1, 2.0, and 3.2, OpenCL up to 2.2 and Vulkan1.2</td>
+</tr>
+<tr>
+<td>NPU</td>
+<td>6TOPs, supports INT4/INT8/INT16/FP16</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>64-bit 8GB LPDDR4X at 2133MHz</td>
+</tr>
+</tbody>
+</table>
+</div><p>OS Support	<br>
+FriendlyWrt 21.02<br>
+FriendlyWrt 22.03<br>
+Android 12 Tablet<br>
+Android 12 TV<br>
+FriendlyCore Lite 20.04<br>
+Debian 10 Desktop<br>
+Debian 11 Desktop<br>
+Ubuntu 22.04 Desktop<br>
+Linux-5.10-LTS<br>
+U-boot-2017.09</p>
+<p>No built in wifi, but I use access points at home anyway.</p>
+          <p><a href="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63/1</link>
+        <pubDate>Sun, 30 Apr 2023 17:21:27 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-63-1</guid>
+        <source url="https://smoothwan.discourse.group/t/would-smootwan-run-on-nanopi-r6s/63.rss">Would SmootWAN run on NanoPi R6S?</source>
+      </item>
+  </channel>
+</rss>

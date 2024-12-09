@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Release SmoothWAN 0.99.9 HF5 · SmoothWAN/SmoothWAN</title>
+    <link>https://smoothwan.discourse.group/t/release-smoothwan-0-99-9-hf5-smoothwan-smoothwan/43</link>
+    <description>https://github.com/SmoothWAN/SmoothWAN/releases/tag/0.99.9HF5</description>
+    
+    <lastBuildDate>Mon, 03 Apr 2023 08:03:48 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/release-smoothwan-0-99-9-hf5-smoothwan-smoothwan/43.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Release SmoothWAN 0.99.9 HF5 · SmoothWAN/SmoothWAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/SmoothWAN/SmoothWAN/releases/tag/0.99.9HF5">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/SmoothWAN/SmoothWAN/releases/tag/0.99.9HF5" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/64c65312f42443814a4f0f507076b1d04422bb8b_2_690x345.png" class="thumbnail" width="690" height="345" srcset="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/64c65312f42443814a4f0f507076b1d04422bb8b_2_690x345.png, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/optimized/1X/64c65312f42443814a4f0f507076b1d04422bb8b_2_1035x517.png 1.5x, https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/64c65312f42443814a4f0f507076b1d04422bb8b.png 2x" data-dominant-color="F1F2F2"></div>
+
+<h3><a href="https://github.com/SmoothWAN/SmoothWAN/releases/tag/0.99.9HF5" target="_blank" rel="noopener">Release SmoothWAN 0.99.9 HF5 · SmoothWAN/SmoothWAN</a></h3>
+
+  <p>Useful links
+
+Forum
+Important announcements
+Speedify FAQ
+SmoothWAN documentation
+Check downloaded file integrity
+Credits
+Ping Tracer
+
+Build defaults
+
+WebUI address/LAN: http://172.17.17.2
+Wi-Fi SSI...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://smoothwan.discourse.group/t/release-smoothwan-0-99-9-hf5-smoothwan-smoothwan/43/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/release-smoothwan-0-99-9-hf5-smoothwan-smoothwan/43/1</link>
+        <pubDate>Mon, 03 Apr 2023 08:03:48 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-43-1</guid>
+        <source url="https://smoothwan.discourse.group/t/release-smoothwan-0-99-9-hf5-smoothwan-smoothwan/43.rss">Release SmoothWAN 0.99.9 HF5 · SmoothWAN/SmoothWAN</source>
+      </item>
+  </channel>
+</rss>

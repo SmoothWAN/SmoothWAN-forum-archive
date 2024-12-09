@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Simplest hardware option</title>
+    <link>https://smoothwan.discourse.group/t/simplest-hardware-option/123</link>
+    <description>I have both RPI4 and NanoPi R5S hardware sitting around doing very little. I thought that this project might be a good use of them, however we rely on our broadband for our business, and I want to make sure it&#39;s as easy to look after and reliable as possible.
+
+Currently, we have a FTTC VDSL modem connected over PPPoE into our QNAP router, which has ASUS AImesh hanging off it for Wifi, and draytek 10G switches for 10G to our desktops and 1G elsewhere. 
+
+I don&#39;t want to provide another wifi network, so the RPI option doesn&#39;t look like it would work well. If I went for a Flint or Slate device, can I combine two ethernet WAN&#39;s into one WAN into the QNAP router?
+
+Sean</description>
+    
+    <lastBuildDate>Sun, 21 Jan 2024 03:48:38 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/simplest-hardware-option/123.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Simplest hardware option</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, you could use <a href="http://github.com/TalalMash/Unofficial-Speedify-Installer-For-OpenWrt/tree/master" class="inline-onebox">GitHub - TalalMash/Unofficial-Speedify-Installer-For-OpenWrt: Easily install &amp; configure Speedify on OpenWrt using a web browser.</a> with the NanoPi R5S running OpenWrt.</p>
+<p>The Slate/Flint may be too slow for fiber, if over 100-200Mbit.<br>
+Any Intel mini PC (with 3+ ethernet ports) would work quite well and deliver the lowest latency and around the same cost as the Flint/Slate, but without Wi-Fi.</p>
+          <p><a href="https://smoothwan.discourse.group/t/simplest-hardware-option/123/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/simplest-hardware-option/123/2</link>
+        <pubDate>Sun, 21 Jan 2024 03:43:08 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-123-2</guid>
+        <source url="https://smoothwan.discourse.group/t/simplest-hardware-option/123.rss">Simplest hardware option</source>
+      </item>
+      <item>
+        <title>Simplest hardware option</title>
+        <dc:creator><![CDATA[sean]]></dc:creator>
+        <description><![CDATA[
+            <p>I have both RPI4 and NanoPi R5S hardware sitting around doing very little. I thought that this project might be a good use of them, however we rely on our broadband for our business, and I want to make sure it’s as easy to look after and reliable as possible.</p>
+<p>Currently, we have a FTTC VDSL modem connected over PPPoE into our QNAP router, which has ASUS AImesh hanging off it for Wifi, and draytek 10G switches for 10G to our desktops and 1G elsewhere.</p>
+<p>I don’t want to provide another wifi network, so the RPI option doesn’t look like it would work well. If I went for a Flint or Slate device, can I combine two ethernet WAN’s into one WAN into the QNAP router?</p>
+<p>Sean</p>
+          <p><a href="https://smoothwan.discourse.group/t/simplest-hardware-option/123/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/simplest-hardware-option/123/1</link>
+        <pubDate>Sat, 20 Jan 2024 14:30:21 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-123-1</guid>
+        <source url="https://smoothwan.discourse.group/t/simplest-hardware-option/123.rss">Simplest hardware option</source>
+      </item>
+  </channel>
+</rss>

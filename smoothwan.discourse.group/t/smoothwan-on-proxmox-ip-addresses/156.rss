@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SmoothWAN on Proxmox - IP addresses</title>
+    <link>https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156</link>
+    <description>Hello,
+
+I was so excited to see there is a SmoothWAN VMWare image that could be used with Proxmox! I&#39;ve gone ahead and followed the instructions in the guide and I currently have the guest running. However, I have one small issue...
+
+My Proxmox node has been a part of my infrastructure for some time and already provides other services for my network (on the 192.168 private address scheme). So, now that I&#39;ve created the SmoothWAN guest, I can&#39;t access it at the 172 addressing scheme.
+
+I&#39;ve made a backup of the guest before I start futzing around too much... But how difficult will it be for me to change the SmoothWAN guest to operate on a 192 address? If I just change the IP address of the machine, what will break? What other apps have been installed and configured that will stop working?
+
+I&#39;m going to give it a try... But, please let me know if there are any known issues or steps that I need to consider in switching the SmoothWAN instance over to a different subnet.
+
+Thank you!
+
+
+CB</description>
+    
+    <lastBuildDate>Sat, 15 Jun 2024 07:57:01 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>SmoothWAN on Proxmox - IP addresses</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>It shouldn’t, there were problems in older SmoothWAN versions though.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/3</link>
+        <pubDate>Sat, 15 Jun 2024 07:57:01 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-156-3</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156.rss">SmoothWAN on Proxmox - IP addresses</source>
+      </item>
+      <item>
+        <title>SmoothWAN on Proxmox - IP addresses</title>
+        <dc:creator><![CDATA[stuupifiedbyspeedify]]></dc:creator>
+        <description><![CDATA[
+            <p>So, easy enough, I changed the static IP to DHCP and it grabbed an address. I will make this a reserved address so that it doesn’t change. Like I said before though, are there other things that will break due to this change? Thanks!</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/2</link>
+        <pubDate>Sun, 02 Jun 2024 03:45:37 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-156-2</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156.rss">SmoothWAN on Proxmox - IP addresses</source>
+      </item>
+      <item>
+        <title>SmoothWAN on Proxmox - IP addresses</title>
+        <dc:creator><![CDATA[stuupifiedbyspeedify]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I was so excited to see there is a SmoothWAN VMWare image that could be used with Proxmox! I’ve gone ahead and followed the instructions in the guide and I currently have the guest running. However, I have one small issue…</p>
+<p>My Proxmox node has been a part of my infrastructure for some time and already provides other services for my network (on the 192.168 private address scheme). So, now that I’ve created the SmoothWAN guest, I can’t access it at the 172 addressing scheme.</p>
+<p>I’ve made a backup of the guest before I start futzing around too much… But how difficult will it be for me to change the SmoothWAN guest to operate on a 192 address? If I just change the IP address of the machine, what will break? What other apps have been installed and configured that will stop working?</p>
+<p>I’m going to give it a try… But, please let me know if there are any known issues or steps that I need to consider in switching the SmoothWAN instance over to a different subnet.</p>
+<p>Thank you!</p>
+<p>CB</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156/1</link>
+        <pubDate>Sun, 02 Jun 2024 03:30:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-156-1</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-on-proxmox-ip-addresses/156.rss">SmoothWAN on Proxmox - IP addresses</source>
+      </item>
+  </channel>
+</rss>

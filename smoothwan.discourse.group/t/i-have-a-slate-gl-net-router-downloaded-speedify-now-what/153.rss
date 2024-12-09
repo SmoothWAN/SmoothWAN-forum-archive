@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>I have a Slate GL-Net Router, Downloaded Speedify - now What?</title>
+    <link>https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153</link>
+    <description>Newbie, Got file, downloaded the file onto my Slate Ax Router, now I can not connect to my Router.  Connects actually but says no Internet.  I look for the WiFi SmoothWAN Setup but also not there.  I thought was next step.  Not sure what to do? 
+
+Steps I took:
+Router on, PC signed into GL 5G wifi from router.  On PC went to router webpage address and under upgrades downloaded and brought over file to install.  I did hit Keep settings - (Maybe my issue)  It installed, once done no access to that webpage address any longer, and no wifi to select called SmoothWan.  My Router wifi shows up still, I connect but no interent? 
+
+Any help would be great.
+
+Thanks,
+
+Brandon</description>
+    
+    <lastBuildDate>Fri, 17 May 2024 14:59:30 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>I have a Slate GL-Net Router, Downloaded Speedify - now What?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Hold the reset button for 10 seconds then release, it should reset shortly after, should be ready in 2 minutes.</p>
+<p>If that didn’t work here is the restore procedure: <a href="https://docs.gl-inet.com/router/en/4/faq/debrick/" class="inline-onebox">Debrick via Uboot - GL.iNet Router Docs 4</a><br>
+Keep settings is a problem when mixing different firmware.</p>
+          <p><a href="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153/2</link>
+        <pubDate>Fri, 17 May 2024 14:59:30 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-153-2</guid>
+        <source url="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.rss">I have a Slate GL-Net Router, Downloaded Speedify - now What?</source>
+      </item>
+      <item>
+        <title>I have a Slate GL-Net Router, Downloaded Speedify - now What?</title>
+        <dc:creator><![CDATA[Jax5er]]></dc:creator>
+        <description><![CDATA[
+            <p>Newbie, Got file, downloaded the file onto my Slate Ax Router, now I can not connect to my Router.  Connects actually but says no Internet.  I look for the WiFi SmoothWAN Setup but also not there.  I thought was next step.  Not sure what to do?</p>
+<p>Steps I took:<br>
+Router on, PC signed into GL 5G wifi from router.  On PC went to router webpage address and under upgrades downloaded and brought over file to install.  I did hit Keep settings - (Maybe my issue)  It installed, once done no access to that webpage address any longer, and no wifi to select called SmoothWan.  My Router wifi shows up still, I connect but no interent?</p>
+<p>Any help would be great.</p>
+<p>Thanks,</p>
+<p>Brandon</p>
+          <p><a href="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153/1</link>
+        <pubDate>Fri, 17 May 2024 14:19:51 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-153-1</guid>
+        <source url="https://smoothwan.discourse.group/t/i-have-a-slate-gl-net-router-downloaded-speedify-now-what/153.rss">I have a Slate GL-Net Router, Downloaded Speedify - now What?</source>
+      </item>
+  </channel>
+</rss>

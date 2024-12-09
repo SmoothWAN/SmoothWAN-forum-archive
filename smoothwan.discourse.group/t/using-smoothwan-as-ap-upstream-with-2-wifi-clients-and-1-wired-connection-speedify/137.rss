@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</title>
+    <link>https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137</link>
+    <description>I&#39;d like to use Smoothwan on a RPI , where the RPI acts as the Access Points for my clients . The upstream consists of one wired connection, and 2 wifi connections , which will be bonded with Speedify. 
+
+The RPI has one wifi chip on board, so I would need to add two Wifi USB chips. 
+
+Is this possible with Smoothwan?  And is it possible with a RPI ?  I understand there might be some performance hits on frequency level due to running 3 wifi connections simultaneously, but am I wondering the the RPI and software can manage that all wifi connections at once.</description>
+    
+    <lastBuildDate>Wed, 10 Apr 2024 16:37:29 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>The Slate AX/Flint is definitly the choice for AP. Pi’s Wi-Fi is unstable.<br>
+It can also connect to client and act as an AP at the same time per radio, there are 2 with different frequncies 2.4Ghz and 5Ghz.</p>
+          <p><a href="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/3</link>
+        <pubDate>Wed, 10 Apr 2024 16:37:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-137-3</guid>
+        <source url="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137.rss">Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</source>
+      </item>
+      <item>
+        <title>Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</title>
+        <dc:creator><![CDATA[aloft]]></dc:creator>
+        <description><![CDATA[
+            <p>Just to add, if this can bedone with e.g. the Gl-Inet Slate device by plugging in an extra Wifi point via the USB port, that would be work for me as well.</p>
+          <p><a href="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/2</link>
+        <pubDate>Mon, 18 Mar 2024 14:41:30 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-137-2</guid>
+        <source url="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137.rss">Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</source>
+      </item>
+      <item>
+        <title>Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</title>
+        <dc:creator><![CDATA[aloft]]></dc:creator>
+        <description><![CDATA[
+            <p>I’d like to use Smoothwan on a RPI , where the RPI acts as the Access Points for my clients . The upstream consists of one wired connection, and 2 wifi connections , which will be bonded with Speedify.</p>
+<p>The RPI has one wifi chip on board, so I would need to add two Wifi USB chips.</p>
+<p>Is this possible with Smoothwan?  And is it possible with a RPI ?  I understand there might be some performance hits on frequency level due to running 3 wifi connections simultaneously, but am I wondering the the RPI and software can manage that all wifi connections at once.</p>
+          <p><a href="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137/1</link>
+        <pubDate>Mon, 18 Mar 2024 12:26:55 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-137-1</guid>
+        <source url="https://smoothwan.discourse.group/t/using-smoothwan-as-ap-upstream-with-2-wifi-clients-and-1-wired-connection-speedify/137.rss">Using smoothwan as AP , upstream with 2 wifi clients and 1 wired connection (speedify)</source>
+      </item>
+  </channel>
+</rss>

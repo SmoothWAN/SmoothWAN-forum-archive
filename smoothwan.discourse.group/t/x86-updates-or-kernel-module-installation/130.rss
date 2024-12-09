@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>X86 updates or kernel module installation?</title>
+    <link>https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130</link>
+    <description>I know that there is a way to build a custom openwrt image for specific hardware but it exceeds my skillset at this time. 
+Is there a way to install custom kernel modules from within smoothwan? I tried standard linux updated commands in the terminal with no success.
+Currently running on a bare metal N6005 fanless PC with 4x2.5Gb ports, would be great to know if I would benefit from custom kernel mods for my hardware. 
+I did go ahead and boot the PC from a live MX linux USB drive and ran update &amp; upgrade, installed to NVME drive, rebooted to NVME, verified updates all complete and then saved the output from lsmod for future reference.</description>
+    
+    <lastBuildDate>Tue, 06 Feb 2024 04:11:33 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>X86 updates or kernel module installation?</title>
+        <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m wondering if the system might run better with updated intel modules for the 2.5 G Nics and N6005 APU. I’m not actually sure if I would benefit or not, just assuming.</p>
+          <p><a href="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/3</link>
+        <pubDate>Tue, 06 Feb 2024 04:11:33 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-130-3</guid>
+        <source url="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130.rss">X86 updates or kernel module installation?</source>
+      </item>
+      <item>
+        <title>X86 updates or kernel module installation?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes you could with <code>opkg</code>, modules are packaged and named as <code>kmod-&lt;module&gt;</code> usually.<br>
+What module are you interested in adding?</p>
+          <p><a href="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/2</link>
+        <pubDate>Tue, 06 Feb 2024 02:26:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-130-2</guid>
+        <source url="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130.rss">X86 updates or kernel module installation?</source>
+      </item>
+      <item>
+        <title>X86 updates or kernel module installation?</title>
+        <dc:creator><![CDATA[drmrfancypants]]></dc:creator>
+        <description><![CDATA[
+            <p>I know that there is a way to build a custom openwrt image for specific hardware but it exceeds my skillset at this time.<br>
+Is there a way to install custom kernel modules from within smoothwan? I tried standard linux updated commands in the terminal with no success.<br>
+Currently running on a bare metal N6005 fanless PC with 4x2.5Gb ports, would be great to know if I would benefit from custom kernel mods for my hardware.<br>
+I did go ahead and boot the PC from a live MX linux USB drive and ran update &amp; upgrade, installed to NVME drive, rebooted to NVME, verified updates all complete and then saved the output from lsmod for future reference.</p>
+          <p><a href="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130/1</link>
+        <pubDate>Tue, 06 Feb 2024 00:49:53 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-130-1</guid>
+        <source url="https://smoothwan.discourse.group/t/x86-updates-or-kernel-module-installation/130.rss">X86 updates or kernel module installation?</source>
+      </item>
+  </channel>
+</rss>

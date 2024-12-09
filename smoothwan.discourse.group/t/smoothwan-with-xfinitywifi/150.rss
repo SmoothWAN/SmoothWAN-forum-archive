@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Smoothwan with xfinitywifi</title>
+    <link>https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150</link>
+    <description>New here. Is there a way to use smoothwan with xfinitywifi?  Also is there a way to change the macaddress on smoothwan wifi to spoof the xfinity portal.</description>
+    
+    <lastBuildDate>Thu, 16 May 2024 17:00:39 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Smoothwan with xfinitywifi</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>You can change the MAC address using Services → Terminal:</p>
+<pre><code class="lang-auto">nano /etc/config/wireless
+</code></pre>
+<p>Add under wifi-iface*:</p>
+<pre><code class="lang-auto">option macaddr 'xx:xx:xx:xx:xx:xx'
+</code></pre>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/3</link>
+        <pubDate>Thu, 16 May 2024 09:49:42 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-150-3</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150.rss">Smoothwan with xfinitywifi</source>
+      </item>
+      <item>
+        <title>Smoothwan with xfinitywifi</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>In Speedify UI, the interface should show something like this:<br>
+<img src="https://canada1.discourse-cdn.com/free1/uploads/smoothwan/original/1X/2d81ab965a37c8b3a278ece3d797c9433cc81c1b.png" alt="image" data-base62-sha1="6uziOndzNzMGp9hzuhjDXn72yEz" width="271" height="353"></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/2</link>
+        <pubDate>Thu, 16 May 2024 09:47:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-150-2</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150.rss">Smoothwan with xfinitywifi</source>
+      </item>
+      <item>
+        <title>Smoothwan with xfinitywifi</title>
+        <dc:creator><![CDATA[nilreb]]></dc:creator>
+        <description><![CDATA[
+            <p>New here. Is there a way to use smoothwan with xfinitywifi?  Also is there a way to change the macaddress on smoothwan wifi to spoof the xfinity portal.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150/1</link>
+        <pubDate>Thu, 16 May 2024 09:37:48 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-150-1</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-xfinitywifi/150.rss">Smoothwan with xfinitywifi</source>
+      </item>
+  </channel>
+</rss>

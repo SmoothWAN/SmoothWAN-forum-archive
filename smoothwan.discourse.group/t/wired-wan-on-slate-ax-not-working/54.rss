@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Wired WAN on Slate AX not working</title>
+    <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54</link>
+    <description>Connecting comcast from my Beryl (where it works fine) to the slate, I don&#39;t get IPv4 address. dmesg shows
+[105977.281409] nss-dp 3a001200.dp2 eth1: PHY Link up speed: 1000
+[105977.281473] IPv6: ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
+but it does not seem to connect and I don&#39;t get an IPv4 address. It doesn&#39;t show up in the speedify wan interfaces. I have tried both portone and porttwo.</description>
+    
+    <lastBuildDate>Mon, 17 Apr 2023 07:38:23 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, DNSMasq DNS service is disabled. ADGuardHome as indicated in the Wiki is the main DNS, the disable protection only turns ADG to a normal DNS server.<br>
+DHCP options are set in LAN interface settings. Default <code>6,172.17.17.2</code>.</p>
+<p>Seems like some devices need a different method for renaming.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/11</link>
+        <pubDate>Mon, 17 Apr 2023 07:38:23 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-11</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>SmoothWAN v0.99.5HF5 r16399+159-c67509efd7</p>
+<p>I think the only thing I’ve added was netdata.<br>
+I have not re-enabled adguard, though it’s DNS Queries counter continues to increase which is puzzling. /etc/resolve.conf points to the speedify dns server. Hmmm… so even with adguard protection disabled it is still serving up the dns for the lan and listening on 53</p>
+<blockquote>
+<p><code>tcp        0      0 :::53                   :::*                    LISTEN      4428/AdGuardHome</code></p>
+</blockquote>
+<p>instead of dnsmasq which would ordinarily forward to <a href="http://resolv.com" rel="noopener nofollow ugc">resolv.com</a> entries I guess this is getting sidetracked.</p>
+<p>As for stability of the networking… currently sitting at</p>
+<blockquote>
+<p><code>root@SmoothWAN:/etc/config# uptime</code><br>
+<code>01:09:07 up 1 day,  3:45,  load average: 0.35, 0.30, 0.29</code></p>
+</blockquote>
+<p>all of the interfaces have remained online and the routes have all remained in place. Speedify seems to be functioning well enough with three interfaces all set primary.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/10</link>
+        <pubDate>Mon, 17 Apr 2023 01:17:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-10</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Interesting, PortOne should have the metric set by default (25).</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/9</link>
+        <pubDate>Sat, 15 Apr 2023 21:39:39 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-9</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Hotspot USB seems to works fine without renaming. Interface metric without renaming is 33 where with renaming it was 100. Also having set the interface metric on PortOne allowed comcast to come online and stay online as part of the speedify vpn connection.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/8</link>
+        <pubDate>Sat, 15 Apr 2023 21:28:11 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-8</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Does it do the same with interface renamer off? Bottom of <a href="https://smoothwan.com/installation/" class="inline-onebox">Quick Setup - SmoothWAN</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/7</link>
+        <pubDate>Sat, 15 Apr 2023 20:58:44 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-7</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Can’t do a static IP on the comcast. Can’t nail it down yet. Just had some problems. Interface was up and had an IP, but no routes, so speedify wasn’t using it.</p>
+<blockquote>
+<p><code>/etc/init.d/network restart</code></p>
+</blockquote>
+<p>seems to cure the missing IP addresses and/or missing routes. Then had to disconnect and reconnect speedify. Speedify performance is terrible right now 0.82 down 1.3 up.</p>
+<p>uptime 22:28<br>
+UI is terribly slow AdGuardHome is using alot of resources.<br>
+Lost the default via route for comcast again.<br>
+Couldn’t get the right combination of services to restart.<br>
+Had to powercycle.</p>
+<p>Disabled adguard for now.<br>
+Default metric on PortOne wasn’t set.<br>
+I believe that when speedify inserted it’s default route it clobbered the comcast route.</p>
+<p>hotspot which shows up as usb interface eth3 (maybe renaming?) didn’t want to get addr via dhcp until after network restart.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/6</link>
+        <pubDate>Sat, 15 Apr 2023 20:46:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-6</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Can you maintain connection with a static IP for link diagnostic check?</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/5</link>
+        <pubDate>Sat, 15 Apr 2023 01:23:51 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-5</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>After the router reboot I had to also unplug and replug the ethernet cable for the comcast. Initially it came up, but then the route disappeared and only the wlan0 and USB-d5da (eth3) came online with speedify</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/4</link>
+        <pubDate>Fri, 14 Apr 2023 22:12:39 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-4</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Had to reboot the router and the cable modem. Seems like there might be a bit of a race condition with the dhcp client as I had difficulty when first tethering my hotspot (eth3). Had to plug and unplug several times to get an address assigned.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/3</link>
+        <pubDate>Fri, 14 Apr 2023 22:06:28 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-3</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>that’s interesting, does it get IP with the <code>Restart</code> button in Network → Interfaces?</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/2</link>
+        <pubDate>Fri, 14 Apr 2023 21:38:29 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-2</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+      <item>
+        <title>Wired WAN on Slate AX not working</title>
+        <dc:creator><![CDATA[thumper]]></dc:creator>
+        <description><![CDATA[
+            <p>Connecting comcast from my Beryl (where it works fine) to the slate, I don’t get IPv4 address. dmesg shows<br>
+[105977.281409] nss-dp 3a001200.dp2 eth1: PHY Link up speed: 1000<br>
+[105977.281473] IPv6: ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready<br>
+but it does not seem to connect and I don’t get an IPv4 address. It doesn’t show up in the speedify wan interfaces. I have tried both portone and porttwo.</p>
+          <p><a href="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54/1</link>
+        <pubDate>Fri, 14 Apr 2023 20:40:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-54-1</guid>
+        <source url="https://smoothwan.discourse.group/t/wired-wan-on-slate-ax-not-working/54.rss">Wired WAN on Slate AX not working</source>
+      </item>
+  </channel>
+</rss>

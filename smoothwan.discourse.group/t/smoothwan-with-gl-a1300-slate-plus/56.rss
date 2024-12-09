@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+    <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56</link>
+    <description>Hello, does SmoothWAN works with the newer Qualcomm-based GL-A1300 Slate &#39;Plus&#39; ?
+It is smaller and uses less power than the AX. 
+Thank you.. =)</description>
+    
+    <lastBuildDate>Sun, 23 Jul 2023 10:19:10 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>RAM may not be enough and 700mhz CPU may be too slow causing dropouts, I’ll have to write a guide here sometime for installing Speedify manually on stock firmware for testing/testers.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/9</link>
+        <pubDate>Sun, 23 Jul 2023 10:19:10 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-9</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[suspi]]></dc:creator>
+        <description><![CDATA[
+            <p>Anybody try out SmoothWan on the Slate Plus? It’s currently $75, so it’s tempting over Slate AX’s $110.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/8</link>
+        <pubDate>Sun, 23 Jul 2023 02:34:55 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-8</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes I’ve tried with Anker QC and RAVPOWER PD.<br>
+My meter shows &lt;1A at idle, CPU load doesn’t have much effect, but using the 5Ghz Wi-Fi bumps it to 2A spikes averaging ~1.4A.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/7</link>
+        <pubDate>Sat, 15 Apr 2023 01:52:20 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-7</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[vezzie]]></dc:creator>
+        <description><![CDATA[
+            <p>Have you tried the AX with regular QC powerbank? That’s awesome, I might switch to AX if it does.<br>
+I thought the AX need a PD devices that knows to adjust to 5v3A according to GL tech here:  <a href="https://forum.gl-inet.com/t/slate-ax-requirement-for-4a-adapter/21110/38" class="inline-onebox" rel="noopener nofollow ugc">Slate AX requirement for 4A adapter - #38 by alzhao - Technical Support for Routers - GL.iNet</a></p>
+<p>This post makes me buy the &lt;6.5w PLUS instead of the AX; I was worried I can’t use a powerbank:  <a href="https://forum.gl-inet.com/t/slate-ax-requirement-for-4a-adapter/21110/7" class="inline-onebox" rel="noopener nofollow ugc">Slate AX requirement for 4A adapter - #7 by NomadTony - Technical Support for Routers - GL.iNet</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/6</link>
+        <pubDate>Sat, 15 Apr 2023 01:48:43 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-6</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Note that I won’t use the official OpenWrt builds, instead, using the GL.iNet repo due to the use of calibrated BDF (usually) for the Wi-Fi.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/5</link>
+        <pubDate>Sat, 15 Apr 2023 01:22:38 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-5</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>AX doesn’t use PD, just simple 5V, it works ok with powerbanks.<br>
+5.2V mini wall adapters work great too, you only need the bulky wall adapter / branded powerbank with power-hungry connected USB 3.0 device connected to the AX.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/4</link>
+        <pubDate>Sat, 15 Apr 2023 01:19:25 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-4</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[vezzie]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes, I just ordered one from Amazon last night. I think OpenWRT should work:<br>
+<a href="https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=9945d05171dd5f71c1d288ed63fa4112024d0a85" class="onebox" target="_blank" rel="noopener nofollow ugc">https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=9945d05171dd5f71c1d288ed63fa4112024d0a85</a></p>
+<p>PLUS hardware Info: <a href="https://docs.gl-inet.com/en/4/user_guide/gl-a1300/hardware_info/" class="inline-onebox" rel="noopener nofollow ugc">Hardware Info - GL.iNet Docs 4</a></p>
+<p>I’m hoping it can combine the datas from my USB-tethered TMo &amp; ATT phones with Speedify.<br>
+I think 170Mbps Wireguard should be ok, because datas from those 2 phones will probably won’t reach AX 550Mbps anyway.</p>
+<p>Btw does the AX works with a PD PowerBank ? (I want to avoid GL bulky charger if possible, that’s why I ordered the Plus instead).</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/3</link>
+        <pubDate>Sat, 15 Apr 2023 01:16:05 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-3</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Do you have one? I can post a build to test, my predicted speed for that would be around 100Mbit.<br>
+I hope it won’t run out of memory too (256 vs 512) since that is used for storage NAND UBIFS filesystem, wish glinet used EMMCs, but they use SLC memory which can handle a lot of writes, apps are probably the reason.</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/2</link>
+        <pubDate>Sat, 15 Apr 2023 00:33:47 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-2</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+      <item>
+        <title>SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</title>
+        <dc:creator><![CDATA[vezzie]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello, does SmoothWAN works with the newer Qualcomm-based GL-A1300 Slate ‘Plus’ ?<br>
+It is smaller and uses less power than the AX.<br>
+Thank you… =)</p>
+          <p><a href="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56/1</link>
+        <pubDate>Sat, 15 Apr 2023 00:18:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-56-1</guid>
+        <source url="https://smoothwan.discourse.group/t/smoothwan-with-gl-a1300-slate-plus/56.rss">SmoothWan with GL-A1300 Slate &#39;Plus&#39;?</source>
+      </item>
+  </channel>
+</rss>

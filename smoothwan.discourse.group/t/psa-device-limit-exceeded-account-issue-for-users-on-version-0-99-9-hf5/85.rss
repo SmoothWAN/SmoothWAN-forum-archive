@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>PSA: Device limit exceeded account issue for users on version 0.99.9 HF5</title>
+    <link>https://smoothwan.discourse.group/t/psa-device-limit-exceeded-account-issue-for-users-on-version-0-99-9-hf5/85</link>
+    <description>Visit SmoothWAN WebUI -&gt; Services -&gt; TTYD, enter `root` as username and your web UI password, then paste the following and hit enter:
+```
+cp /var/lib/dbus/machine-id /etc/machine-id
+```
+Close the tab and reboot.
+Send an email to Speedify to reset limits.
+Fixed next release. 
+Affects Speedify 13.0.1+ users.</description>
+    
+    <lastBuildDate>Sat, 22 Jul 2023 13:15:58 +0000</lastBuildDate>
+    <category>Announcements</category>
+    <atom:link href="https://smoothwan.discourse.group/t/psa-device-limit-exceeded-account-issue-for-users-on-version-0-99-9-hf5/85.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>PSA: Device limit exceeded account issue for users on version 0.99.9 HF5</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Visit SmoothWAN WebUI → Services → TTYD, enter <code>root</code> as username and your web UI password, then paste the following and hit enter:</p>
+<pre><code class="lang-auto">cp /var/lib/dbus/machine-id /etc/machine-id
+</code></pre>
+<p>Close the tab and reboot.<br>
+Send an email to Speedify to reset limits.<br>
+Fixed next release.<br>
+Affects Speedify 13.0.1+ users.</p>
+          <p><a href="https://smoothwan.discourse.group/t/psa-device-limit-exceeded-account-issue-for-users-on-version-0-99-9-hf5/85/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/psa-device-limit-exceeded-account-issue-for-users-on-version-0-99-9-hf5/85/1</link>
+        <pubDate>Sat, 22 Jul 2023 13:15:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-85-1</guid>
+        <source url="https://smoothwan.discourse.group/t/psa-device-limit-exceeded-account-issue-for-users-on-version-0-99-9-hf5/85.rss">PSA: Device limit exceeded account issue for users on version 0.99.9 HF5</source>
+      </item>
+  </channel>
+</rss>

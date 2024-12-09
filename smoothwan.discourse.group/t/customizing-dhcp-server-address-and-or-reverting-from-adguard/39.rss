@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+    <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39</link>
+    <description>Hey guys,
+
+I must be dumb because I can&#39;t for the life of me change my DHCP server settings to something else since you moved it to AdGuard.
+
+Every once in a while I can get it to work. But not joking... takes at LEAST an hour.
+
+I don&#39;t know if I&#39;m doing it wrong or doing it out of order, but it is a huge pain in the ass.
+
+If I go change the static URL on BR-LAN in Interfaces first, then I can&#39;t access the machine without manually assigning things DHCP settings on my machine because the change in Interfaces doesn&#39;t effect AdGuard. And sometimes I can&#39;t get back to the router at all. Like right now.
+
+So then I completely wipe and start over. And start I by confirguring AdGuard settings first, but it doesn&#39;t update the static IP in BR-LAN and then I&#39;m stuck again.
+
+I just want an easy way to change the subnet to whatever I want.
+
+What am I doing wrong here?
+
+I&#39;ve finally resorted to trying to roll back this section based on the instructions here that 
+Tala posted, but those don&#39;t fix the problem either.
+
+(https://github.com/SmoothWAN/SmoothWAN/issues/136)</description>
+    
+    <lastBuildDate>Mon, 03 Apr 2023 06:53:03 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Reverted to DNSmasq in 0.99.9HF5</p>
+          <p><a href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/5</link>
+        <pubDate>Mon, 03 Apr 2023 06:53:03 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-39-5</guid>
+        <source url="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss">Customizing DHCP server address and/or Reverting from AdGuard</source>
+      </item>
+      <item>
+        <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Found an issue with <code>adghome</code> DHCP not always restarting on <code>iface</code>, fixed next release.</p>
+          <p><a href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/4</link>
+        <pubDate>Sat, 01 Apr 2023 16:39:45 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-39-4</guid>
+        <source url="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss">Customizing DHCP server address and/or Reverting from AdGuard</source>
+      </item>
+      <item>
+        <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>It’s recommended to change DHCP settings first while connected, then set the LAN IP address.</p>
+          <p><a href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/3</link>
+        <pubDate>Sat, 01 Apr 2023 16:26:45 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-39-3</guid>
+        <source url="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss">Customizing DHCP server address and/or Reverting from AdGuard</source>
+      </item>
+      <item>
+        <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>I couldn’t replicate these issues but I’ll add an option to disable AdGuardHome and use stock OpenWrt DNSmasq settings in AdGuard LuCI page if it helps.<br>
+The problems persisted even after disabling ADGHome and enabling dnsmasq per the instructions posted? If so what are they?</p>
+          <p><a href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/2</link>
+        <pubDate>Sat, 01 Apr 2023 16:25:24 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-39-2</guid>
+        <source url="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss">Customizing DHCP server address and/or Reverting from AdGuard</source>
+      </item>
+      <item>
+        <title>Customizing DHCP server address and/or Reverting from AdGuard</title>
+        <dc:creator><![CDATA[chansearrington]]></dc:creator>
+        <description><![CDATA[
+            <p>Hey guys,</p>
+<p>I must be dumb because I can’t for the life of me change my DHCP server settings to something else since you moved it to AdGuard.</p>
+<p>Every once in a while I can get it to work. But not joking… takes at LEAST an hour.</p>
+<p>I don’t know if I’m doing it wrong or doing it out of order, but it is a huge pain in the ass.</p>
+<p>If I go change the static URL on BR-LAN in Interfaces first, then I can’t access the machine without manually assigning things DHCP settings on my machine because the change in Interfaces doesn’t effect AdGuard. And sometimes I can’t get back to the router at all. Like right now.</p>
+<p>So then I completely wipe and start over. And start I by confirguring AdGuard settings first, but it doesn’t update the static IP in BR-LAN and then I’m stuck again.</p>
+<p>I just want an easy way to change the subnet to whatever I want.</p>
+<p>What am I doing wrong here?</p>
+<p>I’ve finally resorted to trying to roll back this section based on the instructions here that<br>
+Tala posted, but those don’t fix the problem either.</p>
+<p>(<a href="https://github.com/SmoothWAN/SmoothWAN/issues/136" class="inline-onebox" rel="noopener nofollow ugc">v0.99.9 HF4 - FLINT - DHCP ISSUE · Issue #136 · SmoothWAN/SmoothWAN · GitHub</a>)</p>
+          <p><a href="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39/1</link>
+        <pubDate>Sat, 01 Apr 2023 10:43:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-39-1</guid>
+        <source url="https://smoothwan.discourse.group/t/customizing-dhcp-server-address-and-or-reverting-from-adguard/39.rss">Customizing DHCP server address and/or Reverting from AdGuard</source>
+      </item>
+  </channel>
+</rss>

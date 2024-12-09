@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Beryl AX SmoothWAN</title>
+    <link>https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132</link>
+    <description>Is it possible to install SmoothWAN on the Beryl AX or only the OpenWRT Speedify package? I can test any build if it helps.
+
+Thanks!</description>
+    
+    <lastBuildDate>Wed, 10 Apr 2024 16:46:46 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Beryl AX SmoothWAN</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>Going on with package in next release since GL.iNet has removed the build system, and it’s tricky to make. There will be GL.iNet edition package and full image for PC/Pi.</p>
+          <p><a href="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132/2</link>
+        <pubDate>Wed, 10 Apr 2024 16:46:46 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-132-2</guid>
+        <source url="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132.rss">Beryl AX SmoothWAN</source>
+      </item>
+      <item>
+        <title>Beryl AX SmoothWAN</title>
+        <dc:creator><![CDATA[tkabal]]></dc:creator>
+        <description><![CDATA[
+            <p>Is it possible to install SmoothWAN on the Beryl AX or only the OpenWRT Speedify package? I can test any build if it helps.</p>
+<p>Thanks!</p>
+          <p><a href="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132/1</link>
+        <pubDate>Thu, 15 Feb 2024 03:33:13 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-132-1</guid>
+        <source url="https://smoothwan.discourse.group/t/beryl-ax-smoothwan/132.rss">Beryl AX SmoothWAN</source>
+      </item>
+  </channel>
+</rss>

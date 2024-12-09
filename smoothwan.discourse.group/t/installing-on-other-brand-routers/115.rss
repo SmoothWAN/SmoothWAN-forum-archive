@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Installing on other brand routers</title>
+    <link>https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115</link>
+    <description>Sorry if this is a stupid question but I was wondering if it is possible to install smooth WAN on a different brand router?
+For example open WRT can be installed on a Netgear R7800. Does the same concept apply to installing smoothwan on the R7800, since it is compatible with a openWRT install?
+
+Thanks</description>
+    
+    <lastBuildDate>Tue, 06 Feb 2024 02:33:56 +0000</lastBuildDate>
+    <category>Help</category>
+    <atom:link href="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Installing on other brand routers</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p><a href="https://github.com/TalalMash/Unofficial-Speedify-Installer-For-OpenWrt">Speedify on other hardware</a></p>
+          <p><a href="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/3</link>
+        <pubDate>Tue, 06 Feb 2024 02:33:56 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-115-3</guid>
+        <source url="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115.rss">Installing on other brand routers</source>
+      </item>
+      <item>
+        <title>Installing on other brand routers</title>
+        <dc:creator><![CDATA[TalalM]]></dc:creator>
+        <description><![CDATA[
+            <p>SmoothWAN contains customization for each hardware unfortunately, I’ve heard that Speedify is going to add OpenWrt support soon which should work with official OpenWrt build.<br>
+I don’t have the device to add support.</p>
+          <p><a href="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/2</link>
+        <pubDate>Wed, 20 Dec 2023 04:10:11 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-115-2</guid>
+        <source url="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115.rss">Installing on other brand routers</source>
+      </item>
+      <item>
+        <title>Installing on other brand routers</title>
+        <dc:creator><![CDATA[Shane8johnson]]></dc:creator>
+        <description><![CDATA[
+            <p>Sorry if this is a stupid question but I was wondering if it is possible to install smooth WAN on a different brand router?<br>
+For example open WRT can be installed on a Netgear R7800. Does the same concept apply to installing smoothwan on the R7800, since it is compatible with a openWRT install?</p>
+<p>Thanks</p>
+          <p><a href="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115/1</link>
+        <pubDate>Fri, 15 Dec 2023 18:02:58 +0000</pubDate>
+        <guid isPermaLink="false">smoothwan.discourse.group-post-115-1</guid>
+        <source url="https://smoothwan.discourse.group/t/installing-on-other-brand-routers/115.rss">Installing on other brand routers</source>
+      </item>
+  </channel>
+</rss>
